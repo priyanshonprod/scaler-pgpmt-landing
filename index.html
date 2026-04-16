@@ -1240,7 +1240,9 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   padding: 24px 20px;
   border-right: 1px solid var(--border-light);
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   background: var(--panel);
 }
 .role-shift-before,
@@ -2228,6 +2230,76 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   }
 }
 
+/* ===== ROLE SHIFT DATE BADGE ===== */
+.role-shift-date {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--blue);
+  margin-bottom: 4px;
+}
+
+/* ===== COMPACT PAIN QUOTES ROW ===== */
+.pain-quotes-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--border-light);
+  margin-top: 48px;
+}
+@media (max-width: 900px) {
+  .pain-quotes-row { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .pain-quotes-row { grid-template-columns: 1fr; }
+}
+.pain-quote-card {
+  padding: 28px 24px;
+  border-right: 1px solid var(--border-light);
+}
+.pain-quote-card:last-child { border-right: none; }
+@media (max-width: 900px) {
+  .pain-quote-card:nth-child(2) { border-right: none; }
+  .pain-quote-card:nth-child(3) { border-top: 1px solid var(--border-light); }
+  .pain-quote-card:nth-child(4) { border-top: 1px solid var(--border-light); border-right: none; }
+}
+.pain-quote-mark {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 32px;
+  color: var(--blue);
+  line-height: 1;
+  margin-bottom: 8px;
+  opacity: 0.4;
+}
+.pain-quote-text {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.pain-quote-persona {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+/* ===== HEADER NAV HIDDEN STATE ===== */
+#header.nav-hidden .header-nav {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+#header .header-nav {
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
 /* ===== LEARNER SUCCESS (SSB-STYLE CARDS) ===== */
 .ls-section {
   background: #111;
@@ -2474,9 +2546,10 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 <nav class="section-nav" id="section-nav">
   <div class="nav-track">
     <a class="nav-item active" href="#who-for">Who It's For</a>
-    <a class="nav-item" href="#wall-of-problems">The Problem</a>
+    <a class="nav-item" href="#fold2">The Shift</a>
     <a class="nav-item" href="#program-section">Program</a>
     <a class="nav-item" href="#curriculum-section">Curriculum</a>
+    <a class="nav-item" href="#career-tool">Career</a>
     <a class="nav-item" href="#fold9">Pricing</a>
     <a class="nav-item" href="#fold12">FAQs</a>
   </div>
@@ -2489,10 +2562,9 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
       <div class="annotation" data-ann="hero"><strong>WHAT:</strong> Hero answering What/Why/When/How in first fold. <strong>WHY:</strong> First 5 seconds decide stay/leave. Headline = fear of obsolescence. Stats answer When (12 months, June 2026), How (weekend live + async), Cost (3.25L). <strong>CONVERSION:</strong> Two CTAs — guide download (warm lead) + callback (hot lead). Company logos = instant social proof. <strong>TG:</strong> All segments — ops, engineering, product, senior leadership.</div>
       <div class="hero-eyebrow fade-in"><span>Post Graduate Program in Management & Technology</span></div>
       <h1 class="hero-h1 fade-in fade-in-delay-1">AI is rewriting the rules. Are you writing them — or being <em>written out?</em></h1>
-      <p class="hero-sub fade-in fade-in-delay-2">12 months. For professionals in operations, engineering, product management, and senior leadership — who want to lead the AI era, not adapt to it after the fact.</p>
+      <p class="hero-sub fade-in fade-in-delay-2">12 months. Built for operations, engineering, product, finance, and strategy professionals who need to lead AI transformation — not watch it from the sidelines.</p>
       <div class="stat-strip fade-in fade-in-delay-2">
         <div class="stat-item"><div class="stat-number">12 months</div><div class="stat-label">Weekend live + weekday async</div><div class="stat-source">Starts June 2026</div></div>
-        <div class="stat-item"><div class="stat-number">&#8377;3.25L</div><div class="stat-label">All-in. EMI from &#8377;9K/mo.</div><div class="stat-source">Start at &#8377;20K down</div></div>
         <div class="stat-item"><div class="stat-number">60 seats</div><div class="stat-label">Cohort 2 — 24 remaining</div><div class="stat-source">Applications close May 15</div></div>
         <div class="stat-item"><div class="stat-number">200+</div><div class="stat-label">Hours of live instruction</div><div class="stat-source">3 specialization tracks</div></div>
       </div>
@@ -2523,10 +2595,9 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   </div>
 </section>
 
-<!-- ===== WHO IS THIS PROGRAM FOR — Scaler OPGP pattern: sidebar tabs + content ===== -->
+<!-- ===== WHO IS THIS PROGRAM FOR — 3-panel tabbed layout ===== -->
 <section id="who-for" class="section">
   <div class="container">
-    <div class="annotation" data-ann="who-for"><strong>WHAT:</strong> 4 experience-based audience segments as interactive sidebar tabs — matches Scaler OPGP "Who It Is For" pattern. <strong>WHY:</strong> Self-selection removes "is this for me?" objection. Each tab shows a learner quote in their voice. Image placeholder + quote overlay = human, relatable. <strong>TRANSCRIPT QUOTES:</strong> "I'm stuck in an IC role" (Eng, 11 YoE), "I want to move to leadership but every role now asks for AI" (PM, 7 YoE), "My company is running AI pilots, I'm not in the room" (Dir, 14 YoE), "Half my playbook is becoming obsolete" (VP, 15 YoE). <strong>TG:</strong> All 4 segments.</div>
     <span class="section-label" style="display:block;">Who Is This For</span>
     <h2 class="fade-in" style="margin-bottom:12px;">AI is reshaping every role. Are you ready for yours?</h2>
     <p class="fade-in" style="color:var(--muted);max-width:700px;margin-bottom:48px;">The problem isn't talent — it's that your current stack doesn't include the AI layer companies now expect.</p>
@@ -2535,20 +2606,20 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
       <!-- LEFT: tabs -->
       <div class="who-tabs">
         <div class="who-tab active" data-who="who-p1">
-          <div class="who-exp">3-5 Years</div>
-          <div class="who-title">Product Managers, Engineers &amp; Analysts</div>
+          <div class="who-tab-exp">3-5 Years</div>
+          <div class="who-tab-title">Product Managers, Engineers &amp; Analysts</div>
         </div>
         <div class="who-tab" data-who="who-p2">
-          <div class="who-exp">5-7 Years</div>
-          <div class="who-title">Senior ICs, Team Leads &amp; Ops Managers</div>
+          <div class="who-tab-exp">5-7 Years</div>
+          <div class="who-tab-title">Senior ICs, Team Leads &amp; Ops Managers</div>
         </div>
         <div class="who-tab" data-who="who-p3">
-          <div class="who-exp">7-10 Years</div>
-          <div class="who-title">Directors, Senior Managers &amp; VPs</div>
+          <div class="who-tab-exp">7-10 Years</div>
+          <div class="who-tab-title">Directors, Senior Managers &amp; VPs</div>
         </div>
         <div class="who-tab" data-who="who-p4">
-          <div class="who-exp">10-15+ Years</div>
-          <div class="who-title">CXOs, GMs &amp; Executive Leaders</div>
+          <div class="who-tab-exp">10-15+ Years</div>
+          <div class="who-tab-title">CXOs, GMs &amp; Executive Leaders</div>
         </div>
       </div>
 
@@ -2627,120 +2698,10 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   </div>
 </section>
 
-<!-- ===== WALL OF PROBLEMS — v5: Pain-to-resolution flow ===== -->
-<section id="wall-of-problems" class="section">
-  <div class="container">
-    <div class="annotation" data-ann="problems"><strong>WHAT:</strong> Pain-to-resolution flow — verbatim learner quotes on the left, PGPMT resolution on the right, with a directional connector between them. <strong>WHY:</strong> Pain amplification before solution. Always-visible format = no friction. Every row is self-contained. The top statement frames all 5 pains as one root gap. <strong>TRANSCRIPT SOURCES:</strong> "I'm stuck in an IC role for the last nine years" (Sr. Eng, 11 YoE), "My juniors are using AI tools and I can't" (Dir Eng, 14 YoE), "I am not able to learn new things" (PM, 13 YoE), "I want to be at the intersection of AI and IP" (Entrepreneur, 8 YoE), "Even if I join, will I be able to do justice?" (VP Ops, 15 YoE). <strong>CONVERSION:</strong> If visitor relates to even ONE row, they see the resolution immediately — zero interaction required.</div>
-    <span class="section-label text-center" style="display:block;">Sound Familiar?</span>
-    <h2 class="text-center fade-in" style="margin-bottom:40px;">Real words from professionals like you</h2>
-
-    <p class="wop-header-statement fade-in">Every pain you feel points back to one gap: <span class="wop-gap-highlight">you don't have the AI layer.</span></p>
-
-    <div class="wop-list fade-in">
-
-      <!-- Row 1: Stuck in Career -->
-      <div class="wop-row">
-        <div class="wop-pain">
-          <div class="wop-pain-label">Stuck in Career</div>
-          <div class="wop-pain-quote">"I'm stuck in an IC role for the last nine years."</div>
-          <div class="wop-pain-persona">Sr. Engineer, 11 years of experience</div>
-        </div>
-        <div class="wop-connector">
-          <div class="wop-connector-line"></div>
-          <div class="wop-connector-arrow"></div>
-          <div class="wop-connector-line"></div>
-        </div>
-        <div class="wop-resolution">
-          <div class="wop-resolution-label">How PGPMT resolves this</div>
-          <div class="wop-resolution-text">Career trajectory module maps your current function to AI-era leadership roles. You're positioned for VP of Strategy or Head of AI Transformation.</div>
-        </div>
-      </div>
-
-      <!-- Row 2: AI Anxiety -->
-      <div class="wop-row">
-        <div class="wop-pain">
-          <div class="wop-pain-label">AI Anxiety</div>
-          <div class="wop-pain-quote">"My juniors are using AI tools and I can't."</div>
-          <div class="wop-pain-persona">Director of Engineering, 14 years of experience</div>
-        </div>
-        <div class="wop-connector">
-          <div class="wop-connector-line"></div>
-          <div class="wop-connector-arrow"></div>
-          <div class="wop-connector-line"></div>
-        </div>
-        <div class="wop-resolution">
-          <div class="wop-resolution-label">How PGPMT resolves this</div>
-          <div class="wop-resolution-text">Phase 1 builds AI fluency from business-user level — no coding. By month 3, you'll evaluate AI tools for your function and lead teams that build with AI.</div>
-        </div>
-      </div>
-
-      <!-- Row 3: Skill Gap -->
-      <div class="wop-row">
-        <div class="wop-pain">
-          <div class="wop-pain-label">Skill Gap</div>
-          <div class="wop-pain-quote">"I am not able to learn new things."</div>
-          <div class="wop-pain-persona">Product Manager, 13 years of experience</div>
-        </div>
-        <div class="wop-connector">
-          <div class="wop-connector-line"></div>
-          <div class="wop-connector-arrow"></div>
-          <div class="wop-connector-line"></div>
-        </div>
-        <div class="wop-resolution">
-          <div class="wop-resolution-label">How PGPMT resolves this</div>
-          <div class="wop-resolution-text">Every module is built around real deployments, not theory. You'll analyze Bajaj Finance's 800-agent deployment and design an org restructure. You leave with skills you used.</div>
-        </div>
-      </div>
-
-      <!-- Row 4: No Direction -->
-      <div class="wop-row">
-        <div class="wop-pain">
-          <div class="wop-pain-label">No Direction</div>
-          <div class="wop-pain-quote">"I want to be at the intersection of AI and IP."</div>
-          <div class="wop-pain-persona">Entrepreneur, 8 years of experience</div>
-        </div>
-        <div class="wop-connector">
-          <div class="wop-connector-line"></div>
-          <div class="wop-connector-arrow"></div>
-          <div class="wop-connector-line"></div>
-        </div>
-        <div class="wop-resolution">
-          <div class="wop-resolution-label">How PGPMT resolves this</div>
-          <div class="wop-resolution-text">Specialization tracks let you pick your lane: AI Product, AI Strategy, or AI Operations. The cohort becomes your co-founder pool and advisory board.</div>
-        </div>
-      </div>
-
-      <!-- Row 5: No Time -->
-      <div class="wop-row">
-        <div class="wop-pain">
-          <div class="wop-pain-label">No Time</div>
-          <div class="wop-pain-quote">"Even if I join, will I be able to do justice?"</div>
-          <div class="wop-pain-persona">VP of Operations, 15 years of experience</div>
-        </div>
-        <div class="wop-connector">
-          <div class="wop-connector-line"></div>
-          <div class="wop-connector-arrow"></div>
-          <div class="wop-connector-line"></div>
-        </div>
-        <div class="wop-resolution">
-          <div class="wop-resolution-label">How PGPMT resolves this</div>
-          <div class="wop-resolution-text">Weekend live sessions (Sat–Sun, 9am–1pm) + 4–6 hours async during the week. All sessions recorded. The format was designed by and for people with real responsibilities.</div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="wop-cta-bar fade-in">
-      <div class="wop-cta-text">PGPMT closes this gap <span>in 12 months.</span></div>
-      <a href="#apply" class="btn-primary" style="white-space:nowrap;flex-shrink:0;">Apply Now</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== AI PARADIGM SHIFT ===== -->
+<!-- ===== AI PARADIGM SHIFT — merged with role shift + pain quotes ===== -->
 <section id="fold2" class="section">
   <div class="container">
-    <div class="annotation" data-ann="shift"><strong>WHAT:</strong> Data-driven urgency section. <strong>WHY:</strong> External proof that AI is real and happening NOW. Removes "maybe later" objection. Brand logos add credibility. <strong>WHEN:</strong> Urgency builder — "the shift already happened."</div>
+    <div class="annotation" data-ann="shift"><strong>WHAT:</strong> Merged section — decade timeline, rapid role shift with specific dates, compact pain quotes. <strong>WHY:</strong> One unified urgency section instead of three fragmented ones. Timeline proves velocity; role cards prove breadth; pain quotes create personal identification.</div>
 
     <div class="fold2-h2 fade-in">
       <span class="section-label text-center" style="display:block;">The Shift</span>
@@ -2783,18 +2744,20 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
       </div>
     </div>
 
-    <!-- How AI changed every role — in just one year -->
+    <!-- Role shift: all 5 roles redefined in 12 months -->
     <div class="role-shift-block fade-in">
       <div class="role-shift-header">
-        <span class="section-label" style="color:var(--amber);">In Just One Year</span>
-        <h3 class="role-shift-title">Every role you know has already changed. Here's how.</h3>
-        <p class="role-shift-sub">GPT-4o, Claude 3.5, Copilot Enterprise, autonomous AI agents — they didn't just ship. They rewrote how people work. Every quarter, another role gets redefined.</p>
+        <span class="section-label" style="color:var(--amber);">Feb 2024 &rarr; Feb 2025</span>
+        <h3 class="role-shift-title">Five roles. Twelve months. All redefined.</h3>
       </div>
 
       <div class="role-shift-grid">
         <!-- Role 1: Engineer -->
         <div class="role-shift-card">
-          <div class="role-shift-role">Engineer</div>
+          <div class="role-shift-role">
+            <span class="role-shift-date">Feb 2024</span>
+            Engineer
+          </div>
           <div class="role-shift-before">
             <div class="role-shift-label">Before</div>
             <div class="role-shift-desc">Writes code, reviews PRs, debugs, ships features. Measured by lines shipped.</div>
@@ -2810,7 +2773,10 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 
         <!-- Role 2: Product Manager -->
         <div class="role-shift-card">
-          <div class="role-shift-role">Product Manager</div>
+          <div class="role-shift-role">
+            <span class="role-shift-date">May 2024</span>
+            Product Manager
+          </div>
           <div class="role-shift-before">
             <div class="role-shift-label">Before</div>
             <div class="role-shift-desc">Writes PRDs, prioritizes backlog, talks to users, coordinates with engineering.</div>
@@ -2826,7 +2792,10 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 
         <!-- Role 3: Operations -->
         <div class="role-shift-card">
-          <div class="role-shift-role">Operations Leader</div>
+          <div class="role-shift-role">
+            <span class="role-shift-date">Aug 2024</span>
+            Operations Leader
+          </div>
           <div class="role-shift-before">
             <div class="role-shift-label">Before</div>
             <div class="role-shift-desc">Optimizes processes, manages teams, tracks SLAs, runs playbooks.</div>
@@ -2842,7 +2811,10 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 
         <!-- Role 4: Finance -->
         <div class="role-shift-card">
-          <div class="role-shift-role">Finance Professional</div>
+          <div class="role-shift-role">
+            <span class="role-shift-date">Oct 2024</span>
+            Finance Professional
+          </div>
           <div class="role-shift-before">
             <div class="role-shift-label">Before</div>
             <div class="role-shift-desc">Builds models in Excel, runs forecasts, prepares board decks, monitors compliance.</div>
@@ -2858,7 +2830,10 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 
         <!-- Role 5: Sales -->
         <div class="role-shift-card">
-          <div class="role-shift-role">Sales &amp; GTM</div>
+          <div class="role-shift-role">
+            <span class="role-shift-date">Feb 2025</span>
+            Sales &amp; GTM
+          </div>
           <div class="role-shift-before">
             <div class="role-shift-label">Before</div>
             <div class="role-shift-desc">Cold calls, CRM updates, pipeline management, quarterly targets.</div>
@@ -2872,10 +2847,29 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="role-shift-footer">
-        <p class="role-shift-punchline">Five roles. One year. All redefined.</p>
-        <p class="role-shift-sub-punch">This isn't a trend you can wait out. The next quarter will change them again.</p>
+    <!-- Compact pain quotes -->
+    <div class="pain-quotes-row fade-in">
+      <div class="pain-quote-card">
+        <div class="pain-quote-mark">"</div>
+        <div class="pain-quote-text">I'm stuck in an IC role for the last nine years.</div>
+        <div class="pain-quote-persona">Sr. Engineer, 11 years of experience</div>
+      </div>
+      <div class="pain-quote-card">
+        <div class="pain-quote-mark">"</div>
+        <div class="pain-quote-text">My juniors are using AI tools and I can't.</div>
+        <div class="pain-quote-persona">Director of Engineering, 14 years of experience</div>
+      </div>
+      <div class="pain-quote-card">
+        <div class="pain-quote-mark">"</div>
+        <div class="pain-quote-text">My company is running AI pilots. I'm not in the room.</div>
+        <div class="pain-quote-persona">Operations Director, 12 years of experience</div>
+      </div>
+      <div class="pain-quote-card">
+        <div class="pain-quote-mark">"</div>
+        <div class="pain-quote-text">Half my playbook is becoming obsolete.</div>
+        <div class="pain-quote-persona">VP of Strategy, 15 years of experience</div>
       </div>
     </div>
 
@@ -3423,12 +3417,6 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
         </div>
       </div>
 
-      <!-- Target role -->
-      <div class="scrubber-target-row">
-        <div class="scrubber-target-label">Target Role After PGPMT</div>
-        <div class="scrubber-target-role" id="scrubber-target-display">Head of AI Products</div>
-      </div>
-
       <!-- Phase labels above scrubber -->
       <div class="scrubber-timeline-wrap">
         <div class="scrubber-phase-labels" id="scrubber-phase-labels">
@@ -3455,34 +3443,6 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
         </div>
         <div class="scrubber-input-wrap">
           <input type="range" class="scrubber-input" id="career-scrubber" min="0" max="100" value="0" step="1">
-        </div>
-      </div>
-
-      <!-- Probability graph -->
-      <div class="scrubber-prob-wrap">
-        <div class="scrubber-prob-label">Probability of Reaching Target Role</div>
-        <div class="scrubber-prob-row">
-          <div class="prob-bar-wrap" data-phase-bar="0">
-            <div class="prob-bar-track"><div class="prob-bar-fill" style="height:0%"></div></div>
-            <div class="prob-bar-val">15%</div>
-          </div>
-          <div class="prob-bar-wrap" data-phase-bar="1">
-            <div class="prob-bar-track"><div class="prob-bar-fill" style="height:0%"></div></div>
-            <div class="prob-bar-val">35%</div>
-          </div>
-          <div class="prob-bar-wrap" data-phase-bar="2">
-            <div class="prob-bar-track"><div class="prob-bar-fill" style="height:0%"></div></div>
-            <div class="prob-bar-val">55%</div>
-          </div>
-          <div class="prob-bar-wrap" data-phase-bar="3">
-            <div class="prob-bar-track"><div class="prob-bar-fill" style="height:0%"></div></div>
-            <div class="prob-bar-val">72%</div>
-          </div>
-          <div class="prob-bar-wrap" data-phase-bar="4">
-            <div class="prob-bar-track"><div class="prob-bar-fill" style="height:0%"></div></div>
-            <div class="prob-bar-val">85%</div>
-          </div>
-          <div class="scrubber-prob-end-pct" id="scrubber-prob-display">85%</div>
         </div>
       </div>
 
@@ -4221,7 +4181,28 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   updateScrubber(0);
 })();
 
-// (legacy tab switchers removed — who-tab and curr-tab no longer used in rebuilt sections)
+// --- Header nav hide when section-nav visible ---
+// Piggybacks on the section-nav scroll logic already in scripts.js.
+// We observe the section-nav for the 'visible' class addition/removal.
+(function() {
+  const header = document.getElementById('header');
+  const sectionNav = document.getElementById('section-nav');
+  if (!header || !sectionNav) return;
+
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.attributeName === 'class') {
+        if (sectionNav.classList.contains('visible')) {
+          header.classList.add('nav-hidden');
+        } else {
+          header.classList.remove('nav-hidden');
+        }
+      }
+    });
+  });
+
+  observer.observe(sectionNav, { attributes: true });
+})();
 </script>
 </body>
 </html>
