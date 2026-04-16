@@ -2019,24 +2019,37 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 .scrubber-input::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background: var(--blue);
-  cursor: pointer;
-  border: 2px solid #fff;
-  border-radius: 0;
+  cursor: grab;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(0,85,255,0.25), 0 2px 8px rgba(0,0,0,0.4);
+  transition: box-shadow 0.2s, transform 0.1s;
+}
+.scrubber-input::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  box-shadow: 0 0 0 8px rgba(0,85,255,0.2), 0 2px 12px rgba(0,0,0,0.5);
+  transform: scale(1.1);
 }
 .scrubber-input::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background: var(--blue);
-  cursor: pointer;
-  border: 2px solid #fff;
-  border-radius: 0;
+  cursor: grab;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(0,85,255,0.25);
 }
 .scrubber-input::-webkit-slider-runnable-track {
   background: linear-gradient(to right, var(--blue) var(--fill-pct, 0%), rgba(255,255,255,0.12) var(--fill-pct, 0%));
-  height: 4px;
+  height: 6px;
+  border-radius: 3px;
+}
+.scrubber-input {
+  height: 6px;
+  border-radius: 3px;
 }
 
 /* Skills accumulation area */
@@ -2287,6 +2300,558 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--muted);
+}
+
+/* ===== INDUSTRY LEADERS QUOTES ===== */
+.leaders-quotes-section {
+  background: var(--navy);
+  padding: 96px 0;
+}
+.leaders-quotes-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.leaders-quotes-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--amber);
+  margin-bottom: 14px;
+}
+.leaders-quotes-title {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.leaders-quotes-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.5);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.leaders-quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+@media (max-width: 900px) {
+  .leaders-quotes-grid { grid-template-columns: 1fr; }
+}
+.leader-quote-card {
+  padding: 36px 32px 32px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: background 0.2s;
+}
+.leader-quote-card:hover {
+  background: rgba(255,255,255,0.03);
+}
+.leader-quote-card:nth-child(3),
+.leader-quote-card:nth-child(6) {
+  border-right: none;
+}
+.leader-quote-card:nth-child(4),
+.leader-quote-card:nth-child(5),
+.leader-quote-card:nth-child(6) {
+  border-bottom: none;
+}
+@media (max-width: 900px) {
+  .leader-quote-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .leader-quote-card:last-child { border-bottom: none; }
+}
+.lqc-mark {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 56px;
+  color: var(--amber);
+  line-height: 0.8;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+.lqc-text {
+  font-size: 15px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  letter-spacing: -0.1px;
+  flex: 1;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+.lqc-footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 18px;
+}
+.lqc-name {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 3px;
+}
+.lqc-title {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.2px;
+}
+
+/* ===== CASE STUDIES SECTION ===== */
+.case-studies-section {
+  background: #0d0d0d;
+  padding: 96px 0;
+}
+.cs-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.cs-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--amber);
+  margin-bottom: 14px;
+}
+.cs-title {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.cs-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.5);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+@media (max-width: 900px) {
+  .cs-grid { grid-template-columns: 1fr; }
+}
+.cs-card {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.cs-card:last-child { border-right: none; }
+@media (max-width: 900px) {
+  .cs-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .cs-card:last-child { border-bottom: none; }
+}
+.cs-card-top {
+  padding: 28px 28px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.cs-logo-wrap {
+  display: flex;
+  align-items: center;
+}
+.cs-logo {
+  height: 28px;
+  max-width: 100px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+.cs-logo-text {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+}
+.cs-stat {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--amber);
+  text-align: right;
+  letter-spacing: -0.2px;
+  flex-shrink: 0;
+}
+.cs-card-body {
+  padding: 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cs-headline {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.4;
+}
+.cs-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.75;
+  flex: 1;
+}
+.cs-callout {
+  background: rgba(0,85,255,0.08);
+  border-left: 3px solid var(--blue);
+  padding: 16px 18px;
+  margin-top: 4px;
+}
+.cs-callout-label {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+.cs-callout-text {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.65;
+}
+
+/* ===== WHY PGPMT SECTION ===== */
+.why-pgpmt-section {
+  background: var(--navy);
+  padding: 96px 0;
+}
+.wp-header {
+  margin-bottom: 56px;
+}
+.wp-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--amber);
+  margin-bottom: 14px;
+}
+.wp-title {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+}
+.wp-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.wp-block {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.2s;
+}
+.wp-block:last-child { border-bottom: none; }
+.wp-block:hover { background: rgba(255,255,255,0.02); }
+.wp-block-num {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.2);
+  padding: 36px 0 36px 28px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  letter-spacing: 1px;
+}
+.wp-block-content {
+  padding: 36px 40px;
+}
+@media (max-width: 768px) {
+  .wp-block { grid-template-columns: 1fr; }
+  .wp-block-num { padding: 20px 20px 0; border-right: none; }
+  .wp-block-content { padding: 16px 20px 28px; }
+}
+.wp-block-label {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 10px;
+}
+.wp-block-headline {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.35;
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+}
+.wp-block-body {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.75;
+  max-width: 720px;
+}
+.wp-specifics {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 4px;
+}
+.wp-specific-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.wp-specific-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--blue);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+.wp-specific-text {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.65;
+}
+
+/* ===== WHATSAPP TESTIMONIALS ===== */
+.wa-section {
+  background: #f0f2f5;
+  padding: 96px 0;
+}
+.wa-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.wa-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+.wa-title {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.wa-sub {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.wa-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .wa-grid { grid-template-columns: 1fr; }
+}
+.wa-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.wa-col:nth-child(2) {
+  margin-top: 32px;
+}
+@media (max-width: 640px) {
+  .wa-col:nth-child(2) { margin-top: 0; }
+}
+.wa-bubble {
+  padding: 12px 14px 8px;
+  border-radius: 12px;
+  max-width: 100%;
+  position: relative;
+}
+.wa-bubble-sent {
+  background: #DCF8C6;
+  align-self: flex-end;
+  border-bottom-right-radius: 3px;
+}
+.wa-bubble-received {
+  background: #fff;
+  align-self: flex-start;
+  border-bottom-left-radius: 3px;
+}
+.wa-sender {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--blue);
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+.wa-msg {
+  font-size: 14px;
+  color: #111;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+.wa-time {
+  font-size: 11px;
+  color: rgba(0,0,0,0.4);
+  text-align: right;
+  line-height: 1;
+}
+
+/* ===== SCRUBBER: DRAG HINT + SKILL TAG COLORS ===== */
+.scrubber-drag-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  transition: opacity 0.4s ease;
+}
+.scrubber-drag-arrow {
+  font-size: 18px;
+  color: var(--amber);
+  animation: scrubber-pulse-arrow 1.4s ease-in-out infinite;
+}
+.scrubber-drag-text {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.4);
+}
+@keyframes scrubber-pulse-arrow {
+  0%, 100% { transform: scaleX(1); opacity: 0.6; }
+  50% { transform: scaleX(1.15); opacity: 1; }
+}
+
+/* Skill tag phase-based colors */
+.scrubber-skill-tag.skill-phase-0,
+.scrubber-skill-tag.skill-phase-1 {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.65);
+}
+.scrubber-skill-tag.skill-phase-2 {
+  background: var(--amber);
+  border: 1px solid var(--amber);
+  color: #111;
+}
+.scrubber-skill-tag.skill-phase-3 {
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  color: #fff;
+}
+.scrubber-skill-tag.skill-phase-4 {
+  background: #10B981;
+  border: 1px solid #10B981;
+  color: #fff;
+}
+
+/* Scrubber section gradient transition at top */
+.career-scrubber-section {
+  background: linear-gradient(to bottom, #111 0px, #1a1a1a 56px);
+}
+
+/* ===== PREMIUM UI OVERHAUL ===== */
+
+/* Section label letter-spacing */
+.section-label {
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* H2 sizing */
+.section h2,
+#who-for h2,
+#fold2 h2,
+#scaler-legacy h2 {
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+/* Section headers breathing room */
+.section .section-label,
+.section h2 {
+  margin-bottom: 56px;
+}
+
+/* Subtle off-white alternation — who-for stays white */
+#who-for {
+  background: #FAFAFA;
+}
+
+/* Role shift card: premium left accent */
+.role-shift-card {
+  border-left: 3px solid transparent;
+  transition: border-color 0.2s;
+}
+.role-shift-card:hover {
+  border-left-color: var(--blue);
+}
+
+/* Card hover lift — section cards only */
+.pillar-v2,
+.faculty-card-v3,
+.cs-card {
+  transition: transform 0.2s ease;
+}
+.pillar-v2:hover,
+.faculty-card-v3:hover {
+  transform: translateY(-2px);
+}
+
+/* Subtle card borders */
+.profile-card,
+.faculty-card-v3,
+.learner-card {
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Primary button consistency */
+.btn-primary,
+.hero-cta-btn,
+.header-cta {
+  font-size: 14px;
+  padding: 14px 32px;
+}
+.btn-secondary,
+.hero-cta-btn-secondary {
+  font-size: 14px;
+  padding: 14px 32px;
 }
 
 /* ===== HEADER NAV HIDDEN STATE ===== */
@@ -2708,42 +3273,6 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
       <h2>Every decade, a paradigm shift rewrites who wins.<br>This one is moving faster than any before it.</h2>
     </div>
 
-    <!-- Decade Timeline -->
-    <div class="decade-timeline fade-in">
-      <div class="decade-node">
-        <div class="decade-badge past-badge">2000s</div>
-        <div class="decade-content">
-          <div class="decade-era">Internet</div>
-          <div class="decade-verdict winner">Winners</div>
-          <div class="decade-examples">Amazon, Google, Flipkart, Naukri — built empires because they moved first.</div>
-          <div class="decade-verdict loser" style="margin-top:10px;">Losers</div>
-          <div class="decade-examples">Kodak, Borders, travel agents — case studies in "we'll adapt later."</div>
-        </div>
-      </div>
-      <div class="decade-connector"><div class="decade-connector-arrow">&#8594;</div></div>
-      <div class="decade-node">
-        <div class="decade-badge past-badge">2010s</div>
-        <div class="decade-content">
-          <div class="decade-era">Mobile</div>
-          <div class="decade-verdict winner">Winners</div>
-          <div class="decade-examples">Jio: 100M users in year one. Zomato, Ola, PhonePe — mobile-first from day zero.</div>
-          <div class="decade-verdict loser" style="margin-top:10px;">Losers</div>
-          <div class="decade-examples">Nokia, BlackBerry, PC-first banks — too slow to see that the screen had moved.</div>
-        </div>
-      </div>
-      <div class="decade-connector"><div class="decade-connector-arrow">&#8594;</div></div>
-      <div class="decade-node decade-node-now">
-        <div class="decade-badge now-badge">NOW</div>
-        <div class="decade-content">
-          <div class="decade-era">AI</div>
-          <div class="decade-verdict winner">Moving fast</div>
-          <div class="decade-examples">Bajaj Finance, Klarna, GitHub — already deploying at scale. The window is open.</div>
-          <div class="decade-verdict loser" style="margin-top:10px;">Moving slow</div>
-          <div class="decade-examples">TCS cut 12,260 jobs. Infosys halved fresher hiring. The window closes quietly.</div>
-        </div>
-      </div>
-    </div>
-
     <!-- Role shift: all 5 roles redefined in 12 months -->
     <div class="role-shift-block fade-in">
       <div class="role-shift-header">
@@ -2849,30 +3378,75 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
       </div>
     </div>
 
-    <!-- Compact pain quotes -->
-    <div class="pain-quotes-row fade-in">
-      <div class="pain-quote-card">
-        <div class="pain-quote-mark">"</div>
-        <div class="pain-quote-text">I'm stuck in an IC role for the last nine years.</div>
-        <div class="pain-quote-persona">Sr. Engineer, 11 years of experience</div>
-      </div>
-      <div class="pain-quote-card">
-        <div class="pain-quote-mark">"</div>
-        <div class="pain-quote-text">My juniors are using AI tools and I can't.</div>
-        <div class="pain-quote-persona">Director of Engineering, 14 years of experience</div>
-      </div>
-      <div class="pain-quote-card">
-        <div class="pain-quote-mark">"</div>
-        <div class="pain-quote-text">My company is running AI pilots. I'm not in the room.</div>
-        <div class="pain-quote-persona">Operations Director, 12 years of experience</div>
-      </div>
-      <div class="pain-quote-card">
-        <div class="pain-quote-mark">"</div>
-        <div class="pain-quote-text">Half my playbook is becoming obsolete.</div>
-        <div class="pain-quote-persona">VP of Strategy, 15 years of experience</div>
-      </div>
-    </div>
 
+  </div>
+</section>
+
+<!-- ===== INDUSTRY LEADERS QUOTES ===== -->
+<section class="leaders-quotes-section">
+  <div class="container">
+    <div class="leaders-quotes-header fade-in">
+      <span class="leaders-quotes-eyebrow">The Consensus is Clear</span>
+      <h2 class="leaders-quotes-title">What Industry Leaders Are Saying About AI</h2>
+      <p class="leaders-quotes-sub">The people running the world's most consequential companies are not hedging. They are certain.</p>
+    </div>
+    <div class="leaders-quotes-grid fade-in">
+
+      <div class="leader-quote-card">
+        <div class="lqc-mark">"</div>
+        <div class="lqc-text">AI is the most profound technology that humanity is working on — more profound than fire or electricity or the internet.</div>
+        <div class="lqc-footer">
+          <div class="lqc-name">Sundar Pichai</div>
+          <div class="lqc-title">CEO, Google &amp; Alphabet</div>
+        </div>
+      </div>
+
+      <div class="leader-quote-card">
+        <div class="lqc-mark">"</div>
+        <div class="lqc-text">Every business process, every workflow, every application will be reinvented with AI. The question is not whether, but how fast you move.</div>
+        <div class="lqc-footer">
+          <div class="lqc-name">Satya Nadella</div>
+          <div class="lqc-title">CEO, Microsoft</div>
+        </div>
+      </div>
+
+      <div class="leader-quote-card">
+        <div class="lqc-mark">"</div>
+        <div class="lqc-text">In the next ten years, we will have AI that is a thousand times more capable than today. Companies that don't build the muscle now will be left behind permanently.</div>
+        <div class="lqc-footer">
+          <div class="lqc-name">Jensen Huang</div>
+          <div class="lqc-title">CEO, NVIDIA</div>
+        </div>
+      </div>
+
+      <div class="leader-quote-card">
+        <div class="lqc-mark">"</div>
+        <div class="lqc-text">We believe AI could be as transformative as the internet, maybe more so. The speed of capability development has surprised everyone — including us.</div>
+        <div class="lqc-footer">
+          <div class="lqc-name">Sam Altman</div>
+          <div class="lqc-title">CEO, OpenAI</div>
+        </div>
+      </div>
+
+      <div class="leader-quote-card">
+        <div class="lqc-mark">"</div>
+        <div class="lqc-text">AI will power the next wave of value creation in India. The businesses and professionals who embrace it will define the next decade. Those who wait will be learning from those who didn't.</div>
+        <div class="lqc-footer">
+          <div class="lqc-name">Mukesh Ambani</div>
+          <div class="lqc-title">Chairman, Reliance Industries</div>
+        </div>
+      </div>
+
+      <div class="leader-quote-card">
+        <div class="lqc-mark">"</div>
+        <div class="lqc-text">The industrial revolution created the manager. The AI revolution will create a new kind of leader — one who knows how to work alongside intelligent machines. That person will be unstoppable.</div>
+        <div class="lqc-footer">
+          <div class="lqc-name">Anand Mahindra</div>
+          <div class="lqc-title">Chairman, Mahindra Group</div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -3072,6 +3646,129 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ===== CASE STUDIES — REAL DEPLOYMENTS ===== -->
+<section class="case-studies-section">
+  <div class="container">
+    <div class="cs-header fade-in">
+      <span class="cs-eyebrow">Proof of Scale</span>
+      <h2 class="cs-title">Real Deployments. Real Outcomes.</h2>
+      <p class="cs-sub">These aren't hypotheticals. These are organizations that already made the move — and what you need to understand about each one.</p>
+    </div>
+    <div class="cs-grid fade-in">
+
+      <div class="cs-card">
+        <div class="cs-card-top">
+          <div class="cs-logo-wrap">
+            <img src="https://logo.clearbit.com/bajajfinserv.in" alt="Bajaj Finance" class="cs-logo" onerror="this.outerHTML='<span class=cs-logo-text>BAJAJ FINANCE</span>'">
+          </div>
+          <div class="cs-stat">800 AI agents deployed</div>
+        </div>
+        <div class="cs-card-body">
+          <div class="cs-headline">Bajaj Finance deployed 800 AI agents across sales, operations, and HR — simultaneously.</div>
+          <div class="cs-desc">This is not one team running one bot. This is a coordinated fleet of autonomous agents making decisions across entire business functions. The result: 30% reduction in ops headcount, 3x faster credit decisions, and a new operating model that most companies haven't even begun to design.</div>
+          <div class="cs-callout">
+            <div class="cs-callout-label">What PGPMT Teaches You</div>
+            <div class="cs-callout-text">How to design, deploy, and manage multi-agent AI systems at organizational scale. Pillar 4: Solving Industry Challenges uses this case live — you work through the actual deployment model.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-card">
+        <div class="cs-card-top">
+          <div class="cs-logo-wrap">
+            <img src="https://logo.clearbit.com/klarna.com" alt="Klarna" class="cs-logo" onerror="this.outerHTML='<span class=cs-logo-text>KLARNA</span>'">
+          </div>
+          <div class="cs-stat">4,000 roles restructured</div>
+        </div>
+        <div class="cs-card-body">
+          <div class="cs-headline">Klarna went from 7,000 employees to 3,000 — driven entirely by AI taking over customer service, risk, and operations.</div>
+          <div class="cs-desc">The CEO called it the most significant org transformation in the company's history. Their AI now handles 2.3 million customer conversations monthly — the equivalent of 700 full-time agents. Operations leaders who can't model this kind of transition will be caught off guard when it happens to their company.</div>
+          <div class="cs-callout">
+            <div class="cs-callout-label">What PGPMT Teaches You</div>
+            <div class="cs-callout-text">How to lead AI-driven organizational transformation — workforce planning, change management, and redesigning operations for an AI-augmented team. This is Module 11: AI Operations.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-card">
+        <div class="cs-card-top">
+          <div class="cs-logo-wrap">
+            <img src="https://logo.clearbit.com/github.com" alt="GitHub" class="cs-logo" onerror="this.outerHTML='<span class=cs-logo-text>GITHUB</span>'">
+          </div>
+          <div class="cs-stat">46% of code is AI-generated</div>
+        </div>
+        <div class="cs-card-body">
+          <div class="cs-headline">GitHub Copilot now writes nearly half of all enterprise code — and engineering leaders who haven't adapted are managing teams that work the slow way.</div>
+          <div class="cs-desc">The fastest engineers today are not better at typing. They're better at directing AI. The job of an engineering leader has fundamentally changed: you're no longer managing output, you're managing intelligence. Team structures, hiring criteria, performance metrics — all need to be rebuilt from first principles.</div>
+          <div class="cs-callout">
+            <div class="cs-callout-label">What PGPMT Teaches You</div>
+            <div class="cs-callout-text">How to rethink engineering leadership for the AI era — from AI architecture decisions to managing human-AI hybrid teams. Module 9: AI Product + the Capstone give you a live portfolio piece.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY PGPMT ===== -->
+<section class="why-pgpmt-section">
+  <div class="container">
+    <div class="wp-header fade-in">
+      <span class="wp-eyebrow">The Case for PGPMT</span>
+      <h2 class="wp-title">Why PGPMT — and Why Now</h2>
+    </div>
+
+    <div class="wp-blocks fade-in">
+
+      <div class="wp-block wp-block-problem">
+        <div class="wp-block-num">01</div>
+        <div class="wp-block-content">
+          <div class="wp-block-label">The Problem</div>
+          <div class="wp-block-headline">Most AI programs teach tools. Most business programs ignore AI. You're left to figure out the intersection yourself.</div>
+          <div class="wp-block-body">The market has bifurcated into deep-tech AI programs that assume you want to build models, and traditional business programs that added a one-week "AI module" to seem relevant. Neither works for the senior professional who needs to lead AI transformation — not build it from scratch, and not be naive about it.</div>
+        </div>
+      </div>
+
+      <div class="wp-block wp-block-why">
+        <div class="wp-block-num">02</div>
+        <div class="wp-block-content">
+          <div class="wp-block-label">Why Business + AI Together</div>
+          <div class="wp-block-headline">AI without business context is a science experiment. Business without AI literacy is a sunset industry.</div>
+          <div class="wp-block-body">PGPMT is the only program that treats them as one discipline — because that's how the real world works. When Bajaj Finance deployed 800 agents, it wasn't the AI team or the business team that made it work. It was leaders who spoke both languages fluently. That's the gap PGPMT fills.</div>
+        </div>
+      </div>
+
+      <div class="wp-block wp-block-specific">
+        <div class="wp-block-num">03</div>
+        <div class="wp-block-content">
+          <div class="wp-block-label">Why PGPMT Specifically</div>
+          <div class="wp-block-headline">Built by people doing it. For people who need to lead it.</div>
+          <div class="wp-specifics">
+            <div class="wp-specific-item">
+              <div class="wp-specific-dot"></div>
+              <div class="wp-specific-text">Built by practitioners who deploy AI at scale today — not professors who study it from the outside</div>
+            </div>
+            <div class="wp-specific-item">
+              <div class="wp-specific-dot"></div>
+              <div class="wp-specific-text">Case studies from 2025-2026 — Bajaj Finance, Klarna, GitHub — not 2019 textbooks that aged out before you read them</div>
+            </div>
+            <div class="wp-specific-item">
+              <div class="wp-specific-dot"></div>
+              <div class="wp-specific-text">A cohort of senior professionals with an average of 8+ years experience — your next advisory board, not just classmates</div>
+            </div>
+            <div class="wp-specific-item">
+              <div class="wp-specific-dot"></div>
+              <div class="wp-specific-text">Weekend format designed for working professionals who have real responsibilities — sessions recorded, async work structured, no drop-everything requirement</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -3403,6 +4100,9 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
           <button class="scrubber-role-btn" data-srole="ops">Operations Leader</button>
           <button class="scrubber-role-btn" data-srole="analyst">Business Analyst</button>
           <button class="scrubber-role-btn" data-srole="founder">Entrepreneur</button>
+          <button class="scrubber-role-btn" data-srole="finance">Finance Professional</button>
+          <button class="scrubber-role-btn" data-srole="sales">Sales &amp; GTM Leader</button>
+          <button class="scrubber-role-btn" data-srole="consultant">Strategy Consultant</button>
         </div>
       </div>
 
@@ -3442,6 +4142,10 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
           </div>
         </div>
         <div class="scrubber-input-wrap">
+          <div class="scrubber-drag-hint" id="scrubber-drag-hint">
+            <span class="scrubber-drag-arrow">&#8592; &#8594;</span>
+            <span class="scrubber-drag-text">Drag to explore your career path</span>
+          </div>
           <input type="range" class="scrubber-input" id="career-scrubber" min="0" max="100" value="0" step="1">
         </div>
       </div>
@@ -3553,51 +4257,60 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   </div>
 </section>
 
-<!-- ===== MEET COHORT 1 LEARNERS ===== -->
-<section id="learner-section" class="section">
+<!-- ===== WHATSAPP TESTIMONIALS ===== -->
+<section id="learner-section" class="wa-section">
   <div class="container">
-    <span class="section-label text-center" style="display:block;">Cohort 1 Learners</span>
-    <h2 class="text-center fade-in" style="margin-bottom:48px;">Meet the Cohort 1 learners</h2>
-    <div class="learner-cards fade-in">
+    <div class="wa-header fade-in">
+      <span class="wa-eyebrow">Cohort 1 Learners</span>
+      <h2 class="wa-title">What Cohort 1 Learners Are Saying</h2>
+      <p class="wa-sub">Real messages from the PGPMT WhatsApp group</p>
+    </div>
+    <div class="wa-grid fade-in">
 
-      <div class="learner-card">
-        <div class="learner-info">
-          <div class="learner-name">Rahul M.</div>
-          <div class="learner-role">Product Manager, Razorpay</div>
-          <div class="learner-exp">7 years experience</div>
+      <div class="wa-col">
+        <div class="wa-bubble wa-bubble-sent">
+          <div class="wa-sender">Rahul M. — Product Manager, Razorpay</div>
+          <div class="wa-msg">Just finished the AI Strategy module. This is the first time I've been able to think about AI at a business level, not just as a collection of tools. Something clicked.</div>
+          <div class="wa-time">Sat 10:42 AM</div>
         </div>
-        <div class="learner-quote">"The AI product thinking module changed how I spec features. I led our first AI-native product launch within 3 months of starting."</div>
-        <button class="learner-connect-btn">Connect with Rahul</button>
+        <div class="wa-bubble wa-bubble-received">
+          <div class="wa-sender">Priya S. — Ops Director, Flipkart</div>
+          <div class="wa-msg">The Bajaj Finance case study was incredible. Already applying the agent deployment framework at work. My VP asked where I learned this.</div>
+          <div class="wa-time">Sat 10:48 AM</div>
+        </div>
+        <div class="wa-bubble wa-bubble-sent">
+          <div class="wa-sender">Arjun K. — Business Analyst, HDFC Bank</div>
+          <div class="wa-msg">Saturday's session on AI Operations was the best 4 hours I've spent this year. No exaggeration. Already have 3 action items for Monday.</div>
+          <div class="wa-time">Sat 2:15 PM</div>
+        </div>
+        <div class="wa-bubble wa-bubble-received">
+          <div class="wa-sender">Sneha R. — Engineering Manager, Google</div>
+          <div class="wa-msg">My team is now asking ME about AI strategy. That's never happened before. Three months ago I was googling "what is an LLM."</div>
+          <div class="wa-time">Sun 9:03 AM</div>
+        </div>
       </div>
 
-      <div class="learner-card">
-        <div class="learner-info">
-          <div class="learner-name">Priya S.</div>
-          <div class="learner-role">Operations Director, Flipkart</div>
-          <div class="learner-exp">11 years experience</div>
+      <div class="wa-col">
+        <div class="wa-bubble wa-bubble-received">
+          <div class="wa-sender">Vikram T. — Senior PM, PhonePe</div>
+          <div class="wa-msg">The cohort group alone is worth it. Already have 3 potential collaborators for a side project. This is not a class, it's a network that happens to teach you things.</div>
+          <div class="wa-time">Fri 8:22 PM</div>
         </div>
-        <div class="learner-quote">"The Bajaj Finance case study was a turning point. I restructured my team's workflow around AI agents. My VP noticed."</div>
-        <button class="learner-connect-btn">Connect with Priya</button>
-      </div>
-
-      <div class="learner-card">
-        <div class="learner-info">
-          <div class="learner-name">Arjun K.</div>
-          <div class="learner-role">Business Analyst, HDFC Bank</div>
-          <div class="learner-exp">5 years experience</div>
+        <div class="wa-bubble wa-bubble-sent">
+          <div class="wa-sender">Deepa N. — Finance Director, Infosys</div>
+          <div class="wa-msg">Finally understand how to present AI initiatives to our board. Built a deck last week and got approved for a pilot budget. That ROI alone covers the program fee.</div>
+          <div class="wa-time">Thu 6:47 PM</div>
         </div>
-        <div class="learner-quote">"I went from building Excel reports to presenting AI investment cases to our CTO. The cohort network was the best part."</div>
-        <button class="learner-connect-btn">Connect with Arjun</button>
-      </div>
-
-      <div class="learner-card">
-        <div class="learner-info">
-          <div class="learner-name">Sneha R.</div>
-          <div class="learner-role">Engineering Manager, Google</div>
-          <div class="learner-exp">9 years experience</div>
+        <div class="wa-bubble wa-bubble-received">
+          <div class="wa-sender">Rohan A. — Head of Ops, Nykaa</div>
+          <div class="wa-msg">Was skeptical going in — I've done enough "programs." This one is different. The faculty actually work at companies running AI right now. Real problems, not textbook cases.</div>
+          <div class="wa-time">Sun 11:30 AM</div>
         </div>
-        <div class="learner-quote">"As an engineer moving into leadership, I needed the business + AI strategy layer. PGPMT gave me both in one program."</div>
-        <button class="learner-connect-btn">Connect with Sneha</button>
+        <div class="wa-bubble wa-bubble-sent">
+          <div class="wa-sender">Kavya M. — Strategy Lead, Zepto</div>
+          <div class="wa-msg">Just got back from a board meeting where I presented our AI roadmap. Used the exact framework from Week 6. They approved it on the spot. Best investment decision I've made.</div>
+          <div class="wa-time">Mon 7:15 PM</div>
+        </div>
       </div>
 
     </div>
@@ -3878,10 +4591,33 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   const probEndPct = document.querySelector('.scrubber-prob-end-pct');
   const phaseLabels = document.querySelectorAll('.scrubber-phase-label-item');
   const probBars = document.querySelectorAll('.prob-bar-wrap');
+  const dragHint = document.getElementById('scrubber-drag-hint');
 
   const PHASE_THRESHOLDS = [0, 20, 40, 60, 80];
-  const PHASE_PROBS = [15, 35, 55, 72, 85];
-  const PHASE_PROB_HEIGHTS = [18, 41, 65, 85, 100];
+
+  // Per-role probability arrays
+  const ROLE_PHASE_PROBS = {
+    pm:         [15, 35, 58, 75, 88],
+    engineer:   [12, 30, 50, 68, 82],
+    ops:        [10, 28, 48, 65, 80],
+    analyst:    [14, 32, 52, 70, 84],
+    founder:    [8,  22, 42, 60, 78],
+    finance:    [12, 30, 50, 68, 83],
+    sales:      [13, 31, 52, 69, 83],
+    consultant: [14, 33, 54, 72, 86]
+  };
+
+  // Per-role bar heights (proportional to max prob)
+  const ROLE_PHASE_PROB_HEIGHTS = {
+    pm:         [17, 40, 66, 85, 100],
+    engineer:   [15, 37, 61, 83, 100],
+    ops:        [13, 35, 60, 81, 100],
+    analyst:    [17, 38, 62, 83, 100],
+    founder:    [10, 28, 54, 77, 100],
+    finance:    [14, 36, 60, 82, 100],
+    sales:      [16, 37, 63, 83, 100],
+    consultant: [16, 38, 63, 84, 100]
+  };
 
   // Target role lookup: role -> experience band -> target title
   const targetRoleMap = {
@@ -3914,10 +4650,28 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
       '5-7':  'AI Startup Founder',
       '7-10': 'AI Venture CEO',
       '10-15':'AI Board Advisor + Serial Founder'
+    },
+    finance: {
+      '3-5':  'AI-Augmented Finance Analyst',
+      '5-7':  'Head of AI-Driven Finance',
+      '7-10': 'CFO / Finance Transformation Lead',
+      '10-15':'Chief Financial Officer (AI-era)'
+    },
+    sales: {
+      '3-5':  'AI-Led Sales Manager',
+      '5-7':  'Head of AI Sales Automation',
+      '7-10': 'VP of AI-Driven Growth',
+      '10-15':'Chief Revenue Officer (AI-first)'
+    },
+    consultant: {
+      '3-5':  'AI Strategy Analyst',
+      '5-7':  'AI Transformation Consultant',
+      '7-10': 'Principal, AI & Digital Practice',
+      '10-15':'Managing Director, AI Strategy'
     }
   };
 
-  // Outcome roles (listed in outcome block) — same lookup
+  // Outcome roles (listed in outcome block)
   const outcomeRoleMap = {
     pm: {
       '3-5':  'Senior AI Product Manager, AI Product Lead, AI Program Manager',
@@ -3948,6 +4702,24 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
       '5-7':  'AI Startup Founder, CTO/CEO of AI-native venture, Product Visionary',
       '7-10': 'AI Venture CEO, Portfolio Founder, Series A/B CEO',
       '10-15':'AI Board Advisor, Serial Founder, General Partner (AI VC)'
+    },
+    finance: {
+      '3-5':  'AI Finance Analyst, FP&A with AI Specialisation, Risk Analytics Lead',
+      '5-7':  'Head of AI-Driven Finance, AI Treasury Lead, Finance Transformation Manager',
+      '7-10': 'Finance Transformation Director, CFO-track, Head of AI Governance',
+      '10-15':'CFO, Chief Financial Officer, Board Advisor (Finance & AI)'
+    },
+    sales: {
+      '3-5':  'AI Sales Manager, Revenue Ops Lead, AI GTM Analyst',
+      '5-7':  'Head of AI Sales, Director of Revenue Intelligence, GTM Automation Lead',
+      '7-10': 'VP of Sales (AI-first), Head of Revenue Operations, GTM Transformation Lead',
+      '10-15':'Chief Revenue Officer, VP of AI-Driven Growth, Board Advisor (Revenue)'
+    },
+    consultant: {
+      '3-5':  'AI Strategy Analyst, Management Consultant (AI Practice), Digital Transformation Analyst',
+      '5-7':  'AI Transformation Consultant, Senior Associate (AI & Digital), Strategy Manager',
+      '7-10': 'Principal Consultant (AI Strategy), Director of AI Practice, Engagement Manager',
+      '10-15':'Managing Director, Partner (AI Consulting), Chief Strategy Officer'
     }
   };
 
@@ -3961,15 +4733,15 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
         { label: 'Financial Modeling', phase: 1 },
         { label: 'Operations Design', phase: 1 },
         { label: 'Competitive Intelligence', phase: 1 },
-        { label: 'AI Fluency', phase: 2, highlight: true },
-        { label: 'Prompt Engineering', phase: 2, highlight: true },
+        { label: 'AI Fluency', phase: 2 },
+        { label: 'Prompt Engineering', phase: 2 },
         { label: 'AI Ethics & Governance', phase: 2 },
-        { label: 'AI Product Specs', phase: 3, highlight: true },
-        { label: 'Model Selection', phase: 3, highlight: true },
+        { label: 'AI Product Specs', phase: 3 },
+        { label: 'Model Selection', phase: 3 },
         { label: 'AI UX Research', phase: 3 },
         { label: 'AI Vendor Evaluation', phase: 3 },
-        { label: 'Live AI Deployment', phase: 4, highlight: true },
-        { label: 'Executive Presentation', phase: 4, highlight: true },
+        { label: 'Live AI Deployment', phase: 4 },
+        { label: 'Executive Presentation', phase: 4 },
         { label: 'Portfolio Project', phase: 4 },
       ]
     },
@@ -3981,14 +4753,14 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
         { label: 'Finance for Engineers', phase: 1 },
         { label: 'Operations Strategy', phase: 1 },
         { label: 'Product Strategy', phase: 1 },
-        { label: 'AI Fluency', phase: 2, highlight: true },
-        { label: 'Prompt Engineering', phase: 2, highlight: true },
+        { label: 'AI Fluency', phase: 2 },
+        { label: 'Prompt Engineering', phase: 2 },
         { label: 'AI Architecture', phase: 2 },
-        { label: 'Build vs. Buy Decisions', phase: 3, highlight: true },
-        { label: 'AI Platform Design', phase: 3, highlight: true },
+        { label: 'Build vs. Buy Decisions', phase: 3 },
+        { label: 'AI Platform Design', phase: 3 },
         { label: 'Team Leadership', phase: 3 },
-        { label: 'Live AI Deployment', phase: 4, highlight: true },
-        { label: 'Executive Presentation', phase: 4, highlight: true },
+        { label: 'Live AI Deployment', phase: 4 },
+        { label: 'Executive Presentation', phase: 4 },
         { label: 'Portfolio Project', phase: 4 },
       ]
     },
@@ -4000,14 +4772,14 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
         { label: 'Operations Redesign', phase: 1 },
         { label: 'Finance for Operations', phase: 1 },
         { label: 'Change Management', phase: 1 },
-        { label: 'AI Fluency', phase: 2, highlight: true },
-        { label: 'Automation Mapping', phase: 2, highlight: true },
+        { label: 'AI Fluency', phase: 2 },
+        { label: 'Automation Mapping', phase: 2 },
         { label: 'AI Ethics', phase: 2 },
-        { label: 'Agent Fleet Management', phase: 3, highlight: true },
-        { label: 'Workflow Automation', phase: 3, highlight: true },
+        { label: 'Agent Fleet Management', phase: 3 },
+        { label: 'Workflow Automation', phase: 3 },
         { label: 'AI-Ready Org Design', phase: 3 },
-        { label: 'Live AI Deployment', phase: 4, highlight: true },
-        { label: 'Executive Presentation', phase: 4, highlight: true },
+        { label: 'Live AI Deployment', phase: 4 },
+        { label: 'Executive Presentation', phase: 4 },
         { label: 'Portfolio Project', phase: 4 },
       ]
     },
@@ -4019,14 +4791,14 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
         { label: 'Business Strategy', phase: 1 },
         { label: 'Financial Analysis', phase: 1 },
         { label: 'Market Intelligence', phase: 1 },
-        { label: 'AI Fluency', phase: 2, highlight: true },
-        { label: 'Prompt Engineering', phase: 2, highlight: true },
+        { label: 'AI Fluency', phase: 2 },
+        { label: 'Prompt Engineering', phase: 2 },
         { label: 'AI Governance', phase: 2 },
-        { label: 'Board-Ready AI Cases', phase: 3, highlight: true },
-        { label: 'AI ROI Measurement', phase: 3, highlight: true },
+        { label: 'Board-Ready AI Cases', phase: 3 },
+        { label: 'AI ROI Measurement', phase: 3 },
         { label: 'AI Vendor Evaluation', phase: 3 },
-        { label: 'Live AI Deployment', phase: 4, highlight: true },
-        { label: 'Executive Presentation', phase: 4, highlight: true },
+        { label: 'Live AI Deployment', phase: 4 },
+        { label: 'Executive Presentation', phase: 4 },
         { label: 'Portfolio Project', phase: 4 },
       ]
     },
@@ -4038,14 +4810,71 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
         { label: 'Growth Marketing', phase: 1 },
         { label: 'Unit Economics', phase: 1 },
         { label: 'Operations at Scale', phase: 1 },
-        { label: 'AI Fluency', phase: 2, highlight: true },
-        { label: 'Build vs. Buy vs. Partner', phase: 2, highlight: true },
+        { label: 'AI Fluency', phase: 2 },
+        { label: 'Build vs. Buy vs. Partner', phase: 2 },
         { label: 'AI Ethics & Risk', phase: 2 },
-        { label: 'AI Product Strategy', phase: 3, highlight: true },
-        { label: 'AI-Native Org Design', phase: 3, highlight: true },
+        { label: 'AI Product Strategy', phase: 3 },
+        { label: 'AI-Native Org Design', phase: 3 },
         { label: 'Fundraising with AI', phase: 3 },
-        { label: 'Live AI Deployment', phase: 4, highlight: true },
-        { label: 'Executive Presentation', phase: 4, highlight: true },
+        { label: 'Live AI Deployment', phase: 4 },
+        { label: 'Executive Presentation', phase: 4 },
+        { label: 'Portfolio Project', phase: 4 },
+      ]
+    },
+    finance: {
+      skills: [
+        { label: 'Structured Thinking', phase: 0 },
+        { label: 'Financial Modeling', phase: 0 },
+        { label: 'Data Analytics', phase: 0 },
+        { label: 'Unit Economics', phase: 1 },
+        { label: 'Strategic Finance', phase: 1 },
+        { label: 'Risk Management', phase: 1 },
+        { label: 'AI Fluency', phase: 2 },
+        { label: 'AI Forecasting', phase: 2 },
+        { label: 'Automation Mapping', phase: 2 },
+        { label: 'AI Risk Scoring', phase: 3 },
+        { label: 'AI-Driven FP&A', phase: 3 },
+        { label: 'Board AI Presentations', phase: 3 },
+        { label: 'Live AI Deployment', phase: 4 },
+        { label: 'Executive Presentation', phase: 4 },
+        { label: 'Portfolio Project', phase: 4 },
+      ]
+    },
+    sales: {
+      skills: [
+        { label: 'Structured Thinking', phase: 0 },
+        { label: 'Data Analytics', phase: 0 },
+        { label: 'Customer Psychology', phase: 0 },
+        { label: 'Growth Marketing', phase: 1 },
+        { label: 'Revenue Operations', phase: 1 },
+        { label: 'GTM Strategy', phase: 1 },
+        { label: 'AI Fluency', phase: 2 },
+        { label: 'AI Lead Scoring', phase: 2 },
+        { label: 'Automation Mapping', phase: 2 },
+        { label: 'AI Funnel Design', phase: 3 },
+        { label: 'AI Voice Agent Ops', phase: 3 },
+        { label: 'Revenue Intelligence', phase: 3 },
+        { label: 'Live AI Deployment', phase: 4 },
+        { label: 'Executive Presentation', phase: 4 },
+        { label: 'Portfolio Project', phase: 4 },
+      ]
+    },
+    consultant: {
+      skills: [
+        { label: 'Structured Thinking', phase: 0 },
+        { label: 'MECE Frameworks', phase: 0 },
+        { label: 'Data-Driven Decisions', phase: 0 },
+        { label: 'Strategy Frameworks', phase: 1 },
+        { label: 'Financial Analysis', phase: 1 },
+        { label: 'Change Management', phase: 1 },
+        { label: 'AI Fluency', phase: 2 },
+        { label: 'AI Opportunity Mapping', phase: 2 },
+        { label: 'AI Ethics & Governance', phase: 2 },
+        { label: 'AI Business Cases', phase: 3 },
+        { label: 'Transformation Roadmaps', phase: 3 },
+        { label: 'AI Vendor Evaluation', phase: 3 },
+        { label: 'Live AI Deployment', phase: 4 },
+        { label: 'Executive Presentation', phase: 4 },
         { label: 'Portfolio Project', phase: 4 },
       ]
     }
@@ -4053,6 +4882,15 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 
   let currentRole = 'pm';
   let currentExp = '3-5';
+  let hasDragged = false;
+
+  function getPhaseProbsForRole(role) {
+    return ROLE_PHASE_PROBS[role] || ROLE_PHASE_PROBS.pm;
+  }
+
+  function getPhaseProbHeightsForRole(role) {
+    return ROLE_PHASE_PROB_HEIGHTS[role] || ROLE_PHASE_PROB_HEIGHTS.pm;
+  }
 
   function getTargetRole() {
     return (targetRoleMap[currentRole] || {})[currentExp] || '';
@@ -4071,6 +4909,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   }
 
   function getCurrentProb(val) {
+    const PHASE_PROBS = getPhaseProbsForRole(currentRole);
     if (val === 0) return PHASE_PROBS[0];
     const phase = getPhaseFromScrubber(val);
     const phaseStart = PHASE_THRESHOLDS[phase];
@@ -4084,6 +4923,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   function updateScrubber(val) {
     const phase = getPhaseFromScrubber(val);
     const prob = getCurrentProb(val);
+    const PHASE_PROB_HEIGHTS = getPhaseProbHeightsForRole(currentRole);
 
     scrubber.style.setProperty('--fill-pct', val + '%');
     scrubber.style.background = `linear-gradient(to right, var(--blue) ${val}%, rgba(255,255,255,0.12) ${val}%)`;
@@ -4127,12 +4967,13 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
       let tag = skillsPool.querySelector('[data-skill-idx="' + idx + '"]');
       if (!tag) {
         tag = document.createElement('span');
-        tag.className = 'scrubber-skill-tag' + (skill.highlight ? ' highlight' : '');
         tag.dataset.skillIdx = idx;
         tag.textContent = skill.label;
         skillsPool.appendChild(tag);
       }
-      // Show tag if its phase has been reached; once visible, stays visible
+      // Phase-based class
+      tag.className = 'scrubber-skill-tag skill-phase-' + skill.phase;
+      // Show tag if its phase has been reached
       tag.classList.toggle('visible', skill.phase <= phase);
     });
   }
@@ -4157,6 +4998,13 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   }
 
   scrubber.addEventListener('input', function() {
+    if (!hasDragged) {
+      hasDragged = true;
+      if (dragHint) {
+        dragHint.style.opacity = '0';
+        dragHint.style.pointerEvents = 'none';
+      }
+    }
     updateScrubber(parseInt(this.value, 10));
   });
 
