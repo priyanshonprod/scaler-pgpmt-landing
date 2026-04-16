@@ -513,7 +513,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== FOLD 2 — AI PARADIGM SHIFT ===== */
 #fold2 { background: var(--bg); }
-.fold2-h2 { text-align: center; margin-bottom: 56px; }
+.fold2-h2 { text-align: center; margin-bottom: 24px; }
 .fold2-h2 h2 { max-width: 700px; margin: 0 auto; }
 .timeline { display: flex; justify-content: center; gap: 0; margin-bottom: 56px; position: relative; }
 .timeline::before {
