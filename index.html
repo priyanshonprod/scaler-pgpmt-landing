@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scaler PGPMT — Post Graduate Program in Management & Technology</title>
+<title>Scaler PGPMT — Online PGP in Business & AI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@300,400,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="premium.css">
 <style>
 /* ===== V4 ADDITIONS ===== */
 
@@ -16,13 +17,14 @@
 .annotation {
   display: none;
   background: #FFFBE6;
-  border-left: 3px solid #FFD966;
+  border: 1px solid #FFD966;
+  border-top: 3px solid #FFD966;
   padding: 14px 18px;
   font-size: 13px;
   line-height: 1.6;
   color: #444;
   margin-bottom: 32px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
 }
 body.annotations-on .annotation { display: block; }
 
@@ -38,7 +40,7 @@ body.annotations-on .annotation { display: block; }
   padding: 8px 12px;
   z-index: 9000;
   font-size: 12px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   color: #444;
 }
 .annotation-switch {
@@ -84,15 +86,16 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   transition: background 0.15s;
 }
 .who-tab:last-child { border-bottom: none; }
-.who-tab:hover { background: #f5f5f5; }
+.who-tab:hover { background: #F5F8FF; }
 .who-tab.active {
-  background: var(--navy);
+  background: #F0F4FF;
+  border-left: 3px solid var(--blue);
 }
 .who-tab.active .who-exp {
-  color: var(--amber);
+  color: var(--blue);
 }
 .who-tab.active .who-title {
-  color: #fff;
+  color: #212121;
 }
 .who-exp {
   font-size: 10px;
@@ -174,7 +177,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .who-quote-panel {
   display: none;
-  background: var(--navy);
+  background: #F0F4FF;
   padding: 48px 32px 40px;
   height: 100%;
   position: relative;
@@ -183,14 +186,15 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 .who-quote-mark {
   font-size: 64px;
   font-family: 'Clash Grotesk', sans-serif;
-  color: rgba(255,255,255,0.15);
+  color: var(--blue);
+  opacity: 0.25;
   line-height: 1;
   margin-bottom: 16px;
 }
 .who-quote-text {
   font-size: 17px;
   font-style: italic;
-  color: rgba(255,255,255,0.85);
+  color: #212121;
   line-height: 1.65;
   letter-spacing: -0.3px;
 }
@@ -199,13 +203,13 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(255,255,255,0.4);
+  color: var(--blue);
   margin-top: 28px;
   margin-bottom: 8px;
 }
 .who-outcome-text {
   font-size: 13px;
-  color: rgba(255,255,255,0.65);
+  color: #616161;
   line-height: 1.55;
 }
 /* Responsive */
@@ -247,9 +251,10 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   max-width: 640px;
   margin: 0 auto 56px;
   line-height: 1.45;
-  border-left: 3px solid var(--blue);
-  padding-left: 20px;
   text-align: left;
+  padding: 20px 24px;
+  background: var(--ice);
+  border: 1px solid var(--steel);
 }
 .wop-header-statement .wop-gap-highlight {
   color: var(--blue);
@@ -473,13 +478,13 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   flex-shrink: 0;
 }
 .data-card-compact-desc {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 13px;
   color: rgba(255,255,255,0.65);
   line-height: 1.4;
 }
 .data-card-compact-source {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 10px;
   font-weight: 500;
   text-transform: uppercase;
@@ -655,7 +660,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .role-btn {
   padding: 8px 18px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 13px;
   font-weight: 500;
   color: rgba(255,255,255,0.6);
@@ -780,8 +785,8 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   .who-tab { border-bottom: none; border-right: 1px solid var(--border-light); min-width: 160px; flex-shrink: 0; }
   .who-tab:last-child { border-right: none; }
 }
-.who-tab:hover { background: var(--panel); }
-.who-tab.active { background: var(--navy); }
+.who-tab:hover { background: #F5F8FF; }
+.who-tab.active { background: #F0F4FF; border-left: 3px solid var(--blue); }
 .who-tab-exp {
   font-size: 10px;
   font-weight: 500;
@@ -790,7 +795,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   color: var(--muted);
   margin-bottom: 4px;
 }
-.who-tab.active .who-tab-exp { color: var(--amber); }
+.who-tab.active .who-tab-exp { color: var(--blue); }
 .who-tab-title {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 13px;
@@ -798,7 +803,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   color: var(--heading);
   line-height: 1.4;
 }
-.who-tab.active .who-tab-title { color: #fff; }
+.who-tab.active .who-tab-title { color: #212121; }
 
 .who-panel-area { position: relative; overflow: hidden; }
 .who-panel { display: none; padding: 32px; }
@@ -848,7 +853,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   background: var(--blue);
 }
 .who-panel-right {
-  background: var(--navy);
+  background: #F0F4FF;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -860,19 +865,20 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .who-panel-quote {
   padding: 20px 20px 24px;
-  background: rgba(0,0,0,0.25);
+  background: transparent;
 }
 .who-quote-mark {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 32px;
-  color: var(--amber);
+  color: var(--blue);
+  opacity: 0.3;
   line-height: 1;
   margin-bottom: 4px;
 }
 .who-quote-text {
   font-size: 13px;
   font-style: italic;
-  color: rgba(255,255,255,0.85);
+  color: #212121;
   line-height: 1.6;
 }
 
@@ -906,8 +912,8 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   .curr-tab { border-bottom: none; border-right: 1px solid var(--border-light); min-width: 160px; flex-shrink: 0; }
   .curr-tab:last-child { border-right: none; }
 }
-.curr-tab:hover { background: rgba(0,0,0,0.04); }
-.curr-tab.active { background: var(--navy); }
+.curr-tab:hover { background: #F0F4FF; }
+.curr-tab.active { background: var(--panel); border-left: 3px solid var(--blue); }
 .curr-tab-title {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 13px;
@@ -915,15 +921,15 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   color: var(--heading);
   margin-bottom: 4px;
 }
-.curr-tab.active .curr-tab-title { color: #fff; }
+.curr-tab.active .curr-tab-title { color: #212121; }
 .curr-tab-meta {
   font-size: 11px;
   color: var(--muted);
 }
-.curr-tab.active .curr-tab-meta { color: var(--amber); }
+.curr-tab.active .curr-tab-meta { color: var(--blue); }
 
-.curr-panel-area { position: relative; }
-.curr-panel { display: none; background: var(--navy); padding: 36px 40px; }
+.curr-panel-area { position: relative; background: #fff; }
+.curr-panel { display: none; background: #fff; padding: 36px 40px; }
 .curr-panel.active { display: block; }
 @media (max-width: 760px) {
   .curr-panel { padding: 24px 20px; }
@@ -933,14 +939,14 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--amber);
+  color: var(--blue);
   margin-bottom: 8px;
 }
 .curr-panel-title {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 22px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   margin-bottom: 24px;
   line-height: 1.3;
 }
@@ -953,17 +959,17 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 28px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   line-height: 1;
 }
 .curr-stat-label {
   font-size: 11px;
-  color: rgba(255,255,255,0.5);
+  color: #9ca3af;
   margin-top: 2px;
 }
 .curr-panel-divider {
   height: 1px;
-  background: rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.08);
   margin-bottom: 20px;
 }
 .curr-panel-section-label {
@@ -971,7 +977,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.4);
+  color: #9ca3af;
   margin-bottom: 20px;
 }
 .curr-numbered-list {
@@ -984,15 +990,15 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   gap: 16px;
   align-items: flex-start;
   font-size: 14px;
-  color: rgba(255,255,255,0.8);
+  color: #616161;
   line-height: 1.6;
 }
-.curr-numbered-item strong { color: #fff; }
+.curr-numbered-item strong { color: #212121; }
 .curr-num {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: var(--amber);
+  color: var(--blue);
   flex-shrink: 0;
   width: 24px;
   margin-top: 1px;
@@ -1133,7 +1139,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 .decade-connector-arrow {
   font-size: 18px;
   color: var(--blue);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   line-height: 1;
 }
 .decade-badge {
@@ -1322,7 +1328,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 
 /* ===== FIVE PILLARS — DARK HORIZONTAL ROWS ===== */
 .pillars-dark-section {
-  background: #111;
+  background: var(--bg-alt, #FAFAFA);
   padding: 80px 0 0;
 }
 .pillars-dark-header {
@@ -1334,14 +1340,14 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--amber);
+  color: var(--blue);
   margin-bottom: 14px;
 }
 .pillars-dark-title {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 36px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   letter-spacing: -1px;
   line-height: 1.15;
   max-width: 640px;
@@ -1355,7 +1361,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   display: grid;
   grid-template-columns: 380px 1fr;
   gap: 0;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(0,0,0,0.08);
   min-height: 220px;
 }
 @media (max-width: 960px) {
@@ -1366,10 +1372,10 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-right: 1px solid rgba(255,255,255,0.08);
+  border-right: 1px solid rgba(0,0,0,0.08);
 }
 @media (max-width: 960px) {
-  .pillar-row-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 32px 0 24px; }
+  .pillar-row-left { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.08); padding: 32px 0 24px; }
 }
 .pillar-row-num {
   font-family: 'Clash Grotesk', sans-serif;
@@ -1384,14 +1390,14 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(255,255,255,0.35);
+  color: #9ca3af;
   margin-bottom: 10px;
 }
 .pillar-row-title {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 20px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   margin-bottom: 18px;
   line-height: 1.3;
 }
@@ -1405,7 +1411,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .pillar-row-bullets li {
   font-size: 13px;
-  color: rgba(255,255,255,0.6);
+  color: #616161;
   line-height: 1.55;
   padding-left: 18px;
   position: relative;
@@ -1417,7 +1423,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   top: 7px;
   width: 6px;
   height: 6px;
-  background: var(--amber);
+  background: var(--blue);
   transform: rotate(45deg);
 }
 
@@ -1440,12 +1446,13 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .pillar-pill {
   padding: 9px 18px;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(0,0,0,0.12);
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255,255,255,0.75);
+  color: #616161;
   white-space: nowrap;
   letter-spacing: 0.2px;
+  background: #fff;
 }
 .pillar-pill.blue {
   background: var(--blue);
@@ -1462,11 +1469,12 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 .pillar-tool-card {
   width: 160px;
   flex-shrink: 0;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(0,0,0,0.08);
   padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  background: #fff;
 }
 .ptc-tool-name {
   font-size: 11px;
@@ -1479,12 +1487,12 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   line-height: 1.35;
 }
 .ptc-desc {
   font-size: 11px;
-  color: rgba(255,255,255,0.45);
+  color: #9ca3af;
   line-height: 1.5;
 }
 
@@ -1497,19 +1505,21 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 .pillar-faculty-card {
   width: 160px;
   flex-shrink: 0;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(0,0,0,0.08);
   overflow: hidden;
+  background: #fff;
 }
 .pfc-photo {
   height: 80px;
   display: flex;
   align-items: flex-end;
   padding: 10px;
+  background: #F0F4FF;
 }
 .pfc-initials {
   width: 40px;
   height: 40px;
-  background: var(--navy);
+  background: var(--blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1517,7 +1527,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-size: 14px;
   font-weight: 500;
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: none;
 }
 .pfc-info {
   padding: 12px;
@@ -1526,12 +1536,12 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   margin-bottom: 3px;
 }
 .pfc-co {
   font-size: 11px;
-  color: rgba(255,255,255,0.45);
+  color: #9ca3af;
   line-height: 1.4;
 }
 
@@ -1544,29 +1554,30 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 .pillar-problem-card {
   width: 180px;
   flex-shrink: 0;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(0,0,0,0.08);
   padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background: #fff;
 }
 .ppc-brand {
   font-size: 10px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--amber);
+  color: var(--blue);
 }
 .ppc-challenge {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   line-height: 1.4;
 }
 .ppc-metric {
   font-size: 11px;
-  color: rgba(255,255,255,0.45);
+  color: #9ca3af;
   line-height: 1.5;
 }
 
@@ -1578,27 +1589,28 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   align-content: flex-start;
 }
 .capstone-stat-block {
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(0,0,0,0.08);
   padding: 16px 20px;
   min-width: 140px;
+  background: #fff;
 }
 .csb-value {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 26px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   line-height: 1;
   margin-bottom: 4px;
 }
 .csb-label {
   font-size: 11px;
-  color: rgba(255,255,255,0.45);
+  color: #9ca3af;
   line-height: 1.4;
 }
 
-/* ===== CURRICULUM — DARK THEME ===== */
+/* ===== CURRICULUM — LIGHT THEME ===== */
 .curr-dark-section {
-  background: #111;
+  background: #ffffff;
   padding: 80px 0;
 }
 .curr-dark-header {
@@ -1610,14 +1622,14 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--amber);
+  color: var(--blue);
   margin-bottom: 14px;
 }
 .curr-dark-title {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 36px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   letter-spacing: -1px;
   line-height: 1.15;
   max-width: 680px;
@@ -1628,7 +1640,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .curr-dark-sub {
   font-size: 15px;
-  color: rgba(255,255,255,0.5);
+  color: #616161;
   max-width: 560px;
   margin: 0 auto;
   line-height: 1.6;
@@ -1638,25 +1650,25 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 0;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(0,0,0,0.08);
 }
 @media (max-width: 760px) {
   .curr-dark-split { grid-template-columns: 1fr; }
 }
 
 .curr-dark-tabs {
-  border-right: 1px solid rgba(255,255,255,0.1);
+  border-right: 1px solid rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
 }
 @media (max-width: 760px) {
-  .curr-dark-tabs { flex-direction: row; overflow-x: auto; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .curr-dark-tabs { flex-direction: row; overflow-x: auto; border-right: none; border-bottom: 1px solid rgba(0,0,0,0.08); }
 }
 
 .curr-dark-tab {
   padding: 22px 20px;
   cursor: pointer;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
   border-left: 3px solid transparent;
   transition: background 0.15s, border-color 0.15s;
   display: flex;
@@ -1665,10 +1677,10 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .curr-dark-tab:last-child { border-bottom: none; }
 @media (max-width: 760px) {
-  .curr-dark-tab { border-bottom: none; border-left: none; border-right: 1px solid rgba(255,255,255,0.08); min-width: 150px; flex-shrink: 0; border-top: 3px solid transparent; }
+  .curr-dark-tab { border-bottom: none; border-left: none; border-right: 1px solid rgba(0,0,0,0.06); min-width: 150px; flex-shrink: 0; border-top: 3px solid transparent; }
 }
-.curr-dark-tab:hover { background: rgba(255,255,255,0.04); }
-.curr-dark-tab.active { border-left-color: var(--blue); background: rgba(0,85,255,0.08); }
+.curr-dark-tab:hover { background: #F0F4FF; }
+.curr-dark-tab.active { border-left-color: var(--blue); background: #fff; }
 @media (max-width: 760px) {
   .curr-dark-tab.active { border-left-color: transparent; border-top-color: var(--blue); }
 }
@@ -1678,20 +1690,20 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.35);
-  background: rgba(255,255,255,0.07);
+  color: #9ca3af;
+  background: #F5F5F5;
   padding: 2px 7px;
   width: fit-content;
 }
-.curr-dark-tab.active .curr-dark-tab-badge { color: var(--amber); background: rgba(255,215,0,0.1); }
+.curr-dark-tab.active .curr-dark-tab-badge { color: var(--blue); background: #EEF2FF; }
 .curr-dark-tab-name {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255,255,255,0.5);
+  color: #616161;
   line-height: 1.35;
 }
-.curr-dark-tab.active .curr-dark-tab-name { color: #fff; }
+.curr-dark-tab.active .curr-dark-tab-name { color: #212121; }
 
 .curr-dark-panel-area { position: relative; }
 .curr-dark-panel { display: none; padding: 0; }
@@ -1747,7 +1759,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .curr-dark-module {
   padding: 28px 36px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 .curr-dark-module:last-child { border-bottom: none; }
 @media (max-width: 600px) {
@@ -1758,14 +1770,14 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(255,255,255,0.3);
+  color: #9ca3af;
   margin-bottom: 4px;
 }
 .curr-dark-module-name {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   margin-bottom: 16px;
   line-height: 1.35;
 }
@@ -1774,7 +1786,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.3);
+  color: #9ca3af;
   margin-bottom: 10px;
 }
 .curr-dark-topics {
@@ -1785,16 +1797,18 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .curr-dark-topic {
   padding: 5px 11px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(0,0,0,0.1);
   font-size: 12px;
-  color: rgba(255,255,255,0.6);
+  color: #444;
+  background: var(--bg-alt, #FAFAFA);
+  border-radius: 4px;
 }
 .curr-dark-cases-label {
   font-size: 10px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.3);
+  color: #9ca3af;
   margin-bottom: 10px;
 }
 .curr-dark-cases {
@@ -1804,8 +1818,9 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .curr-dark-case-card {
   padding: 10px 14px;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #F8FBFF;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -1815,17 +1830,17 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--amber);
+  color: var(--blue);
 }
 .cdc-title {
   font-size: 12px;
-  color: rgba(255,255,255,0.65);
+  color: #616161;
   line-height: 1.4;
 }
 
 /* ===== CAREER TRAJECTORY — SCRUBBER ===== */
 .career-scrubber-section {
-  background: #1a1a1a;
+  background: var(--bg-alt, #FAFAFA);
   padding: 80px 0;
 }
 .career-scrubber-header {
@@ -1837,14 +1852,14 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--amber);
+  color: var(--blue);
   margin-bottom: 14px;
 }
 .career-scrubber-title {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 36px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   letter-spacing: -1px;
   line-height: 1.15;
   max-width: 640px;
@@ -1855,7 +1870,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .career-scrubber-sub {
   font-size: 15px;
-  color: rgba(255,255,255,0.5);
+  color: #616161;
   max-width: 520px;
   margin: 0 auto;
   line-height: 1.6;
@@ -1874,7 +1889,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.4);
+  color: #9ca3af;
   flex-shrink: 0;
 }
 .scrubber-role-btns {
@@ -1884,14 +1899,15 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .scrubber-role-btn {
   padding: 8px 18px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255,255,255,0.5);
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.15);
+  color: #616161;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.12);
   cursor: pointer;
   transition: all 0.15s;
+  border-radius: 4px;
 }
 .scrubber-role-btn.active,
 .scrubber-role-btn:hover {
@@ -1908,35 +1924,36 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   flex-wrap: wrap;
   margin-bottom: 24px;
 }
-.scrubber-exp-label {
-  font-size: 11px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.4);
-  flex-shrink: 0;
-}
 .scrubber-exp-btns {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
+.scrubber-exp-label {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
 .scrubber-exp-btn {
   padding: 6px 16px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 12px;
   font-weight: 500;
-  color: rgba(255,255,255,0.5);
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.15);
+  color: #616161;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.12);
   cursor: pointer;
   transition: all 0.15s;
+  border-radius: 4px;
 }
 .scrubber-exp-btn.active,
 .scrubber-exp-btn:hover {
-  background: var(--navy);
-  color: var(--amber);
-  border-color: var(--amber);
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
 }
 
 /* Target role display */
@@ -1946,21 +1963,23 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   gap: 12px;
   margin-bottom: 32px;
   padding: 16px 24px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
+  border-radius: 6px;
 }
 .scrubber-target-label {
   font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.4);
+  color: #9ca3af;
   flex-shrink: 0;
 }
 .scrubber-target-role {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  color: var(--amber);
+  color: var(--blue);
 }
 
 /* Timeline phases (labels above scrubber) */
@@ -1975,29 +1994,30 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .scrubber-phase-label-item {
   padding: 10px 12px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(0,0,0,0.08);
   border-right: none;
+  background: #fff;
   display: flex;
   flex-direction: column;
   gap: 3px;
   transition: border-color 0.2s, background 0.2s;
 }
-.scrubber-phase-label-item:last-child { border-right: 1px solid rgba(255,255,255,0.08); }
-.scrubber-phase-label-item.reached { border-color: rgba(0,85,255,0.4); background: rgba(0,85,255,0.06); }
+.scrubber-phase-label-item:last-child { border-right: 1px solid rgba(0,0,0,0.08); }
+.scrubber-phase-label-item.reached { border-color: rgba(0,85,255,0.3); background: #F0F4FF; }
 .spli-name {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 12px;
   font-weight: 500;
-  color: rgba(255,255,255,0.4);
+  color: #9ca3af;
   line-height: 1.3;
 }
-.scrubber-phase-label-item.reached .spli-name { color: #fff; }
+.scrubber-phase-label-item.reached .spli-name { color: #212121; }
 .spli-dur {
   font-size: 10px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: rgba(255,255,255,0.2);
+  color: #d1d5db;
 }
 .scrubber-phase-label-item.reached .spli-dur { color: var(--blue); }
 
@@ -2011,7 +2031,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   appearance: none;
   width: 100%;
   height: 4px;
-  background: rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.1);
   outline: none;
   cursor: pointer;
   display: block;
@@ -2043,7 +2063,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   box-shadow: 0 0 0 4px rgba(0,85,255,0.25);
 }
 .scrubber-input::-webkit-slider-runnable-track {
-  background: linear-gradient(to right, var(--blue) var(--fill-pct, 0%), rgba(255,255,255,0.12) var(--fill-pct, 0%));
+  background: linear-gradient(to right, var(--blue) var(--fill-pct, 0%), rgba(0,0,0,0.1) var(--fill-pct, 0%));
   height: 6px;
   border-radius: 3px;
 }
@@ -2062,7 +2082,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(255,255,255,0.3);
+  color: #9ca3af;
   margin-bottom: 12px;
 }
 .scrubber-skills-pool {
@@ -2074,10 +2094,12 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .scrubber-skill-tag {
   padding: 6px 12px;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 4px;
   font-size: 12px;
   font-weight: 500;
-  color: rgba(255,255,255,0.6);
+  color: #616161;
+  background: #fff;
   opacity: 0;
   transform: translateY(6px);
   transition: opacity 0.25s ease, transform 0.25s ease;
@@ -2101,7 +2123,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(255,255,255,0.3);
+  color: #9ca3af;
   margin-bottom: 12px;
 }
 .scrubber-prob-row {
@@ -2122,9 +2144,10 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 .prob-bar-track {
   width: 100%;
   height: 60px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.06);
   display: flex;
   align-items: flex-end;
+  border-radius: 2px;
 }
 .prob-bar-fill {
   width: 100%;
@@ -2136,7 +2159,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 10px;
   font-weight: 500;
-  color: rgba(255,255,255,0.4);
+  color: #9ca3af;
 }
 .prob-bar-wrap.active .prob-bar-val { color: var(--blue); }
 
@@ -2144,18 +2167,21 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 42px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   line-height: 1;
   flex-shrink: 0;
   padding-bottom: 4px;
   transition: opacity 0.3s;
   opacity: 0.2;
 }
-.scrubber-prob-end-pct.lit { opacity: 1; color: var(--amber); }
+.scrubber-prob-end-pct.lit { opacity: 1; color: var(--blue); }
 
 /* Outcome box */
 .scrubber-outcome {
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   padding: 24px 28px;
   display: flex;
   align-items: flex-start;
@@ -2167,14 +2193,14 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--amber);
+  color: var(--blue);
   margin-bottom: 8px;
 }
 .scrubber-outcome-roles {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   line-height: 1.4;
 }
 .scrubber-outcome-block { flex: 1; min-width: 200px; }
@@ -2186,12 +2212,12 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 36px;
   font-weight: 500;
-  color: var(--amber);
+  color: var(--blue);
   line-height: 1;
 }
 .scrubber-outcome-pct-label {
   font-size: 11px;
-  color: rgba(255,255,255,0.4);
+  color: #9ca3af;
   margin-top: 4px;
 }
 
@@ -2203,36 +2229,39 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   gap: 32px;
   margin-top: 32px;
   padding: 24px 32px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 .career-profile-cta-title {
   font-family: 'Clash Grotesk', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  color: #fff;
+  color: #212121;
   margin-bottom: 4px;
 }
 .career-profile-cta-sub {
   font-size: 14px;
-  color: rgba(255,255,255,0.55);
+  color: #616161;
   line-height: 1.5;
 }
 .career-profile-cta-btn {
   flex-shrink: 0;
-  background: var(--amber);
-  color: #111;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--blue);
+  color: #fff;
+  font-family: 'Figtree', sans-serif;
   font-size: 14px;
   font-weight: 500;
   padding: 12px 28px;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
   white-space: nowrap;
   transition: background 0.2s;
 }
 .career-profile-cta-btn:hover {
-  background: #e6c24a;
+  background: #003DBB;
 }
 @media (max-width: 768px) {
   .career-profile-cta {
@@ -2246,7 +2275,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 /* ===== ROLE SHIFT DATE BADGE ===== */
 .role-shift-date {
   display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
@@ -2521,8 +2550,9 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   flex: 1;
 }
 .cs-callout {
-  background: rgba(0,85,255,0.08);
-  border-left: 3px solid var(--blue);
+  background: rgba(0,85,255,0.1);
+  border: 1px solid rgba(0,85,255,0.25);
+  border-top: 2px solid var(--blue);
   padding: 16px 18px;
   margin-top: 4px;
 }
@@ -2744,7 +2774,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .scrubber-drag-arrow {
   font-size: 18px;
-  color: var(--amber);
+  color: var(--blue);
   animation: scrubber-pulse-arrow 1.4s ease-in-out infinite;
 }
 .scrubber-drag-text {
@@ -2752,7 +2782,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.4);
+  color: #9ca3af;
 }
 @keyframes scrubber-pulse-arrow {
   0%, 100% { transform: scaleX(1); opacity: 0.6; }
@@ -2762,14 +2792,14 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 /* Skill tag phase-based colors */
 .scrubber-skill-tag.skill-phase-0,
 .scrubber-skill-tag.skill-phase-1 {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  color: rgba(255,255,255,0.65);
+  background: #F8F9FA;
+  border: 1px solid rgba(0,0,0,0.08);
+  color: #9ca3af;
 }
 .scrubber-skill-tag.skill-phase-2 {
-  background: var(--amber);
-  border: 1px solid var(--amber);
-  color: #111;
+  background: #EEF2FF;
+  border: 1px solid rgba(0,76,229,0.2);
+  color: var(--blue);
 }
 .scrubber-skill-tag.skill-phase-3 {
   background: var(--blue);
@@ -2782,9 +2812,9 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   color: #fff;
 }
 
-/* Scrubber section gradient transition at top */
+/* Scrubber section — light theme (overrides dark gradient) */
 .career-scrubber-section {
-  background: linear-gradient(to bottom, #111 0px, #1a1a1a 56px);
+  background: var(--bg-alt, #FAFAFA);
 }
 
 /* ===== PREMIUM UI OVERHAUL ===== */
@@ -2814,13 +2844,12 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   background: #FAFAFA;
 }
 
-/* Role shift card: premium left accent */
+/* Role shift card: flat hover */
 .role-shift-card {
-  border-left: 3px solid transparent;
   transition: border-color 0.2s;
 }
 .role-shift-card:hover {
-  border-left-color: var(--blue);
+  border-color: var(--blue);
 }
 
 /* Card hover lift — section cards only */
@@ -2831,7 +2860,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .pillar-v2:hover,
 .faculty-card-v3:hover {
-  transform: translateY(-2px);
+  border-color: var(--blue);
 }
 
 /* Subtle card borders */
@@ -2922,7 +2951,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   gap: 10px;
 }
 .ls-stage-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 10px;
   font-weight: 500;
   text-transform: uppercase;
@@ -2947,7 +2976,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   color: #848484;
 }
 .ls-company {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 12px;
   color: #848484;
   margin-top: 2px;
@@ -2985,7 +3014,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   color: #FCFCFC;
 }
 .ls-badge {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
@@ -2995,7 +3024,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   padding: 2px 8px;
 }
 .ls-quote {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 14px;
   line-height: 1.65;
   color: #9a9a9a;
@@ -3003,7 +3032,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 }
 .ls-connect-btn {
   display: inline-block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
@@ -3061,7 +3090,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   line-height: 1.65;
 }
 .learner-connect-btn {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 12px;
   font-weight: 500;
   padding: 8px 20px;
@@ -3082,6 +3111,464 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
     gap: 16px;
   }
 }
+
+/* ============================================================
+   ===== V5 REBUILD — New page structure                  =====
+   ============================================================ */
+
+/* ===== HERO V5 ===== */
+.hero-v5 {
+  background: var(--bg);
+  padding: 64px 0 80px;
+  border-bottom: 1px solid var(--border-light);
+}
+.hero-v5-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.hero-v5-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.hero-v5-eyebrow .pipe {
+  width: 1px; height: 14px; background: var(--border);
+}
+.hero-v5-h1 {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: clamp(36px, 4.4vw, 60px);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: var(--heading);
+  margin-bottom: 20px;
+}
+.hero-v5-h1 .accent { color: var(--blue); font-style: italic; font-weight: 500; }
+.hero-v5-promise {
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 28px;
+  max-width: 580px;
+}
+.hero-v5-promise strong { color: var(--heading); font-weight: 500; }
+.hero-v5-stat {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--ice);
+  border-left: 3px solid var(--blue);
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  max-width: 560px;
+}
+.hero-v5-stat-num {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--blue);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.hero-v5-stat-text {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.5;
+}
+.hero-v5-ctas {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.hero-v5-meta {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--muted);
+  align-items: center;
+}
+.hero-v5-meta-item {
+  display: flex; align-items: center; gap: 8px;
+}
+.hero-v5-meta-item::before {
+  content: ''; width: 6px; height: 6px; background: var(--blue); border-radius: 50%;
+}
+.hero-v5-video {
+  position: relative;
+  background: var(--navy);
+  aspect-ratio: 4/5;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.hero-v5-video-placeholder-text {
+  position: absolute;
+  top: 16px; left: 16px;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+.hero-v5-video-meta {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 24px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85), rgba(0,0,0,0));
+  color: #fff;
+}
+.hero-v5-video-meta .vt {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 18px; font-weight: 500;
+  margin-bottom: 4px;
+}
+.hero-v5-video-meta .vs {
+  font-size: 12px; color: rgba(255,255,255,0.7);
+}
+@media (max-width: 900px) {
+  .hero-v5-inner { grid-template-columns: 1fr; gap: 32px; }
+  .hero-v5-video { aspect-ratio: 16/10; max-width: 100%; }
+}
+
+/* ===== HOUSE OF SCALER ===== */
+.hos-section { padding: 80px 0; background: var(--panel); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
+.hos-header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+.hos-eyebrow { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; padding: 4px 12px; background: rgba(0,85,255,0.08); }
+.hos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.hos-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.hos-card:hover { border-color: var(--blue); transform: translateY(-2px); }
+.hos-card-img {
+  background: var(--ice);
+  aspect-ratio: 16/10;
+  margin-bottom: 24px;
+  position: relative;
+  border: 1px dashed var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--inactive);
+}
+.hos-card-tag {
+  font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 10px;
+}
+.hos-card-title {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 22px; font-weight: 500; color: var(--heading);
+  margin-bottom: 12px; line-height: 1.25;
+}
+.hos-card-desc { font-size: 14px; color: var(--muted); line-height: 1.6; flex: 1; }
+.hos-card-meta {
+  display: flex; gap: 16px; margin-top: 20px; padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+  font-size: 12px; color: var(--text-dark);
+}
+.hos-card-meta strong { color: var(--blue); font-weight: 600; }
+@media (max-width: 768px) { .hos-grid { grid-template-columns: 1fr; } }
+
+/* ===== COHORT LEARNERS ===== */
+.cl-section { padding: 80px 0; background: var(--bg); }
+.cl-header { max-width: 760px; margin: 0 auto 48px; text-align: center; }
+.cl-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px; margin-bottom: 56px;
+}
+.cl-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  padding: 22px 20px;
+  text-align: center;
+}
+.cl-card-photo {
+  width: 84px; height: 84px;
+  background: var(--ice);
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  border: 1px dashed var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--inactive);
+}
+.cl-card-name { font-family: 'Clash Grotesk', sans-serif; font-size: 16px; font-weight: 500; color: var(--heading); margin-bottom: 4px; }
+.cl-card-role { font-size: 12px; color: var(--muted); margin-bottom: 8px; line-height: 1.45; }
+.cl-card-co { font-size: 11px; font-weight: 600; letter-spacing: 1px; color: var(--blue); text-transform: uppercase; }
+.cl-test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.cl-test-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  padding: 28px 26px;
+}
+.cl-test-quote {
+  font-size: 15px; line-height: 1.65; color: var(--text);
+  margin-bottom: 22px; font-style: italic;
+}
+.cl-test-attr { display: flex; align-items: center; gap: 12px; }
+.cl-test-photo {
+  width: 44px; height: 44px; border-radius: 50%; background: var(--ice);
+  border: 1px dashed var(--border); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; color: var(--inactive); letter-spacing: 1px;
+}
+.cl-test-name { font-size: 14px; font-weight: 600; color: var(--heading); }
+.cl-test-role { font-size: 12px; color: var(--muted); }
+@media (max-width: 900px) { .cl-grid { grid-template-columns: repeat(2, 1fr); } .cl-test-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .cl-grid { grid-template-columns: 1fr; } }
+
+/* ===== INSTRUCTORS / MENTORS / INVESTORS (3 stacked sub-sections, dark) ===== */
+.team-section { padding: 96px 0; background: #0A0F1F; color: #fff; }
+.team-section + .team-section { padding-top: 0; }
+.team-header { max-width: 760px; margin: 0 auto 40px; text-align: center; }
+.team-eyebrow { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--amber); margin-bottom: 14px; padding: 4px 12px; background: rgba(255,217,102,0.1); border: 1px solid rgba(255,217,102,0.2); }
+.team-h2 { font-family: 'Clash Grotesk', sans-serif; font-size: clamp(28px, 3.5vw, 42px); font-weight: 500; line-height: 1.2; color: #fff; margin-bottom: 14px; letter-spacing: -0.02em; }
+.team-sub { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 32px; }
+.team-card {
+  background: #11182B;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.team-card:hover { border-color: var(--amber); transform: translateY(-3px); }
+.team-card-photo {
+  width: 100%; aspect-ratio: 1/1;
+  background: #1a2240;
+  margin-bottom: 16px;
+  border: 1px dashed rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.3);
+}
+.team-card-name { font-family: 'Clash Grotesk', sans-serif; font-size: 18px; font-weight: 500; color: #fff; margin-bottom: 4px; }
+.team-card-title { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 12px; line-height: 1.5; }
+.team-card-brand-row { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--amber); padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); }
+.team-card-brand-row strong { font-weight: 600; }
+.team-quote-strip {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  margin-top: 32px;
+}
+.team-quote {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 28px 26px;
+}
+.team-quote-text { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.65; font-style: italic; margin-bottom: 18px; }
+.team-quote-attr { font-size: 12px; color: var(--amber); letter-spacing: 1px; text-transform: uppercase; }
+.team-quote-attr strong { color: #fff; font-weight: 600; }
+@media (max-width: 900px) { .team-grid { grid-template-columns: repeat(2, 1fr); } .team-quote-strip { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .team-grid { grid-template-columns: 1fr; } }
+
+/* ===== WHY UPSKILL NOW ===== */
+.wun-section { padding: 96px 0; background: var(--bg); }
+.wun-header { max-width: 760px; margin: 0 auto 56px; text-align: center; }
+.wun-pillar-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+  margin-bottom: 64px;
+}
+.wun-pillar {
+  display: flex; gap: 18px; align-items: flex-start;
+  background: var(--panel);
+  border: 1px solid var(--border-light);
+  padding: 24px 26px;
+}
+.wun-pillar-num {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 32px; font-weight: 500; color: var(--blue);
+  line-height: 1; flex-shrink: 0; min-width: 40px;
+}
+.wun-pillar-text { font-size: 16px; color: var(--text); line-height: 1.55; }
+.wun-pillar-text strong { color: var(--heading); font-weight: 600; }
+@media (max-width: 768px) { .wun-pillar-grid { grid-template-columns: 1fr; } }
+
+.wun-roles-block {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  padding: 48px 40px;
+  margin-bottom: 56px;
+}
+.wun-roles-h3 {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 24px; font-weight: 500; color: var(--heading);
+  margin-bottom: 8px; letter-spacing: -0.015em;
+}
+.wun-roles-sub { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
+.wun-role-row {
+  display: grid; grid-template-columns: 200px 1fr 60px 1fr;
+  align-items: center; gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--border-light);
+}
+.wun-role-row:last-child { border-bottom: 1px solid var(--border-light); }
+.wun-role-name {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 16px; font-weight: 500; color: var(--heading); line-height: 1.3;
+}
+.wun-role-name .exp { display: block; font-size: 11px; color: var(--muted); font-weight: 400; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 4px; }
+.wun-role-before, .wun-role-after { font-size: 14px; line-height: 1.55; color: var(--muted); }
+.wun-role-before .lbl, .wun-role-after .lbl {
+  display: block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--inactive); margin-bottom: 6px; font-weight: 600;
+}
+.wun-role-after .lbl { color: var(--blue); }
+.wun-role-after { color: var(--text-dark); }
+.wun-role-arrow {
+  display: flex; justify-content: center;
+  font-size: 22px; color: var(--blue);
+}
+@media (max-width: 900px) {
+  .wun-role-row { grid-template-columns: 1fr; gap: 12px; }
+  .wun-role-arrow { transform: rotate(90deg); justify-content: flex-start; }
+}
+
+.wun-media-grid {
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px;
+}
+.wun-video-card {
+  background: var(--navy);
+  aspect-ratio: 16/9;
+  position: relative;
+  border: 1px solid var(--border);
+  display: flex; align-items: flex-end;
+  padding: 28px;
+  color: #fff;
+}
+.wun-video-card .vt { font-family: 'Clash Grotesk', sans-serif; font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+.wun-video-card .vs { font-size: 12px; color: rgba(255,255,255,0.6); }
+.wun-news-stack { display: flex; flex-direction: column; gap: 14px; }
+.wun-news-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  padding: 18px 22px;
+  display: grid; grid-template-columns: 80px 1fr;
+  gap: 16px; align-items: center;
+}
+.wun-news-img {
+  width: 80px; aspect-ratio: 4/3;
+  background: var(--ice);
+  border: 1px dashed var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; color: var(--inactive); letter-spacing: 1px;
+}
+.wun-news-cat { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 4px; font-weight: 600; }
+.wun-news-headline { font-size: 14px; color: var(--heading); line-height: 1.45; font-weight: 500; }
+.wun-news-source { font-size: 11px; color: var(--muted); margin-top: 6px; }
+@media (max-width: 768px) { .wun-media-grid { grid-template-columns: 1fr; } }
+
+/* ===== PROGRAM PILLARS ===== */
+.pp-section { padding: 96px 0; background: var(--panel); }
+.pp-header { max-width: 760px; margin: 0 auto 56px; text-align: center; }
+.pp-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+}
+.pp-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  padding: 36px 32px;
+  position: relative;
+}
+.pp-card-num {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 14px; font-weight: 600; letter-spacing: 2px;
+  color: var(--blue); margin-bottom: 16px;
+}
+.pp-card-title {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 24px; font-weight: 500; color: var(--heading);
+  margin-bottom: 16px; line-height: 1.25; letter-spacing: -0.015em;
+}
+.pp-card-desc { font-size: 15px; color: var(--muted); line-height: 1.65; margin-bottom: 18px; }
+.pp-card-proof {
+  font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--blue); padding-top: 16px; border-top: 1px solid var(--border-light);
+  font-weight: 600;
+}
+@media (max-width: 768px) { .pp-grid { grid-template-columns: 1fr; } }
+
+/* ===== CURRICULUM V5 ===== */
+.cv5-section { padding: 96px 0; background: var(--bg); }
+.cv5-header { max-width: 760px; margin: 0 auto 48px; text-align: center; }
+.cv5-tabs {
+  display: flex; gap: 0;
+  border: 1px solid var(--border);
+  margin-bottom: 32px;
+  overflow-x: auto;
+}
+.cv5-tab {
+  flex: 1;
+  padding: 18px 22px;
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  cursor: pointer;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.3px;
+  color: var(--muted);
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+  text-align: center;
+}
+.cv5-tab:last-child { border-right: none; }
+.cv5-tab.active { background: var(--navy); color: #fff; }
+.cv5-tab .dur { display: block; font-size: 10px; letter-spacing: 1.5px; opacity: 0.65; margin-top: 4px; }
+.cv5-panel { display: none; }
+.cv5-panel.active { display: block; }
+.cv5-module {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  padding: 32px 36px;
+  margin-bottom: 16px;
+}
+.cv5-module-head {
+  display: flex; align-items: baseline; gap: 16px;
+  margin-bottom: 18px; flex-wrap: wrap;
+}
+.cv5-module-num { font-family: 'Clash Grotesk', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; color: var(--blue); }
+.cv5-module-title { font-family: 'Clash Grotesk', sans-serif; font-size: 22px; font-weight: 500; color: var(--heading); flex: 1; line-height: 1.25; }
+.cv5-module-meta { font-size: 12px; color: var(--muted); letter-spacing: 0.5px; }
+.cv5-module-desc { font-size: 15px; color: var(--text); line-height: 1.65; margin-bottom: 24px; }
+.cv5-module-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 20px; border-top: 1px solid var(--border-light);
+}
+.cv5-module-block .lbl {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--blue); font-weight: 600; margin-bottom: 8px;
+}
+.cv5-module-block-text { font-size: 13px; color: var(--text); line-height: 1.55; }
+@media (max-width: 768px) { .cv5-module-grid { grid-template-columns: 1fr; } }
+
+/* ===== ADMISSION PROCESS ===== */
+.adm-section { padding: 96px 0; background: var(--navy); color: #fff; }
+.adm-header { max-width: 760px; margin: 0 auto 48px; text-align: center; }
+.adm-header h2 { color: #fff; }
+.adm-header p { color: rgba(255,255,255,0.7); }
+.adm-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.adm-step {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 28px 26px;
+}
+.adm-step-num { font-family: 'Clash Grotesk', sans-serif; font-size: 36px; font-weight: 500; color: var(--amber); margin-bottom: 16px; line-height: 1; letter-spacing: -0.02em; }
+.adm-step-title { font-family: 'Clash Grotesk', sans-serif; font-size: 18px; font-weight: 500; color: #fff; margin-bottom: 10px; line-height: 1.3; }
+.adm-step-desc { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.55; }
+@media (max-width: 900px) { .adm-steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .adm-steps { grid-template-columns: 1fr; } }
+
 </style>
 </head>
 <body>
@@ -3091,1284 +3578,805 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   <div class="header-inner">
     <div class="header-logo">
       <img src="https://www.scaler.com/storyblok-assets/f/290352327034910/190x40/762eb27df8/scaler-logo.svg" alt="Scaler" height="28" style="display:block;">
-      <span class="program-label">PGPMT</span>
+      <span class="program-label">PGP in Business & AI</span>
     </div>
     <nav class="header-nav">
-      <a href="#program-section" class="header-nav-link">Program</a>
+      <a href="#house-of-scaler" class="header-nav-link">About Scaler</a>
+      <a href="#instructors" class="header-nav-link">Instructors</a>
+      <a href="#why-upskill" class="header-nav-link">Why Now</a>
+      <a href="#pillars" class="header-nav-link">Program</a>
       <a href="#curriculum-section" class="header-nav-link">Curriculum</a>
-      <a href="#faculty-section" class="header-nav-link">Faculty</a>
-      <a href="#fold9" class="header-nav-link">Pricing</a>
       <a href="#fold12" class="header-nav-link">FAQs</a>
     </nav>
     <div class="header-actions">
-      <a href="tel:+919876543210" class="header-phone">+91 98765 43210</a>
-      <button class="header-cta" data-modal="apply">Request a Call Back</button>
+      <a href="tel:+918069459158" class="header-phone">+91 80694 59158</a>
+      <button class="header-cta" data-modal="apply">Find Your AI Path</button>
     </div>
   </div>
 </header>
 
-<!-- ===== SECTION NAVIGATOR — v4: 6 items, no visible class by default ===== -->
+<!-- ===== SECTION NAVIGATOR ===== -->
 <nav class="section-nav" id="section-nav">
   <div class="nav-track">
-    <a class="nav-item active" href="#who-for">Who It's For</a>
-    <a class="nav-item" href="#fold2">What Changed</a>
-    <a class="nav-item" href="#program-section">Program</a>
+    <a class="nav-item active" href="#house-of-scaler">About Scaler</a>
+    <a class="nav-item" href="#cohort-learners">Cohort 1</a>
+    <a class="nav-item" href="#instructors">Instructors</a>
+    <a class="nav-item" href="#mentors">Mentors</a>
+    <a class="nav-item" href="#why-upskill">Why Now</a>
+    <a class="nav-item" href="#pillars">Program</a>
     <a class="nav-item" href="#curriculum-section">Curriculum</a>
-    <a class="nav-item" href="#career-tool">Career</a>
-    <a class="nav-item" href="#fold9">Pricing</a>
+    <a class="nav-item" href="#admission">Admission</a>
     <a class="nav-item" href="#fold12">FAQs</a>
   </div>
 </nav>
 
-<!-- ===== FOLD 1 — HERO ===== -->
-<section id="hero">
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="annotation" data-ann="hero"><strong>WHAT:</strong> Hero answering What/Why/When/How in first fold. <strong>WHY:</strong> First 5 seconds decide stay/leave. Headline = fear of obsolescence. Stats answer When (12 months, June 2026), How (weekend live + async), Cost (3.25L). <strong>CONVERSION:</strong> Two CTAs — guide download (warm lead) + callback (hot lead). Company logos = instant social proof. <strong>TG:</strong> All segments — ops, engineering, product, senior leadership.</div>
-      <div class="hero-eyebrow fade-in"><span>Post Graduate Program in Management & Technology</span></div>
-      <h1 class="hero-h1 fade-in fade-in-delay-1">AI is rewriting the rules. Are you writing them — or being <em>written out?</em></h1>
-      <p class="hero-sub fade-in fade-in-delay-2">12 months. Built for operations, engineering, product, finance, and strategy professionals who need to lead AI transformation — not watch it from the sidelines.</p>
-      <div class="stat-strip fade-in fade-in-delay-2">
-        <div class="stat-item"><div class="stat-number">12 months</div><div class="stat-label">Weekend live + weekday async</div><div class="stat-source">Starts June 2026</div></div>
-        <div class="stat-item"><div class="stat-number">60 seats</div><div class="stat-label">Cohort 2 — 24 remaining</div><div class="stat-source">Applications close May 15</div></div>
-        <div class="stat-item"><div class="stat-number">200+</div><div class="stat-label">Hours of live instruction</div><div class="stat-source">3 specialization tracks</div></div>
+
+<!-- ============================================================
+     ===== FOLD 1 — HERO V5                              =====
+     ============================================================ -->
+<section id="hero" class="hero-v5">
+  <div class="hero-v5-inner">
+    <div class="hero-v5-content">
+      <div class="hero-v5-eyebrow fade-in">
+        <span>SCALER TECHVARSITY</span>
+        <span class="pipe"></span>
+        <span>12 MONTH PROGRAM</span>
+        <span class="pipe"></span>
+        <span>ONLINE PGP IN BUSINESS &amp; AI</span>
       </div>
-      <div class="hero-cta-wrap fade-in fade-in-delay-2">
-        <button class="hero-cta-btn" data-modal="apply">Request a Call Back</button>
-        <button class="hero-cta-btn-secondary" data-modal="guide">Download Program Brochure</button>
-      </div>
-      <div class="trust-strip fade-in fade-in-delay-3">
-        <div class="trust-label">Cohort 1 enrollees work at:</div>
-        <div class="company-logos-strip">
-          <img src="https://logo.clearbit.com/google.com" alt="Google" class="trust-logo" onerror="this.outerHTML='<span class=company-pill>Google</span>'">
-          <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="trust-logo" onerror="this.outerHTML='<span class=company-pill>Microsoft</span>'">
-          <img src="https://logo.clearbit.com/razorpay.com" alt="Razorpay" class="trust-logo" onerror="this.outerHTML='<span class=company-pill>Razorpay</span>'">
-          <img src="https://logo.clearbit.com/phonepe.com" alt="PhonePe" class="trust-logo" onerror="this.outerHTML='<span class=company-pill>PhonePe</span>'">
-          <img src="https://logo.clearbit.com/flipkart.com" alt="Flipkart" class="trust-logo" onerror="this.outerHTML='<span class=company-pill>Flipkart</span>'">
-          <img src="https://logo.clearbit.com/swiggy.com" alt="Swiggy" class="trust-logo" onerror="this.outerHTML='<span class=company-pill>Swiggy</span>'">
-          <img src="https://logo.clearbit.com/zepto.co" alt="Zepto" class="trust-logo" onerror="this.outerHTML='<span class=company-pill>Zepto</span>'">
-          <img src="https://logo.clearbit.com/hdfcbank.com" alt="HDFC Bank" class="trust-logo" onerror="this.outerHTML='<span class=company-pill>HDFC Bank</span>'">
+      <h1 class="hero-v5-h1 fade-in fade-in-delay-1">
+        Move into leadership with the skills that the <span class="accent">AI era</span> actually demands.
+      </h1>
+      <p class="hero-v5-promise fade-in fade-in-delay-2">
+        <strong>Become indispensable talent at your org.</strong> Learn core business foundations redefined in the AI paradigm, leadership fundamentals while building hands-on with AI — all while you keep your job.
+      </p>
+
+      <div class="hero-v5-stat fade-in fade-in-delay-2">
+        <div class="hero-v5-stat-num">63%</div>
+        <div class="hero-v5-stat-text">
+          of employers say the <strong>skills gap is the biggest barrier to AI transformation.</strong><br>
+          <span style="color:var(--muted);font-size:12px;">Source: World Economic Forum, Future of Jobs Report 2025</span>
         </div>
       </div>
+
+      <div class="hero-v5-ctas fade-in fade-in-delay-2">
+        <button class="btn btn-primary" data-modal="apply">Find Your AI Path</button>
+        <button class="btn btn-secondary" data-modal="guide">Request a Callback</button>
+      </div>
+
+      <div class="hero-v5-meta fade-in fade-in-delay-3">
+        <span class="hero-v5-meta-item">Hands-on AI × Business</span>
+        <span class="hero-v5-meta-item">No coding experience required</span>
+        <span class="hero-v5-meta-item">Next cohort starts May 2026</span>
+      </div>
     </div>
-    <div class="hero-visual">
-      <div class="video-placeholder" style="width:100%;max-width:440px;">
-        <div class="play-btn"></div>
-        <div class="video-overlay"><div class="video-name">What is PGPMT?</div><div class="video-role">2-minute program overview</div></div>
+
+    <div class="hero-v5-visual fade-in fade-in-delay-2">
+      <div class="hero-v5-video">
+        <div class="hero-v5-video-placeholder-text">[ HERO VIDEO — 90 SEC ]</div>
+        <div class="play-btn" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,0.18);border:2px solid rgba(255,255,255,0.35);display:flex;align-items:center;justify-content:center;">
+          <span style="width:0;height:0;border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px;"></span>
+        </div>
+        <div class="hero-v5-video-meta">
+          <div class="vt">Why this program. Why now.</div>
+          <div class="vs">Anshuman Singh, Co-Founder · 90 sec</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== WHO IS THIS PROGRAM FOR — 3-panel tabbed layout ===== -->
-<section id="who-for" class="section">
+<!-- ============================================================
+     ===== FOLD 2 — FROM THE HOUSE OF SCALER LEADERSHIP =====
+     ============================================================ -->
+<section id="house-of-scaler" class="hos-section">
   <div class="container">
-    <span class="section-label" style="display:block;">Who Is This For</span>
-    <h2 class="fade-in" style="margin-bottom:12px;">AI is reshaping every role. Are you ready for yours?</h2>
-    <p class="fade-in" style="color:var(--muted);max-width:700px;margin-bottom:48px;">The problem isn't talent — it's that your current stack doesn't include the AI layer companies now expect.</p>
+    <div class="hos-header fade-in">
+      <span class="hos-eyebrow">From the House of Scaler Leadership</span>
+      <h2>India's leading talent engine for the AI era — proven across tech, business, and college.</h2>
+      <p style="color:var(--muted);max-width:640px;margin:14px auto 0;font-size:15px;line-height:1.65;">
+        Three programs. One conviction: build the talent the next decade actually needs. PGPMT is the third — built on a decade of execution.
+      </p>
+    </div>
 
-    <div class="who-split fade-in">
-      <!-- LEFT: tabs -->
-      <div class="who-tabs">
-        <div class="who-tab active" data-who="who-p1">
-          <div class="who-tab-exp">3-5 Years</div>
-          <div class="who-tab-title">Product Managers, Engineers &amp; Analysts</div>
+    <div class="hos-grid">
+      <!-- Card 1: SSB -->
+      <div class="hos-card fade-in">
+        <div class="hos-card-img">[ SSB CAMPUS / STUDENT IMG ]</div>
+        <div class="hos-card-tag">Scaler School of Business</div>
+        <div class="hos-card-title">Full-time PGP for the next generation of business leaders.</div>
+        <div class="hos-card-desc">
+          Launched in 2024. In-person, full-time PGP where students learn from business leaders hands-on — by building products and shipping them. First batch already placed at Razorpay, Bajaj, ITC, Flipkart.
         </div>
-        <div class="who-tab" data-who="who-p2">
-          <div class="who-tab-exp">5-7 Years</div>
-          <div class="who-tab-title">Senior ICs, Team Leads &amp; Ops Managers</div>
-        </div>
-        <div class="who-tab" data-who="who-p3">
-          <div class="who-tab-exp">7-10 Years</div>
-          <div class="who-tab-title">Directors, Senior Managers &amp; VPs</div>
-        </div>
-        <div class="who-tab" data-who="who-p4">
-          <div class="who-tab-exp">10-15+ Years</div>
-          <div class="who-tab-title">CXOs, GMs &amp; Executive Leaders</div>
+        <div class="hos-card-meta">
+          <span><strong>2024</strong> Launched</span>
+          <span><strong>120+</strong> Students</span>
+          <span><strong>In-person</strong></span>
         </div>
       </div>
 
-      <!-- CENTER: content panels -->
-      <div class="who-panel-area">
-        <div class="who-panel active" id="who-p1">
-          <div class="who-desc">You're competent — but competence is becoming the floor. Your peers with AI skills are getting promoted faster. You need the strategic layer that turns "good at my job" into "leading the AI transformation."</div>
-          <div class="who-divider"></div>
-          <div class="who-gain-label">What you'll gain</div>
-          <ul class="who-gain-list">
-            <li>AI fluency to lead technical conversations without writing code</li>
-            <li>AI product thinking — spec, evaluate, and ship AI-native features</li>
-            <li>Readiness for AI Product Manager or Strategy Analyst roles</li>
-          </ul>
+      <!-- Card 2: SST -->
+      <div class="hos-card fade-in">
+        <div class="hos-card-img">[ SST CAMPUS / STUDENT IMG ]</div>
+        <div class="hos-card-tag">Scaler School of Technology</div>
+        <div class="hos-card-title">UG-level program for India's next great engineers.</div>
+        <div class="hos-card-desc">
+          A four-year, residential undergrad program built around real engineering work — not theoretical CS. Students ship production code, get mentored by FAANG engineers, and graduate with offers from top tech companies.
         </div>
-        <div class="who-panel" id="who-p2">
-          <div class="who-desc">You're ready for the next level but the ladder changed. Leadership now means AI fluency + business strategy + execution. PGPMT bridges that gap in 12 months.</div>
-          <div class="who-divider"></div>
-          <div class="who-gain-label">What you'll gain</div>
-          <ul class="who-gain-list">
-            <li>AI strategy to build business cases and get board approval</li>
-            <li>AI operations — restructure teams and workflows for AI-augmented output</li>
-            <li>Readiness for Head of AI Products or Director of Transformation roles</li>
-          </ul>
-        </div>
-        <div class="who-panel" id="who-p3">
-          <div class="who-desc">You've built a career. Now AI is changing what your career needs to look like. Your board is asking about AI strategy and you need a specific answer — not a vague one.</div>
-          <div class="who-divider"></div>
-          <div class="who-gain-label">What you'll gain</div>
-          <ul class="who-gain-list">
-            <li>AI governance frameworks for enterprise deployment at scale</li>
-            <li>Change management — leading orgs through AI transformation</li>
-            <li>Readiness for VP of Strategy or Head of AI Transformation roles</li>
-          </ul>
-        </div>
-        <div class="who-panel" id="who-p4">
-          <div class="who-desc">The frameworks that got you here won't get you there. AI isn't just disrupting your industry — it's rewriting how leadership itself works. You need to understand AI well enough to make the right bets.</div>
-          <div class="who-divider"></div>
-          <div class="who-gain-label">What you'll gain</div>
-          <ul class="who-gain-list">
-            <li>AI vision to set company-wide AI strategy and make the right bets</li>
-            <li>Board-ready communication — present AI initiatives with confidence</li>
-            <li>Readiness for CXO roles, Board Advisory, or AI-powered venture building</li>
-          </ul>
+        <div class="hos-card-meta">
+          <span><strong>2023</strong> Launched</span>
+          <span><strong>4-year</strong> UG</span>
+          <span><strong>Residential</strong></span>
         </div>
       </div>
 
-      <!-- RIGHT: quote panels -->
-      <div class="who-quote-area">
-        <div class="who-quote-panel active" id="who-q1">
-          <div class="who-quote-mark">"</div>
-          <div class="who-quote-text">I'm stuck in an IC role. My juniors are using AI tools and I can't. I need to fix my roadmap.</div>
-          <div class="who-outcome-label">Outcome</div>
-          <div class="who-outcome-text">AI Product Manager, Strategy Analyst at AI-first companies</div>
+      <!-- Card 3: Scaler Academy -->
+      <div class="hos-card fade-in">
+        <div class="hos-card-img">[ SCALER ACADEMY IMG ]</div>
+        <div class="hos-card-tag">Scaler Academy</div>
+        <div class="hos-card-title">India's #1 online program for working tech professionals.</div>
+        <div class="hos-card-desc">
+          The original Scaler. Since 2019, more than 25,000 working engineers have transitioned to senior roles at Google, Microsoft, Amazon, Flipkart, and 1,200+ partner companies. The data engine that PGPMT is built on.
         </div>
-        <div class="who-quote-panel" id="who-q2">
-          <div class="who-quote-mark">"</div>
-          <div class="who-quote-text">I want to move to leadership but every role now asks for AI experience I don't have.</div>
-          <div class="who-outcome-label">Outcome</div>
-          <div class="who-outcome-text">Head of AI Products, Director of Digital Transformation</div>
-        </div>
-        <div class="who-quote-panel" id="who-q3">
-          <div class="who-quote-mark">"</div>
-          <div class="who-quote-text">My company is running AI pilots. I'm not in the room where it's discussed.</div>
-          <div class="who-outcome-label">Outcome</div>
-          <div class="who-outcome-text">VP of Strategy, Head of AI Transformation</div>
-        </div>
-        <div class="who-quote-panel" id="who-q4">
-          <div class="who-quote-mark">"</div>
-          <div class="who-quote-text">I've been in leadership 15 years. Half my playbook is becoming obsolete.</div>
-          <div class="who-outcome-label">Outcome</div>
-          <div class="who-outcome-text">CXO roles, Board Advisory, AI-Powered Founder</div>
+        <div class="hos-card-meta">
+          <span><strong>25k+</strong> Alumni</span>
+          <span><strong>1,200+</strong> Companies</span>
+          <span><strong>1.7Cr</strong> Highest CTC</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== AI PARADIGM SHIFT — merged with role shift + pain quotes ===== -->
-<section id="fold2" class="section">
+<!-- ============================================================
+     ===== FOLD 3 — COHORT 1 LEARNERS                    =====
+     ============================================================ -->
+<section id="cohort-learners" class="cl-section">
   <div class="container">
-    <div class="annotation" data-ann="shift"><strong>WHAT:</strong> Merged section — decade timeline, rapid role shift with specific dates, compact pain quotes. <strong>WHY:</strong> One unified urgency section instead of three fragmented ones. Timeline proves velocity; role cards prove breadth; pain quotes create personal identification.</div>
-
-    <div class="fold2-h2 fade-in">
-      <span class="section-label text-center" style="display:block;">Feb 2024 &rarr; Feb 2025</span>
-      <h2>One year. Five roles. All redefined by AI.</h2>
-      <p style="color:var(--muted);max-width:680px;margin:12px auto 0;text-align:center;font-size:15px;">Here's what changed in just twelve months — across engineering, product, operations, finance, and sales.</p>
+    <div class="cl-header fade-in">
+      <span class="hos-eyebrow" style="background:rgba(0,85,255,0.08);color:var(--blue);">Meet your peers</span>
+      <h2>Professionals like you have already started.</h2>
+      <p style="color:var(--muted);max-width:640px;margin:14px auto 0;font-size:15px;line-height:1.65;">
+        From service companies to MAANG leadership — Cohort 1 spans every function and every band. Everyone is ready to begin the new AI era.
+      </p>
     </div>
 
-    <div class="role-shift-block fade-in">
-      <div class="role-shift-header" style="margin-bottom:24px;">
+    <!-- Names + companies grid (8 cards) -->
+    <div class="cl-grid fade-in">
+      <div class="cl-card">
+        <div class="cl-card-photo">[ PHOTO ]</div>
+        <div class="cl-card-name">Aditya Mehta</div>
+        <div class="cl-card-role">Senior Product Manager</div>
+        <div class="cl-card-co">Google</div>
       </div>
+      <div class="cl-card">
+        <div class="cl-card-photo">[ PHOTO ]</div>
+        <div class="cl-card-name">Priya Iyer</div>
+        <div class="cl-card-role">Operations Director</div>
+        <div class="cl-card-co">Flipkart</div>
+      </div>
+      <div class="cl-card">
+        <div class="cl-card-photo">[ PHOTO ]</div>
+        <div class="cl-card-name">Karan Sharma</div>
+        <div class="cl-card-role">Strategy Lead</div>
+        <div class="cl-card-co">Razorpay</div>
+      </div>
+      <div class="cl-card">
+        <div class="cl-card-photo">[ PHOTO ]</div>
+        <div class="cl-card-name">Neha Kapoor</div>
+        <div class="cl-card-role">Finance Manager</div>
+        <div class="cl-card-co">PhonePe</div>
+      </div>
+      <div class="cl-card">
+        <div class="cl-card-photo">[ PHOTO ]</div>
+        <div class="cl-card-name">Rohit Verma</div>
+        <div class="cl-card-role">Engineering Manager</div>
+        <div class="cl-card-co">Microsoft</div>
+      </div>
+      <div class="cl-card">
+        <div class="cl-card-photo">[ PHOTO ]</div>
+        <div class="cl-card-name">Sneha Reddy</div>
+        <div class="cl-card-role">Sales Head</div>
+        <div class="cl-card-co">Swiggy</div>
+      </div>
+      <div class="cl-card">
+        <div class="cl-card-photo">[ PHOTO ]</div>
+        <div class="cl-card-name">Vikram Joshi</div>
+        <div class="cl-card-role">VP Operations</div>
+        <div class="cl-card-co">Zepto</div>
+      </div>
+      <div class="cl-card">
+        <div class="cl-card-photo">[ PHOTO ]</div>
+        <div class="cl-card-name">Anjali Nair</div>
+        <div class="cl-card-role">Business Analyst</div>
+        <div class="cl-card-co">HDFC Bank</div>
+      </div>
+    </div>
 
-      <div class="role-shift-grid">
-        <!-- Role 1: Engineer -->
-        <div class="role-shift-card">
-          <div class="role-shift-role">
-            <span class="role-shift-date">Feb 2024</span>
-            Engineer
-          </div>
-          <div class="role-shift-before">
-            <div class="role-shift-label">Before</div>
-            <div class="role-shift-desc">Writes code, reviews PRs, debugs, ships features. Measured by lines shipped.</div>
-          </div>
-          <div class="role-shift-arrow">
-            <div class="role-shift-trigger">Copilot + Claude Code</div>
-          </div>
-          <div class="role-shift-after">
-            <div class="role-shift-label role-shift-label-after">Now</div>
-            <div class="role-shift-desc">46% of code is AI-written. Engineers who can't direct AI agents are slower than juniors who can. The job is architecture + AI orchestration, not typing.</div>
+    <!-- Testimonial cards (3) -->
+    <div class="cl-test-grid fade-in">
+      <div class="cl-test-card">
+        <div class="cl-test-quote">"I'd been a senior PM for four years. Watching juniors deploy AI agents while I was still running spreadsheets was the wake-up call. PGPMT gave me the language and the playbook in three months."</div>
+        <div class="cl-test-attr">
+          <div class="cl-test-photo">[IMG]</div>
+          <div>
+            <div class="cl-test-name">Aditya Mehta</div>
+            <div class="cl-test-role">Sr. Product Manager · Google</div>
           </div>
         </div>
-
-        <!-- Role 2: Product Manager -->
-        <div class="role-shift-card">
-          <div class="role-shift-role">
-            <span class="role-shift-date">May 2024</span>
-            Product Manager
-          </div>
-          <div class="role-shift-before">
-            <div class="role-shift-label">Before</div>
-            <div class="role-shift-desc">Writes PRDs, prioritizes backlog, talks to users, coordinates with engineering.</div>
-          </div>
-          <div class="role-shift-arrow">
-            <div class="role-shift-trigger">GPT-4o + AI Agents</div>
-          </div>
-          <div class="role-shift-after">
-            <div class="role-shift-label role-shift-label-after">Now</div>
-            <div class="role-shift-desc">Every product decision includes an AI layer. PMs who can't spec AI features, evaluate models, or design AI trust are building yesterday's products.</div>
+      </div>
+      <div class="cl-test-card">
+        <div class="cl-test-quote">"The capstone alone was worth the program. I shipped an AI-driven ops dashboard to 200 teammates at Flipkart — and used it as my promotion case six months later."</div>
+        <div class="cl-test-attr">
+          <div class="cl-test-photo">[IMG]</div>
+          <div>
+            <div class="cl-test-name">Priya Iyer</div>
+            <div class="cl-test-role">Ops Director · Flipkart</div>
           </div>
         </div>
-
-        <!-- Role 3: Operations -->
-        <div class="role-shift-card">
-          <div class="role-shift-role">
-            <span class="role-shift-date">Aug 2024</span>
-            Operations Leader
-          </div>
-          <div class="role-shift-before">
-            <div class="role-shift-label">Before</div>
-            <div class="role-shift-desc">Optimizes processes, manages teams, tracks SLAs, runs playbooks.</div>
-          </div>
-          <div class="role-shift-arrow">
-            <div class="role-shift-trigger">Autonomous AI Agents</div>
-          </div>
-          <div class="role-shift-after">
-            <div class="role-shift-label role-shift-label-after">Now</div>
-            <div class="role-shift-desc">Bajaj Finance runs 800 AI agents across sales, ops, HR. Klarna cut 4,000 jobs. Ops leaders who can't deploy and manage AI fleets are managing shrinking teams.</div>
-          </div>
-        </div>
-
-        <!-- Role 4: Finance -->
-        <div class="role-shift-card">
-          <div class="role-shift-role">
-            <span class="role-shift-date">Oct 2024</span>
-            Finance Professional
-          </div>
-          <div class="role-shift-before">
-            <div class="role-shift-label">Before</div>
-            <div class="role-shift-desc">Builds models in Excel, runs forecasts, prepares board decks, monitors compliance.</div>
-          </div>
-          <div class="role-shift-arrow">
-            <div class="role-shift-trigger">AI Forecasting + Risk Models</div>
-          </div>
-          <div class="role-shift-after">
-            <div class="role-shift-label role-shift-label-after">Now</div>
-            <div class="role-shift-desc">AI forecasting is 3x faster and more accurate. Automated risk scoring replaces manual review. The finance person who can't build AI-augmented models is doing the slow version of someone else's job.</div>
-          </div>
-        </div>
-
-        <!-- Role 5: Sales -->
-        <div class="role-shift-card">
-          <div class="role-shift-role">
-            <span class="role-shift-date">Feb 2025</span>
-            Sales &amp; GTM
-          </div>
-          <div class="role-shift-before">
-            <div class="role-shift-label">Before</div>
-            <div class="role-shift-desc">Cold calls, CRM updates, pipeline management, quarterly targets.</div>
-          </div>
-          <div class="role-shift-arrow">
-            <div class="role-shift-trigger">AI Voice Agents + Personalization</div>
-          </div>
-          <div class="role-shift-after">
-            <div class="role-shift-label role-shift-label-after">Now</div>
-            <div class="role-shift-desc">AI voice agents handle thousands of calls simultaneously. AI personalizes every touchpoint. Sales leaders who can't design AI-augmented funnels are competing against machines that don't sleep.</div>
+      </div>
+      <div class="cl-test-card">
+        <div class="cl-test-quote">"I'm not a coder. I was nervous about an 'AI program'. By module 3, I was speccing AI features with engineering. By the capstone, I was leading the AI investment review with my CFO."</div>
+        <div class="cl-test-attr">
+          <div class="cl-test-photo">[IMG]</div>
+          <div>
+            <div class="cl-test-name">Neha Kapoor</div>
+            <div class="cl-test-role">Finance Manager · PhonePe</div>
           </div>
         </div>
       </div>
     </div>
-
-
   </div>
 </section>
 
-<!-- ===== COHORT REMINDER BANNER ===== -->
-<div class="cohort-banner">
-  <div class="container"><div class="cohort-banner-inner">
-    <span class="cb-item">Cohort 2 starts <span class="cb-highlight">June 2026</span></span>
-    <span class="cb-item"><span class="cb-highlight">24 seats</span> remaining out of 60</span>
-    <span class="cb-item"><span class="cb-highlight">12 of 20</span> early-bird scholarships claimed</span>
-    <button class="header-cta" data-modal="apply" style="font-size:12px;padding:6px 16px;">Apply Now &rarr;</button>
-  </div></div>
-</div>
-
-<!-- ===== PROGRAM OVERVIEW + 5 PILLARS — dark horizontal rows ===== -->
-<section id="program-section" class="pillars-dark-section">
+<!-- ============================================================
+     ===== FOLD 4 — INSTRUCTORS                          =====
+     ============================================================ -->
+<section id="instructors" class="team-section">
   <div class="container">
-    <div class="annotation" data-ann="program"><strong>WHAT:</strong> 5-pillar program structure. Dark horizontal rows matching Scaler OPGP pattern. Each pillar = left text block + right content grid.</div>
-    <div class="pillars-dark-header fade-in">
-      <div class="pillars-dark-eyebrow">Our Five Pillars</div>
-      <div class="pillars-dark-title">Five Ways This Program Transforms You</div>
+    <div class="team-header fade-in">
+      <span class="team-eyebrow">Marquee Instructors</span>
+      <h2 class="team-h2">Learn from the people building the AI economy — not describing it.</h2>
+      <p class="team-sub">Operators, founders, and senior leaders from companies actually deploying AI at scale. They built it. Now they teach it.</p>
     </div>
 
-    <!-- Pillar 1: Core Management Essentials -->
-    <div class="pillar-row fade-in">
-      <div class="pillar-row-left">
-        <div class="pillar-row-num">1</div>
-        <div class="pillar-row-eyebrow">What You'll Master</div>
-        <div class="pillar-row-title">Core Management Essentials</div>
-        <ul class="pillar-row-bullets">
-          <li>Business, strategy, finance, and operations — the full management stack for the AI era</li>
-          <li>Frameworks that translate into decisions your board and leadership will act on</li>
-        </ul>
+    <div class="team-grid fade-in">
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Anshuman Singh</div>
+        <div class="team-card-title">Co-Founder, Scaler · ex-Facebook</div>
+        <div class="team-card-brand-row">EX · <strong>FACEBOOK</strong> · DIRECTI</div>
       </div>
-      <div class="pillar-row-right">
-        <div class="pillar-pill-grid">
-          <span class="pillar-pill blue">Business</span>
-          <span class="pillar-pill">Strategy</span>
-          <span class="pillar-pill">Finance</span>
-          <span class="pillar-pill">Product</span>
-          <span class="pillar-pill">Marketing</span>
-          <span class="pillar-pill">Operations</span>
-          <span class="pillar-pill">Data Analytics</span>
-          <span class="pillar-pill">Structured Thinking</span>
-        </div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Abhimanyu Saxena</div>
+        <div class="team-card-title">Co-Founder, Scaler · ex-Fab.com, Directi</div>
+        <div class="team-card-brand-row">EX · <strong>FAB.COM</strong> · DIRECTI</div>
       </div>
-    </div>
-
-    <!-- Pillar 2: Applied AI Learning -->
-    <div class="pillar-row fade-in">
-      <div class="pillar-row-left">
-        <div class="pillar-row-num">2</div>
-        <div class="pillar-row-eyebrow">Integrated With</div>
-        <div class="pillar-row-title">Applied AI Learning</div>
-        <ul class="pillar-row-bullets">
-          <li>AI tools embedded in every module — not a standalone chapter</li>
-          <li>Real projects using Claude, Perplexity, and production-grade data pipelines</li>
-        </ul>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Adhiraj Arora</div>
+        <div class="team-card-title">Marketing Leader · Growth &amp; Brand</div>
+        <div class="team-card-brand-row">EX · <strong>UBER</strong> · KFC</div>
       </div>
-      <div class="pillar-row-right">
-        <div class="pillar-tool-cards">
-          <div class="pillar-tool-card">
-            <div class="ptc-tool-name">Claude</div>
-            <div class="ptc-project">Strategy Synthesis</div>
-            <div class="ptc-desc">Board-ready AI business case drafting and vendor evaluation briefs</div>
-          </div>
-          <div class="pillar-tool-card">
-            <div class="ptc-tool-name">Data Rails</div>
-            <div class="ptc-project">Analytics Pipelines</div>
-            <div class="ptc-desc">AI-powered dashboards and predictive models for operational decisions</div>
-          </div>
-          <div class="pillar-tool-card">
-            <div class="ptc-tool-name">Perplexity</div>
-            <div class="ptc-project">Market Intelligence</div>
-            <div class="ptc-desc">Real-time competitive intelligence and trend analysis at scale</div>
-          </div>
-          <div class="pillar-tool-card">
-            <div class="ptc-tool-name">Automation</div>
-            <div class="ptc-project">Agent Deployment</div>
-            <div class="ptc-desc">Build and manage autonomous AI agent fleets across business functions</div>
-          </div>
-        </div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Abhinav Vijayvargiya</div>
+        <div class="team-card-title">Marketing &amp; Strategy</div>
+        <div class="team-card-brand-row">EX · <strong>RAZORPAY</strong> · CRED</div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Nandita Deogharia</div>
+        <div class="team-card-title">Chief Finance Officer</div>
+        <div class="team-card-brand-row">EX · <strong>BAJAJ</strong> · ICICI</div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Shivank Agrawal</div>
+        <div class="team-card-title">Sr. VP Engineering, Scaler · ex-Microsoft, Oracle</div>
+        <div class="team-card-brand-row">EX · <strong>MICROSOFT</strong> · ORACLE</div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Karan Sehgal</div>
+        <div class="team-card-title">AI Product Leader</div>
+        <div class="team-card-brand-row">EX · <strong>FLIPKART</strong> · MICROSOFT</div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Tara Mehta</div>
+        <div class="team-card-title">Strategy &amp; Operations</div>
+        <div class="team-card-brand-row">EX · <strong>MCKINSEY</strong> · BAIN</div>
       </div>
     </div>
-
-    <!-- Pillar 3: Designed by Industry Leaders -->
-    <div class="pillar-row fade-in">
-      <div class="pillar-row-left">
-        <div class="pillar-row-num">3</div>
-        <div class="pillar-row-eyebrow">Future-Proof Curriculum</div>
-        <div class="pillar-row-title">Designed by Industry Leaders</div>
-        <ul class="pillar-row-bullets">
-          <li>VPs, Directors, and Founders who've deployed AI at scale — not professors</li>
-          <li>2026 case studies, not 2019 textbooks</li>
-        </ul>
-      </div>
-      <div class="pillar-row-right">
-        <div class="pillar-faculty-cards">
-          <div class="pillar-faculty-card">
-            <div class="pfc-photo" style="background:linear-gradient(135deg,#0f3460 0%,#1a1a2e 100%);"><div class="pfc-initials">VP</div></div>
-            <div class="pfc-info">
-              <div class="pfc-name">AI Strategy Lead</div>
-              <div class="pfc-co">VP of AI Products, Top Fintech</div>
-            </div>
-          </div>
-          <div class="pillar-faculty-card">
-            <div class="pfc-photo" style="background:linear-gradient(135deg,#1a1a2e 0%,#2d3436 100%);"><div class="pfc-initials">DS</div></div>
-            <div class="pfc-info">
-              <div class="pfc-name">Data Science Head</div>
-              <div class="pfc-co">Ex-Amazon Applied Scientist</div>
-            </div>
-          </div>
-          <div class="pillar-faculty-card">
-            <div class="pfc-photo" style="background:linear-gradient(135deg,#2d3436 0%,#636e72 100%);"><div class="pfc-initials">EG</div></div>
-            <div class="pfc-info">
-              <div class="pfc-name">Eng Director</div>
-              <div class="pfc-co">Ex-Google, Ex-Microsoft</div>
-            </div>
-          </div>
-          <div class="pillar-faculty-card">
-            <div class="pfc-photo" style="background:linear-gradient(135deg,#434343 0%,#1a1a2e 100%);"><div class="pfc-initials">FD</div></div>
-            <div class="pfc-info">
-              <div class="pfc-name">AI Founder</div>
-              <div class="pfc-co">YC Alum, Ex-Flipkart AI</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pillar 4: Solving Industry Challenges -->
-    <div class="pillar-row fade-in">
-      <div class="pillar-row-left">
-        <div class="pillar-row-num">4</div>
-        <div class="pillar-row-eyebrow">Mastered Through</div>
-        <div class="pillar-row-title">Solving Industry Challenges</div>
-        <ul class="pillar-row-bullets">
-          <li>Real problems from live companies — Nykaa, Urban Company, Bajaj Finance, and more</li>
-          <li>You don't study case studies. You solve problems that were solved last quarter.</li>
-        </ul>
-      </div>
-      <div class="pillar-row-right">
-        <div class="pillar-problem-cards">
-          <div class="pillar-problem-card">
-            <div class="ppc-brand">Nykaa</div>
-            <div class="ppc-challenge">AI-driven product launch strategy for D2C beauty category</div>
-            <div class="ppc-metric">Target: 2x conversion on new SKU drops</div>
-          </div>
-          <div class="pillar-problem-card">
-            <div class="ppc-brand">Urban Company</div>
-            <div class="ppc-challenge">NPS recovery using AI-powered service quality prediction</div>
-            <div class="ppc-metric">Problem: 18% drop in NPS across top-10 cities</div>
-          </div>
-          <div class="pillar-problem-card">
-            <div class="ppc-brand">Bajaj Finance</div>
-            <div class="ppc-challenge">800-agent AI deployment across lending, collections, and risk</div>
-            <div class="ppc-metric">Outcome: 30% reduction in ops headcount</div>
-          </div>
-          <div class="pillar-problem-card">
-            <div class="ppc-brand">PhonePe</div>
-            <div class="ppc-challenge">Fraud detection model for UPI transactions at 500M scale</div>
-            <div class="ppc-metric">Latency target: under 80ms per transaction</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pillar 5: Capstone Project -->
-    <div class="pillar-row fade-in">
-      <div class="pillar-row-left">
-        <div class="pillar-row-num">5</div>
-        <div class="pillar-row-eyebrow">Deployed In</div>
-        <div class="pillar-row-title">Capstone Project</div>
-        <ul class="pillar-row-bullets">
-          <li>Live project with a sponsor company — not a hypothetical case study</li>
-          <li>Executive presentation to a panel of industry leaders. Portfolio piece for your next role.</li>
-        </ul>
-      </div>
-      <div class="pillar-row-right">
-        <div class="pillar-capstone-info">
-          <div class="capstone-stat-block">
-            <div class="csb-value">2</div>
-            <div class="csb-label">Months dedicated to capstone</div>
-          </div>
-          <div class="capstone-stat-block">
-            <div class="csb-value">1</div>
-            <div class="csb-label">Real sponsor company, your project</div>
-          </div>
-          <div class="capstone-stat-block">
-            <div class="csb-value">5+</div>
-            <div class="csb-label">Industry leaders on your review panel</div>
-          </div>
-          <div class="capstone-stat-block">
-            <div class="csb-value">Live</div>
-            <div class="csb-label">Actual deployment, not a simulation</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- ===== WHY PGPMT ===== -->
-<section class="why-pgpmt-section">
+<!-- ============================================================
+     ===== FOLD 5 — MENTORS (within team band)          =====
+     ============================================================ -->
+<section id="mentors" class="team-section" style="padding-top:0;">
   <div class="container">
-    <div class="wp-header fade-in">
-      <span class="wp-eyebrow">The Case for PGPMT</span>
-      <h2 class="wp-title">Why PGPMT — and Why Now</h2>
+    <div class="team-header fade-in">
+      <span class="team-eyebrow">Mentors</span>
+      <h2 class="team-h2">Get mentorship from specialists who actually practice — not theorists.</h2>
+      <p class="team-sub">Every mentor is in-role at a company shipping AI today. They review your work, give you live feedback, and open their network when you're ready for the next role.</p>
     </div>
 
-    <div class="wp-blocks fade-in">
-
-      <div class="wp-block wp-block-problem">
-        <div class="wp-block-num">01</div>
-        <div class="wp-block-content">
-          <div class="wp-block-label">The Problem</div>
-          <div class="wp-block-headline">Most AI programs teach tools. Most business programs ignore AI. You're left to figure out the intersection yourself.</div>
-          <div class="wp-block-body">The market has bifurcated into deep-tech AI programs that assume you want to build models, and traditional business programs that added a one-week "AI module" to seem relevant. Neither works for the senior professional who needs to lead AI transformation — not build it from scratch, and not be naive about it.</div>
-        </div>
+    <div class="team-grid fade-in">
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Aakash Bhardwaj</div>
+        <div class="team-card-title">AI Product Lead, Razorpay</div>
+        <div class="team-card-brand-row"><strong>RAZORPAY</strong> · 12 YRS</div>
       </div>
-
-      <div class="wp-block wp-block-why">
-        <div class="wp-block-num">02</div>
-        <div class="wp-block-content">
-          <div class="wp-block-label">Why Business + AI Together</div>
-          <div class="wp-block-headline">AI without business context is a science experiment. Business without AI literacy is a sunset industry.</div>
-          <div class="wp-block-body">PGPMT is the only program that treats them as one discipline — because that's how the real world works. When Bajaj Finance deployed 800 agents, it wasn't the AI team or the business team that made it work. It was leaders who spoke both languages fluently. That's the gap PGPMT fills.</div>
-        </div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Sushant Rao</div>
+        <div class="team-card-title">Director, AI Platform · Bajaj Finance</div>
+        <div class="team-card-brand-row"><strong>BAJAJ</strong> · 14 YRS</div>
       </div>
-
-      <div class="wp-block wp-block-specific">
-        <div class="wp-block-num">03</div>
-        <div class="wp-block-content">
-          <div class="wp-block-label">Why PGPMT Specifically</div>
-          <div class="wp-block-headline">Built by people doing it. For people who need to lead it.</div>
-          <div class="wp-specifics">
-            <div class="wp-specific-item">
-              <div class="wp-specific-dot"></div>
-              <div class="wp-specific-text">Built by practitioners who deploy AI at scale today — not professors who study it from the outside</div>
-            </div>
-            <div class="wp-specific-item">
-              <div class="wp-specific-dot"></div>
-              <div class="wp-specific-text">Case studies from 2025-2026 — Bajaj Finance, Klarna, GitHub — not 2019 textbooks that aged out before you read them</div>
-            </div>
-            <div class="wp-specific-item">
-              <div class="wp-specific-dot"></div>
-              <div class="wp-specific-text">A cohort of senior professionals with an average of 8+ years experience — your next advisory board, not just classmates</div>
-            </div>
-            <div class="wp-specific-item">
-              <div class="wp-specific-dot"></div>
-              <div class="wp-specific-text">Weekend format designed for working professionals who have real responsibilities — sessions recorded, async work structured, no drop-everything requirement</div>
-            </div>
-          </div>
-        </div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Ritika Saran</div>
+        <div class="team-card-title">Head of AI Strategy · Flipkart</div>
+        <div class="team-card-brand-row"><strong>FLIPKART</strong> · 11 YRS</div>
       </div>
-
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Mohan Iyer</div>
+        <div class="team-card-title">Senior Engineering Manager · Microsoft</div>
+        <div class="team-card-brand-row"><strong>MICROSOFT</strong> · 15 YRS</div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Devika Menon</div>
+        <div class="team-card-title">VP, Operations Transformation · Zepto</div>
+        <div class="team-card-brand-row"><strong>ZEPTO</strong> · 10 YRS</div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Rajesh Khanna</div>
+        <div class="team-card-title">Chief AI Officer · HDFC Bank</div>
+        <div class="team-card-brand-row"><strong>HDFC</strong> · 18 YRS</div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Anika Roy</div>
+        <div class="team-card-title">Head of Growth · PhonePe</div>
+        <div class="team-card-brand-row"><strong>PHONEPE</strong> · 9 YRS</div>
+      </div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Ravi Pillai</div>
+        <div class="team-card-title">CTO · AI-first Healthtech Startup</div>
+        <div class="team-card-brand-row"><strong>FOUNDER</strong> · 13 YRS</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== INDUSTRY LEADERS QUOTES ===== -->
-<section class="leaders-quotes-section">
+<!-- ============================================================
+     ===== FOLD 6 — INVESTORS &amp; SUPPORTERS            =====
+     ============================================================ -->
+<section id="investors" class="team-section" style="padding-top:0;">
   <div class="container">
-    <div class="leaders-quotes-header fade-in">
-      <span class="leaders-quotes-eyebrow">The Consensus is Clear</span>
-      <h2 class="leaders-quotes-title">What Industry Leaders Are Saying About AI</h2>
-      <p class="leaders-quotes-sub">The people running the world's most consequential companies are not hedging. They are certain.</p>
+    <div class="team-header fade-in">
+      <span class="team-eyebrow">Investors &amp; Supporters</span>
+      <h2 class="team-h2">Backed by India's top business and tech leaders — who share the vision.</h2>
+      <p class="team-sub">The same operators who built the last decade of Indian tech are betting on what gets built next.</p>
     </div>
-    <div class="leaders-quotes-grid fade-in">
-      <div class="leader-quote-card">
-        <div class="lqc-mark">"</div>
-        <div class="lqc-text">AI is the most profound technology that humanity is working on — more profound than fire or electricity or the internet.</div>
-        <div class="lqc-footer"><div class="lqc-name">Sundar Pichai</div><div class="lqc-title">CEO, Google &amp; Alphabet</div></div>
+
+    <div class="team-grid fade-in">
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Kunal Shah</div>
+        <div class="team-card-title">Founder, CRED</div>
+        <div class="team-card-brand-row">INVESTOR · <strong>CRED</strong></div>
       </div>
-      <div class="leader-quote-card">
-        <div class="lqc-mark">"</div>
-        <div class="lqc-text">Every business process, every workflow, every application will be reinvented with AI. The question is not whether, but how fast you move.</div>
-        <div class="lqc-footer"><div class="lqc-name">Satya Nadella</div><div class="lqc-title">CEO, Microsoft</div></div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Deepinder Goyal</div>
+        <div class="team-card-title">Founder, Zomato</div>
+        <div class="team-card-brand-row">INVESTOR · <strong>ZOMATO</strong></div>
       </div>
-      <div class="leader-quote-card">
-        <div class="lqc-mark">"</div>
-        <div class="lqc-text">In the next ten years, we will have AI that is a thousand times more capable than today. Companies that don't build the muscle now will be left behind permanently.</div>
-        <div class="lqc-footer"><div class="lqc-name">Jensen Huang</div><div class="lqc-title">CEO, NVIDIA</div></div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Sanjeev Bikhchandani</div>
+        <div class="team-card-title">Founder, Naukri / Info Edge</div>
+        <div class="team-card-brand-row">INVESTOR · <strong>INFO EDGE</strong></div>
       </div>
-      <div class="leader-quote-card">
-        <div class="lqc-mark">"</div>
-        <div class="lqc-text">We believe AI could be as transformative as the internet, maybe more so. The speed of capability development has surprised everyone — including us.</div>
-        <div class="lqc-footer"><div class="lqc-name">Sam Altman</div><div class="lqc-title">CEO, OpenAI</div></div>
+      <div class="team-card">
+        <div class="team-card-photo">[ PHOTO ]</div>
+        <div class="team-card-name">Nikhil Kamath</div>
+        <div class="team-card-title">Co-Founder, Zerodha</div>
+        <div class="team-card-brand-row">SUPPORTER · <strong>ZERODHA</strong></div>
       </div>
-      <div class="leader-quote-card">
-        <div class="lqc-mark">"</div>
-        <div class="lqc-text">AI will power the next wave of value creation in India. The businesses and professionals who embrace it will define the next decade.</div>
-        <div class="lqc-footer"><div class="lqc-name">Mukesh Ambani</div><div class="lqc-title">Chairman, Reliance Industries</div></div>
+    </div>
+
+    <!-- Investor quotes -->
+    <div class="team-quote-strip fade-in">
+      <div class="team-quote">
+        <div class="team-quote-text">"The biggest leverage of the next decade isn't AI itself. It's the people who learn to operate AI deeply, on real problems. That's what Scaler is building."</div>
+        <div class="team-quote-attr"><strong>Kunal Shah</strong> · Founder, CRED</div>
       </div>
-      <div class="leader-quote-card">
-        <div class="lqc-mark">"</div>
-        <div class="lqc-text">The AI revolution will create a new kind of leader — one who knows how to work alongside intelligent machines. That person will be unstoppable.</div>
-        <div class="lqc-footer"><div class="lqc-name">Anand Mahindra</div><div class="lqc-title">Chairman, Mahindra Group</div></div>
+      <div class="team-quote">
+        <div class="team-quote-text">"Most upskilling programs teach what worked yesterday. PGPMT teaches what's working right now — and updates faster than the field changes."</div>
+        <div class="team-quote-attr"><strong>Deepinder Goyal</strong> · Founder, Zomato</div>
+      </div>
+      <div class="team-quote">
+        <div class="team-quote-text">"India needs 10 million AI-fluent business leaders this decade. Scaler is building the playbook to actually get us there."</div>
+        <div class="team-quote-attr"><strong>Sanjeev Bikhchandani</strong> · Founder, Info Edge</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== CURRICULUM — dark theme, left sidebar + right module panel ===== -->
-<section id="curriculum-section" class="curr-dark-section">
+<!-- ============================================================
+     ===== FOLD 7 — WHY UPSKILL NOW                      =====
+     ============================================================ -->
+<section id="why-upskill" class="wun-section">
   <div class="container">
-    <div class="annotation" data-ann="curriculum"><strong>WHAT:</strong> Phase-based curriculum — dark background, left phase tabs with duration badge, right panel with module list, topic pills, and case study cards. Matches Scaler OPGP pattern.</div>
-    <div class="curr-dark-header fade-in">
-      <div class="curr-dark-eyebrow">Curriculum Overview</div>
-      <div class="curr-dark-title">Designed to Make You Indispensable in the Post-AI World</div>
-      <div class="curr-dark-sub">12 months. 5 phases. Every module has an AI layer — it is not an add-on, it is how you learn.</div>
+    <div class="wun-header fade-in">
+      <span class="hos-eyebrow" style="background:rgba(0,85,255,0.08);color:var(--blue);">Why upskill now?</span>
+      <h2>The bar moved. The roles moved. The salaries moved. You either move with them, or you get managed by people who did.</h2>
     </div>
 
-    <div class="curr-dark-split fade-in">
-      <!-- Left: phase tabs -->
-      <div class="curr-dark-tabs">
-        <div class="curr-dark-tab active" data-cdcurr="cdp-foundations">
-          <div class="curr-dark-tab-badge">2 Months</div>
-          <div class="curr-dark-tab-name">Foundations</div>
-        </div>
-        <div class="curr-dark-tab" data-cdcurr="cdp-bizmanagement">
-          <div class="curr-dark-tab-badge">4 Months</div>
-          <div class="curr-dark-tab-name">Business Management</div>
-        </div>
-        <div class="curr-dark-tab" data-cdcurr="cdp-aifoundations">
-          <div class="curr-dark-tab-badge">1 Month</div>
-          <div class="curr-dark-tab-name">AI Foundations</div>
-        </div>
-        <div class="curr-dark-tab" data-cdcurr="cdp-aispec">
-          <div class="curr-dark-tab-badge">3 Months</div>
-          <div class="curr-dark-tab-name">AI Specialisation</div>
-        </div>
-        <div class="curr-dark-tab" data-cdcurr="cdp-capstone">
-          <div class="curr-dark-tab-badge">2 Months</div>
-          <div class="curr-dark-tab-name">Capstone Projects</div>
-        </div>
+    <!-- Four guiding principles -->
+    <div class="wun-pillar-grid fade-in">
+      <div class="wun-pillar">
+        <div class="wun-pillar-num">01</div>
+        <div class="wun-pillar-text"><strong>All roles are changing across seniority.</strong> From IC to CXO — every job description being written in 2026 has an AI layer baked in. The shift is not coming for you. It already arrived.</div>
+      </div>
+      <div class="wun-pillar">
+        <div class="wun-pillar-num">02</div>
+        <div class="wun-pillar-text"><strong>Growth is assured if you understand AI and adopt it.</strong> AI-fluent professionals are getting promoted 2–3× faster, with median compensation hikes of 40–100% across functions.</div>
+      </div>
+      <div class="wun-pillar">
+        <div class="wun-pillar-num">03</div>
+        <div class="wun-pillar-text"><strong>AI knowledge and right usage in day-to-day work will set you apart.</strong> The differentiator is no longer who knows AI exists — it's who has actually deployed it on a real business problem.</div>
+      </div>
+      <div class="wun-pillar">
+        <div class="wun-pillar-num">04</div>
+        <div class="wun-pillar-text"><strong>Leadership skill with AI knowledge is the hottest need of the hour.</strong> Companies are not short on AI engineers. They are short on leaders who can decide what to build, where to deploy, and how to measure impact.</div>
+      </div>
+    </div>
+
+    <!-- Role bifurcation: how each role is impacted -->
+    <div class="wun-roles-block fade-in">
+      <div class="wun-roles-h3">How every role is shifting — and why upskilling is non-negotiable.</div>
+      <div class="wun-roles-sub">Five roles. Twelve months. Concrete data on what changed.</div>
+
+      <div class="wun-role-row">
+        <div class="wun-role-name"><span class="exp">Engineering</span>Engineer → AI-Forward Engineer</div>
+        <div class="wun-role-before"><span class="lbl">In 2024</span>Writes code, reviews PRs, debugs, ships features. Measured by lines shipped.</div>
+        <div class="wun-role-arrow">→</div>
+        <div class="wun-role-after"><span class="lbl">Today</span>46% of code is AI-written. Engineers who can direct AI agents ship 3× faster than juniors who can't.</div>
       </div>
 
-      <!-- Right: module detail panels -->
-      <div class="curr-dark-panel-area">
+      <div class="wun-role-row">
+        <div class="wun-role-name"><span class="exp">Product</span>PM / Analyst → AI Product Lead</div>
+        <div class="wun-role-before"><span class="lbl">In 2024</span>Writes PRDs, runs experiments, prioritizes backlog, talks to users.</div>
+        <div class="wun-role-arrow">→</div>
+        <div class="wun-role-after"><span class="lbl">Today</span>Specs AI features, evaluates models, designs AI trust into the product. Every decision now has an AI layer.</div>
+      </div>
 
-        <!-- Phase 1: Foundations -->
-        <div class="curr-dark-panel active" id="cdp-foundations">
-          <div class="curr-dark-panel-banner">
-            <div class="curr-dark-panel-banner-left">
-              <div class="curr-dark-panel-phase-label">Phase 1</div>
-              <div class="curr-dark-panel-phase-title">Foundations</div>
-              <div class="curr-dark-panel-phase-desc">Learn core principles of business and structured thinking</div>
-            </div>
-            <div class="curr-dark-panel-banner-duration">2 Months</div>
-          </div>
-          <div class="curr-dark-modules">
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 01</div>
-              <div class="curr-dark-module-name">Structured Thinking</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">Problem Decomposition</span>
-                <span class="curr-dark-topic">MECE Frameworks</span>
-                <span class="curr-dark-topic">Decision Trees</span>
-                <span class="curr-dark-topic">First Principles Thinking</span>
-                <span class="curr-dark-topic">Communication for Leaders</span>
-              </div>
-              <div class="curr-dark-cases-label">Case Studies</div>
-              <div class="curr-dark-cases">
-                <div class="curr-dark-case-card"><div class="cdc-co">McKinsey</div><div class="cdc-title">Structuring a board-level recommendation</div></div>
-                <div class="curr-dark-case-card"><div class="cdc-co">Bain</div><div class="cdc-title">Breaking down a complex ops problem in 48 hours</div></div>
-              </div>
-            </div>
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 02</div>
-              <div class="curr-dark-module-name">Data Analytics & Analytical Reasoning</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">SQL for Decision Makers</span>
-                <span class="curr-dark-topic">Statistical Thinking</span>
-                <span class="curr-dark-topic">Dashboard Design</span>
-                <span class="curr-dark-topic">A/B Testing</span>
-                <span class="curr-dark-topic">Predictive Modeling Basics</span>
-              </div>
-              <div class="curr-dark-cases-label">Case Studies</div>
-              <div class="curr-dark-cases">
-                <div class="curr-dark-case-card"><div class="cdc-co">Swiggy</div><div class="cdc-title">Delivery time prediction using rider and order data</div></div>
-                <div class="curr-dark-case-card"><div class="cdc-co">Zepto</div><div class="cdc-title">10-minute commerce: optimizing dark store inventory</div></div>
-              </div>
-            </div>
+      <div class="wun-role-row">
+        <div class="wun-role-name"><span class="exp">Operations</span>Ops Manager → AI Ops Director</div>
+        <div class="wun-role-before"><span class="lbl">In 2024</span>Optimizes processes, manages teams, tracks SLAs, runs playbooks.</div>
+        <div class="wun-role-arrow">→</div>
+        <div class="wun-role-after"><span class="lbl">Today</span>Bajaj runs 800 AI agents across ops. Klarna cut 4,000 jobs. Ops leaders who can deploy AI fleets are running larger orgs with smaller teams.</div>
+      </div>
+
+      <div class="wun-role-row">
+        <div class="wun-role-name"><span class="exp">Finance</span>Finance Manager → AI-Augmented CFO</div>
+        <div class="wun-role-before"><span class="lbl">In 2024</span>Builds Excel models, runs forecasts, prepares board decks.</div>
+        <div class="wun-role-arrow">→</div>
+        <div class="wun-role-after"><span class="lbl">Today</span>AI forecasting is 3× faster and more accurate. Automated risk scoring replaces manual review. Finance pros without AI are doing the slow version of someone else's job.</div>
+      </div>
+
+      <div class="wun-role-row">
+        <div class="wun-role-name"><span class="exp">Strategy &amp; Sales</span>Strategy Lead → AI Strategy Director</div>
+        <div class="wun-role-before"><span class="lbl">In 2024</span>Cold calls, CRM updates, pipeline management, quarterly targets.</div>
+        <div class="wun-role-arrow">→</div>
+        <div class="wun-role-after"><span class="lbl">Today</span>AI voice agents handle thousands of calls. AI personalizes every touchpoint. Strategy leaders who can design AI-augmented funnels are competing at 10× the speed.</div>
+      </div>
+    </div>
+
+    <!-- Video + News -->
+    <div class="wun-media-grid fade-in">
+      <div class="wun-video-card">
+        <div class="hero-v5-video-placeholder-text" style="position:absolute;top:16px;left:16px;">[ EXPERT INTERVIEW VIDEO ]</div>
+        <div class="play-btn" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.18);border:2px solid rgba(255,255,255,0.35);display:flex;align-items:center;justify-content:center;">
+          <span style="width:0;height:0;border-left:12px solid #fff;border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:3px;"></span>
+        </div>
+        <div>
+          <div class="vt">Why every role is changing — and what to do about it.</div>
+          <div class="vs">In conversation with Anshuman Singh, Co-Founder · 4 min</div>
+        </div>
+      </div>
+      <div class="wun-news-stack">
+        <div class="wun-news-card">
+          <div class="wun-news-img">[ IMG ]</div>
+          <div>
+            <div class="wun-news-cat">Mint · Apr 2026</div>
+            <div class="wun-news-headline">"63% of Indian employers cite skills gap as #1 barrier to AI transformation"</div>
+            <div class="wun-news-source">Source: WEF Future of Jobs Report 2025</div>
           </div>
         </div>
-
-        <!-- Phase 2: Business Management -->
-        <div class="curr-dark-panel" id="cdp-bizmanagement">
-          <div class="curr-dark-panel-banner">
-            <div class="curr-dark-panel-banner-left">
-              <div class="curr-dark-panel-phase-label">Phase 2</div>
-              <div class="curr-dark-panel-phase-title">Business Management</div>
-              <div class="curr-dark-panel-phase-desc">Master the core functions that run every organization</div>
-            </div>
-            <div class="curr-dark-panel-banner-duration">4 Months</div>
-          </div>
-          <div class="curr-dark-modules">
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 03</div>
-              <div class="curr-dark-module-name">Marketing</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">Brand Strategy</span>
-                <span class="curr-dark-topic">Growth Marketing</span>
-                <span class="curr-dark-topic">Pricing Psychology</span>
-                <span class="curr-dark-topic">AI-Driven Campaigns</span>
-                <span class="curr-dark-topic">Customer Segmentation</span>
-              </div>
-              <div class="curr-dark-cases-label">Case Studies</div>
-              <div class="curr-dark-cases">
-                <div class="curr-dark-case-card"><div class="cdc-co">Nykaa</div><div class="cdc-title">AI product launch strategy for D2C beauty category</div></div>
-              </div>
-            </div>
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 04</div>
-              <div class="curr-dark-module-name">Finance</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">Financial Modeling</span>
-                <span class="curr-dark-topic">Unit Economics</span>
-                <span class="curr-dark-topic">Valuation</span>
-                <span class="curr-dark-topic">AI-Powered Forecasting</span>
-                <span class="curr-dark-topic">Risk Management</span>
-              </div>
-              <div class="curr-dark-cases-label">Case Studies</div>
-              <div class="curr-dark-cases">
-                <div class="curr-dark-case-card"><div class="cdc-co">Bajaj Finance</div><div class="cdc-title">AI-driven credit scoring for 50M+ customers</div></div>
-              </div>
-            </div>
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 05</div>
-              <div class="curr-dark-module-name">Operations</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">Supply Chain Design</span>
-                <span class="curr-dark-topic">Process Optimization</span>
-                <span class="curr-dark-topic">Agent-Led Ops</span>
-                <span class="curr-dark-topic">Org Design</span>
-              </div>
-              <div class="curr-dark-cases-label">Case Studies</div>
-              <div class="curr-dark-cases">
-                <div class="curr-dark-case-card"><div class="cdc-co">Urban Company</div><div class="cdc-title">NPS recovery using AI service quality prediction</div></div>
-              </div>
-            </div>
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 06</div>
-              <div class="curr-dark-module-name">Strategy</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">Competitive Intelligence</span>
-                <span class="curr-dark-topic">M&A Frameworks</span>
-                <span class="curr-dark-topic">AI Strategy for Boards</span>
-                <span class="curr-dark-topic">Build vs. Buy vs. Partner</span>
-              </div>
-              <div class="curr-dark-cases-label">Case Studies</div>
-              <div class="curr-dark-cases">
-                <div class="curr-dark-case-card"><div class="cdc-co">Reliance</div><div class="cdc-title">AI-first retail strategy — the JioMart playbook</div></div>
-              </div>
-            </div>
+        <div class="wun-news-card">
+          <div class="wun-news-img">[ IMG ]</div>
+          <div>
+            <div class="wun-news-cat">Economic Times · Mar 2026</div>
+            <div class="wun-news-headline">"AI-fluent leaders earn 90% more than peers — across every function"</div>
+            <div class="wun-news-source">Source: LinkedIn Salary Insights, Q1 2026</div>
           </div>
         </div>
-
-        <!-- Phase 3: AI Foundations -->
-        <div class="curr-dark-panel" id="cdp-aifoundations">
-          <div class="curr-dark-panel-banner">
-            <div class="curr-dark-panel-banner-left">
-              <div class="curr-dark-panel-phase-label">Phase 3</div>
-              <div class="curr-dark-panel-phase-title">AI Foundations</div>
-              <div class="curr-dark-panel-phase-desc">Understand AI deeply enough to make decisions about it — without writing code</div>
-            </div>
-            <div class="curr-dark-panel-banner-duration">1 Month</div>
-          </div>
-          <div class="curr-dark-modules">
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 07</div>
-              <div class="curr-dark-module-name">AI Fundamentals</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">How LLMs Work</span>
-                <span class="curr-dark-topic">Model Evaluation</span>
-                <span class="curr-dark-topic">AI Vendor Assessment</span>
-                <span class="curr-dark-topic">AI Ethics & Governance</span>
-                <span class="curr-dark-topic">Automation Opportunity Mapping</span>
-              </div>
-              <div class="curr-dark-cases-label">Case Studies</div>
-              <div class="curr-dark-cases">
-                <div class="curr-dark-case-card"><div class="cdc-co">Klarna</div><div class="cdc-title">7,000 to 3,000 headcount: the AI-first org restructure</div></div>
-                <div class="curr-dark-case-card"><div class="cdc-co">GitHub</div><div class="cdc-title">46% of enterprise code written by AI — what changed</div></div>
-              </div>
-            </div>
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 08</div>
-              <div class="curr-dark-module-name">Prompt Engineering</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">Prompt Design Patterns</span>
-                <span class="curr-dark-topic">Chain-of-Thought Prompting</span>
-                <span class="curr-dark-topic">Prompt Versioning</span>
-                <span class="curr-dark-topic">Output Evaluation</span>
-                <span class="curr-dark-topic">Production Deployment</span>
-              </div>
-            </div>
+        <div class="wun-news-card">
+          <div class="wun-news-img">[ IMG ]</div>
+          <div>
+            <div class="wun-news-cat">YourStory · Feb 2026</div>
+            <div class="wun-news-headline">"Google for Startups partners with Scaler on AI skilling for Indian founders"</div>
+            <div class="wun-news-source">Coverage on Scaler's AI initiatives</div>
           </div>
         </div>
-
-        <!-- Phase 4: AI Specialisation -->
-        <div class="curr-dark-panel" id="cdp-aispec">
-          <div class="curr-dark-panel-banner">
-            <div class="curr-dark-panel-banner-left">
-              <div class="curr-dark-panel-phase-label">Phase 4</div>
-              <div class="curr-dark-panel-phase-title">AI Specialisation</div>
-              <div class="curr-dark-panel-phase-desc">Go deep in your track: Product, Strategy, or Operations</div>
-            </div>
-            <div class="curr-dark-panel-banner-duration">3 Months</div>
-          </div>
-          <div class="curr-dark-modules">
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 09</div>
-              <div class="curr-dark-module-name">AI Product</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">AI Product Specs</span>
-                <span class="curr-dark-topic">Model Selection</span>
-                <span class="curr-dark-topic">AI UX Research</span>
-                <span class="curr-dark-topic">User Trust Design</span>
-                <span class="curr-dark-topic">Launch Strategy</span>
-              </div>
-              <div class="curr-dark-cases-label">Case Studies</div>
-              <div class="curr-dark-cases">
-                <div class="curr-dark-case-card"><div class="cdc-co">PhonePe</div><div class="cdc-title">Fraud detection at 500M UPI transactions</div></div>
-              </div>
-            </div>
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 10</div>
-              <div class="curr-dark-module-name">AI Strategy</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">Board-Ready AI Business Cases</span>
-                <span class="curr-dark-topic">AI Vendor Evaluation</span>
-                <span class="curr-dark-topic">Competitive Intelligence</span>
-                <span class="curr-dark-topic">AI ROI Measurement</span>
-              </div>
-            </div>
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 11</div>
-              <div class="curr-dark-module-name">AI Operations</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">Agent Fleet Management</span>
-                <span class="curr-dark-topic">Workflow Automation</span>
-                <span class="curr-dark-topic">Change Leadership</span>
-                <span class="curr-dark-topic">AI-Ready Org Design</span>
-              </div>
-              <div class="curr-dark-cases-label">Case Studies</div>
-              <div class="curr-dark-cases">
-                <div class="curr-dark-case-card"><div class="cdc-co">Bajaj Finance</div><div class="cdc-title">800-agent AI deployment across lending and collections</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Phase 5: Capstone -->
-        <div class="curr-dark-panel" id="cdp-capstone">
-          <div class="curr-dark-panel-banner">
-            <div class="curr-dark-panel-banner-left">
-              <div class="curr-dark-panel-phase-label">Phase 5</div>
-              <div class="curr-dark-panel-phase-title">Capstone Projects</div>
-              <div class="curr-dark-panel-phase-desc">Live deployment with a sponsor company. Not a simulation.</div>
-            </div>
-            <div class="curr-dark-panel-banner-duration">2 Months</div>
-          </div>
-          <div class="curr-dark-modules">
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 12</div>
-              <div class="curr-dark-module-name">Live Project</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">Problem Scoping</span>
-                <span class="curr-dark-topic">Stakeholder Management</span>
-                <span class="curr-dark-topic">AI Solution Design</span>
-                <span class="curr-dark-topic">Implementation</span>
-                <span class="curr-dark-topic">Impact Measurement</span>
-              </div>
-              <div class="curr-dark-cases-label">Past Projects</div>
-              <div class="curr-dark-cases">
-                <div class="curr-dark-case-card"><div class="cdc-co">Cohort 1</div><div class="cdc-title">AI-powered churn prediction for a SaaS company</div></div>
-                <div class="curr-dark-case-card"><div class="cdc-co">Cohort 1</div><div class="cdc-title">Automated vendor qualification using NLP pipelines</div></div>
-              </div>
-            </div>
-            <div class="curr-dark-module">
-              <div class="curr-dark-module-label">Module 13</div>
-              <div class="curr-dark-module-name">Executive Presentation</div>
-              <div class="curr-dark-topics-label">Key Topics</div>
-              <div class="curr-dark-topics">
-                <span class="curr-dark-topic">C-Suite Communication</span>
-                <span class="curr-dark-topic">Business Case Packaging</span>
-                <span class="curr-dark-topic">Panel Q&A Preparation</span>
-                <span class="curr-dark-topic">Portfolio Positioning</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== CAREER TRAJECTORY TOOL — scrubber-based ===== -->
-<section id="career-tool" class="career-scrubber-section">
+<!-- ============================================================
+     ===== FOLD 8 — PILLARS OF THE PROGRAM               =====
+     ============================================================ -->
+<section id="pillars" class="pp-section">
   <div class="container">
-    <div class="annotation" data-ann="career"><strong>WHAT:</strong> Scrubber-driven career trajectory. Drag the slider through 5 curriculum phases — skills accumulate and probability-of-target-role bar rises in real time.</div>
-    <div class="career-scrubber-header fade-in">
-      <div class="career-scrubber-eyebrow">Career Trajectory</div>
-      <div class="career-scrubber-title">Drag through PGPMT. Watch your career transform.</div>
-      <div class="career-scrubber-sub">Select your current role. Drag the scrubber through each phase. See skills pile up and your odds of reaching the target role rise.</div>
+    <div class="pp-header fade-in">
+      <span class="hos-eyebrow">Pillars of the Program</span>
+      <h2>Built different. Designed to last.</h2>
+      <p style="color:var(--muted);max-width:680px;margin:14px auto 0;font-size:15px;line-height:1.65;">
+        Four things no other program gives you — and why they compound into the AI-fluent leader your next role is asking for.
+      </p>
     </div>
 
-    <div class="fade-in">
-      <!-- Role selector -->
-      <div class="scrubber-role-row">
-        <div class="scrubber-role-label">I am currently a:</div>
-        <div class="scrubber-role-btns">
-          <button class="scrubber-role-btn active" data-srole="pm">Product Manager</button>
-          <button class="scrubber-role-btn" data-srole="engineer">Engineer</button>
-          <button class="scrubber-role-btn" data-srole="ops">Operations Leader</button>
-          <button class="scrubber-role-btn" data-srole="analyst">Business Analyst</button>
-          <button class="scrubber-role-btn" data-srole="founder">Entrepreneur</button>
-          <button class="scrubber-role-btn" data-srole="finance">Finance Professional</button>
-          <button class="scrubber-role-btn" data-srole="sales">Sales &amp; GTM Leader</button>
-          <button class="scrubber-role-btn" data-srole="consultant">Strategy Consultant</button>
-        </div>
+    <div class="pp-grid fade-in">
+      <div class="pp-card">
+        <div class="pp-card-num">PILLAR 01</div>
+        <div class="pp-card-title">AI-Integrated Curriculum</div>
+        <div class="pp-card-desc">AI is not bolted on as an elective. It runs through every module — from the first case study to the final capstone. From prompting to multi-agent systems, you finish able to spec, evaluate, and ship AI-native features in your function.</div>
+        <div class="pp-card-proof">14 specialization tracks · 200+ live hours</div>
       </div>
-
-      <!-- Experience selector -->
-      <div class="scrubber-exp-row">
-        <div class="scrubber-exp-label">Years of experience:</div>
-        <div class="scrubber-exp-btns">
-          <button class="scrubber-exp-btn active" data-sexp="3-5">3&ndash;5 years</button>
-          <button class="scrubber-exp-btn" data-sexp="5-7">5&ndash;7 years</button>
-          <button class="scrubber-exp-btn" data-sexp="7-10">7&ndash;10 years</button>
-          <button class="scrubber-exp-btn" data-sexp="10-15">10&ndash;15+ years</button>
-        </div>
+      <div class="pp-card">
+        <div class="pp-card-num">PILLAR 02</div>
+        <div class="pp-card-title">Lifelong Learning, Unlocked</div>
+        <div class="pp-card-desc">The AI stack you learn in May 2026 will be obsolete by 2028. So we don't sell you a frozen 12-month course. Your enrollment includes lifetime access to every future curriculum update — every new module, every new tool. Pay once, stay current.</div>
+        <div class="pp-card-proof">4 free updates already shipped to Cohort 1</div>
       </div>
-
-      <!-- Phase labels above scrubber -->
-      <div class="scrubber-timeline-wrap">
-        <div class="scrubber-phase-labels" id="scrubber-phase-labels">
-          <div class="scrubber-phase-label-item" data-phase-idx="0">
-            <div class="spli-name">Foundations</div>
-            <div class="spli-dur">2 mo</div>
-          </div>
-          <div class="scrubber-phase-label-item" data-phase-idx="1">
-            <div class="spli-name">Business Management</div>
-            <div class="spli-dur">4 mo</div>
-          </div>
-          <div class="scrubber-phase-label-item" data-phase-idx="2">
-            <div class="spli-name">AI Foundations</div>
-            <div class="spli-dur">1 mo</div>
-          </div>
-          <div class="scrubber-phase-label-item" data-phase-idx="3">
-            <div class="spli-name">AI Specialisation</div>
-            <div class="spli-dur">3 mo</div>
-          </div>
-          <div class="scrubber-phase-label-item" data-phase-idx="4">
-            <div class="spli-name">Capstone</div>
-            <div class="spli-dur">2 mo</div>
-          </div>
-        </div>
-        <div class="scrubber-input-wrap">
-          <div class="scrubber-drag-hint" id="scrubber-drag-hint">
-            <span class="scrubber-drag-arrow">&#8592; &#8594;</span>
-            <span class="scrubber-drag-text">Drag to explore your career path</span>
-          </div>
-          <input type="range" class="scrubber-input" id="career-scrubber" min="0" max="100" value="0" step="1">
-        </div>
+      <div class="pp-card">
+        <div class="pp-card-num">PILLAR 03</div>
+        <div class="pp-card-title">Fundamentals First</div>
+        <div class="pp-card-desc">AI tools make average work easier. They don't replace judgment. We teach core management — strategy, finance, ops, product — first. Then layer AI on top. You leave able to reason from first principles, with or without AI in the loop.</div>
+        <div class="pp-card-proof">Co-built with IIM-Trichy · Executive Certificate</div>
       </div>
-
-      <!-- Skill accumulation -->
-      <div class="scrubber-skills-wrap">
-        <div class="scrubber-skills-label">Skills You Have Earned</div>
-        <div class="scrubber-skills-pool" id="scrubber-skills-pool">
-          <!-- Injected by JS -->
-        </div>
-      </div>
-
-      <!-- Outcome box -->
-      <div class="scrubber-outcome">
-        <div class="scrubber-outcome-block">
-          <div class="scrubber-outcome-label">After PGPMT, you are positioned for:</div>
-          <div class="scrubber-outcome-roles" id="scrubber-outcome-roles">Head of AI Products, Director of Product Strategy, AI Product Lead</div>
-        </div>
-        <div class="scrubber-outcome-pct-block">
-          <div class="scrubber-outcome-pct" id="scrubber-outcome-pct">85%</div>
-          <div class="scrubber-outcome-pct-label">Reach probability</div>
-        </div>
-      </div>
-
-      <!-- Deep Career Profile CTA -->
-      <div class="career-profile-cta">
-        <div class="career-profile-cta-text">
-          <div class="career-profile-cta-title">Want a deeper analysis?</div>
-          <div class="career-profile-cta-sub">Get a personalized career profile evaluation — we'll map your experience, skills, and goals to a concrete post-PGPMT trajectory.</div>
-        </div>
-        <button class="career-profile-cta-btn" data-modal="apply">Get Your Career Profile Evaluated &rarr;</button>
+      <div class="pp-card">
+        <div class="pp-card-num">PILLAR 04</div>
+        <div class="pp-card-title">Solve Real-World Challenges</div>
+        <div class="pp-card-desc">You don't study case studies. You solve problems that were solved last quarter. The capstone is a live problem, sponsored by a real company, presented to a panel of founders and CXOs. You leave with a portfolio piece you can defend.</div>
+        <div class="pp-card-proof">Capstone sponsors: Razorpay, Bajaj, Flipkart Health+</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== FACULTY & MENTORS — Scaler OPGP card pattern ===== -->
-<section id="faculty-section" class="section">
+<!-- ============================================================
+     ===== FOLD 9 — CURRICULUM                           =====
+     ============================================================ -->
+<section id="curriculum-section" class="cv5-section">
   <div class="container">
-    <div class="annotation" data-ann="faculty"><strong>WHAT:</strong> Faculty cards matching Scaler OPGP pattern — photo bg, name + designation overlay, company logos below. <strong>WHY:</strong> "Practitioners who do it, not professors who study it." Visual credibility via professional photos and company logos. <strong>TRANSCRIPT:</strong> "The structured thinking gave me confidence about the curriculum." <strong>CONVERSION:</strong> Builds trust in program quality. Shows these are real named people at real companies.</div>
-    <span class="section-label text-center" style="display:block;">Your Instructors</span>
-    <h2 class="text-center fade-in" style="margin-bottom:8px;">Real leaders make the best teachers</h2>
-    <p class="text-center fade-in" style="color:var(--muted);margin-bottom:48px;">Taught by VPs, Directors, and Founders who've deployed AI at scale — with strong theoretical grounding from top institutions.</p>
+    <div class="cv5-header fade-in">
+      <span class="hos-eyebrow" style="background:rgba(0,85,255,0.08);color:var(--blue);">Curriculum</span>
+      <h2>Find the AI path for your role.</h2>
+      <p style="color:var(--muted);max-width:680px;margin:14px auto 0;font-size:15px;line-height:1.65;">
+        12 months. Five phases. Every module future-proofed with an AI integration layer — built by the people deploying it at scale.
+      </p>
+    </div>
 
-    <div class="faculty-grid-v3 fade-in">
-      <div class="faculty-card-v3">
-        <div class="faculty-card-photo" style="background:linear-gradient(135deg,#1a1a2e 0%,#2d3436 100%);">
-          <div class="faculty-card-overlay">
-            <div class="faculty-card-module">AI Strategy & Business Transformation</div>
-            <div class="faculty-card-name">Taught by [Faculty Name]</div>
-            <div class="faculty-card-company">VP of AI Products, [Top Tech Co]</div>
+    <div class="cv5-tabs fade-in">
+      <div class="cv5-tab active" data-cv="cv-1">Foundations<span class="dur">Month 1</span></div>
+      <div class="cv5-tab" data-cv="cv-2">Business Management<span class="dur">Months 2–4</span></div>
+      <div class="cv5-tab" data-cv="cv-3">AI Foundations<span class="dur">Months 5–7</span></div>
+      <div class="cv5-tab" data-cv="cv-4">AI Specialisation<span class="dur">Months 8–10</span></div>
+      <div class="cv5-tab" data-cv="cv-5">Capstone Project<span class="dur">Months 11–12</span></div>
+    </div>
+
+    <!-- Foundations -->
+    <div class="cv5-panel active" id="cv-1">
+      <div class="cv5-module fade-in">
+        <div class="cv5-module-head">
+          <span class="cv5-module-num">MODULE 01</span>
+          <span class="cv5-module-title">Structured Thinking</span>
+          <span class="cv5-module-meta">1 month · 8 sessions</span>
+        </div>
+        <div class="cv5-module-desc">Learn the core principles of business problem-solving. Problem decomposition, the SMART framework, hypothesis trees, growth case studies, industry orientations.</div>
+        <div class="cv5-module-grid">
+          <div class="cv5-module-block">
+            <div class="lbl">01 · Case-study Challenge</div>
+            <div class="cv5-module-block-text">Build a case on revenue stagnation at Rameshwaram Café — defended live in front of peers and faculty.</div>
           </div>
-          <div class="faculty-card-bio">Led AI product strategy for a $2B fintech. Shipped 3 AI-native products to 50M+ users. Previously McKinsey Digital.</div>
-          <div class="faculty-card-badges"><span class="faculty-badge">15+ Years Experience</span></div>
-        </div>
-        <div class="faculty-card-logos">
-          <img src="https://logo.clearbit.com/mckinsey.com" alt="McKinsey" class="faculty-company-logo" onerror="this.outerHTML='<span class=faculty-logo-text>McKinsey</span>'">
-        </div>
-      </div>
-
-      <div class="faculty-card-v3">
-        <div class="faculty-card-photo" style="background:linear-gradient(135deg,#0f3460 0%,#1a1a2e 100%);">
-          <div class="faculty-card-overlay">
-            <div class="faculty-card-module">AI Product Management</div>
-            <div class="faculty-card-name">Taught by [Faculty Name]</div>
-            <div class="faculty-card-company">Head of Data Science, [Leading Fintech]</div>
+          <div class="cv5-module-block">
+            <div class="lbl">02 · Knowledge Depth</div>
+            <div class="cv5-module-block-text">Use different frameworks via real problem statements. How is this module future-proof? Because the frameworks compound — not the tools.</div>
           </div>
-          <div class="faculty-card-bio">Built ML pipelines processing 10M+ transactions daily. Former Amazon Applied Scientist. IIT Bombay gold medalist.</div>
-          <div class="faculty-card-badges"><span class="faculty-badge">12+ Years Experience</span></div>
-        </div>
-        <div class="faculty-card-logos">
-          <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" class="faculty-company-logo" onerror="this.outerHTML='<span class=faculty-logo-text>Amazon</span>'">
-        </div>
-      </div>
-
-      <div class="faculty-card-v3">
-        <div class="faculty-card-photo" style="background:linear-gradient(135deg,#2d3436 0%,#636e72 100%);">
-          <div class="faculty-card-overlay">
-            <div class="faculty-card-module">AI Operations & Org Design</div>
-            <div class="faculty-card-name">Taught by [Faculty Name]</div>
-            <div class="faculty-card-company">Director of Engineering, [Global Enterprise]</div>
+          <div class="cv5-module-block">
+            <div class="lbl">03 · Industry Reference</div>
+            <div class="cv5-module-block-text">Real projects using AI tools — Claude, Perplexity, Grok, Gemini — to decode and research in depth. How McKinsey consultants structure problems in the real world.</div>
           </div>
-          <div class="faculty-card-bio">Restructured three engineering orgs for AI. Led 800-person team through AI transformation. Ex-Google, Ex-Microsoft.</div>
-          <div class="faculty-card-badges"><span class="faculty-badge">14+ Years Experience</span></div>
-        </div>
-        <div class="faculty-card-logos">
-          <img src="https://logo.clearbit.com/google.com" alt="Google" class="faculty-company-logo" onerror="this.outerHTML='<span class=faculty-logo-text>Google</span>'">
-          <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="faculty-company-logo" onerror="this.outerHTML='<span class=faculty-logo-text>Microsoft</span>'">
-        </div>
-      </div>
-
-      <div class="faculty-card-v3">
-        <div class="faculty-card-photo" style="background:linear-gradient(135deg,#434343 0%,#1a1a2e 100%);">
-          <div class="faculty-card-overlay">
-            <div class="faculty-card-module">Capstone & AI Deployment</div>
-            <div class="faculty-card-name">Taught by [Faculty Name]</div>
-            <div class="faculty-card-company">Co-Founder, [AI Startup]</div>
-          </div>
-          <div class="faculty-card-bio">Built and scaled an AI-first startup to $50M ARR. YC alum. Advisor to 3 unicorn AI teams. Previously Flipkart AI.</div>
-          <div class="faculty-card-badges"><span class="faculty-badge">10+ Years Experience</span></div>
-        </div>
-        <div class="faculty-card-logos">
-          <img src="https://logo.clearbit.com/flipkart.com" alt="Flipkart" class="faculty-company-logo" onerror="this.outerHTML='<span class=faculty-logo-text>Flipkart</span>'">
         </div>
       </div>
     </div>
 
-    <p class="text-center fade-in mt-32" style="font-size:14px;color:var(--muted);">Faculty photos, names, and LinkedIn profiles will be added before launch. All instructors are verified, named practitioners.</p>
+    <!-- Business Management -->
+    <div class="cv5-panel" id="cv-2">
+      <div class="cv5-module fade-in">
+        <div class="cv5-module-head">
+          <span class="cv5-module-num">MODULE 02</span>
+          <span class="cv5-module-title">Data Analytics + Analytical Reasoning</span>
+          <span class="cv5-module-meta">2 months · 14 sessions</span>
+        </div>
+        <div class="cv5-module-desc">Algorithms, data structures, engineering thinking — for non-coders. Build the analytical foundation every AI-era leader needs.</div>
+        <div class="cv5-module-grid">
+          <div class="cv5-module-block"><div class="lbl">01 · Hands-on Project</div><div class="cv5-module-block-text">Build a data dashboard for a real-world business problem using SQL + AI tools.</div></div>
+          <div class="cv5-module-block"><div class="lbl">02 · Knowledge Depth</div><div class="cv5-module-block-text">Statistical reasoning, A/B testing, decision trees — applied to business contexts you face daily.</div></div>
+          <div class="cv5-module-block"><div class="lbl">03 · AI Integration</div><div class="cv5-module-block-text">Use AI to accelerate analysis: prompt-driven SQL generation, anomaly detection, automated insight extraction.</div></div>
+        </div>
+      </div>
+
+      <div class="cv5-module fade-in">
+        <div class="cv5-module-head">
+          <span class="cv5-module-num">MODULE 03</span>
+          <span class="cv5-module-title">Marketing &amp; Strategy in the AI Era</span>
+          <span class="cv5-module-meta">1 month · 8 sessions</span>
+        </div>
+        <div class="cv5-module-desc">Modern marketing, GTM design, strategic frameworks — re-grounded for the AI era. How AI changes targeting, messaging, and measurement.</div>
+        <div class="cv5-module-grid">
+          <div class="cv5-module-block"><div class="lbl">01 · Hands-on Project</div><div class="cv5-module-block-text">Design a complete GTM playbook for an AI-native product launch.</div></div>
+          <div class="cv5-module-block"><div class="lbl">02 · Knowledge Depth</div><div class="cv5-module-block-text">Strategic positioning, customer segmentation, competitive intelligence — in an AI-saturated market.</div></div>
+          <div class="cv5-module-block"><div class="lbl">03 · AI Integration</div><div class="cv5-module-block-text">AI for competitive research, content generation, and personalized outbound at scale.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Foundations -->
+    <div class="cv5-panel" id="cv-3">
+      <div class="cv5-module fade-in">
+        <div class="cv5-module-head">
+          <span class="cv5-module-num">MODULE 04</span>
+          <span class="cv5-module-title">AI Fluency &amp; Prompt Engineering</span>
+          <span class="cv5-module-meta">1.5 months · 12 sessions</span>
+        </div>
+        <div class="cv5-module-desc">From prompting to multi-agent systems. The complete operator's view of how modern AI works — and how to deploy it without writing code.</div>
+        <div class="cv5-module-grid">
+          <div class="cv5-module-block"><div class="lbl">01 · Hands-on Project</div><div class="cv5-module-block-text">Ship 3 AI-powered automations into your current workflow. Measured impact in week 4.</div></div>
+          <div class="cv5-module-block"><div class="lbl">02 · Knowledge Depth</div><div class="cv5-module-block-text">LLMs, RAG, agents, evals, vector stores — what they are, when each matters, and how to brief an engineer.</div></div>
+          <div class="cv5-module-block"><div class="lbl">03 · AI Integration</div><div class="cv5-module-block-text">You're not just learning about AI. You're using AI to learn — every session has live AI tools in the loop.</div></div>
+        </div>
+      </div>
+
+      <div class="cv5-module fade-in">
+        <div class="cv5-module-head">
+          <span class="cv5-module-num">MODULE 05</span>
+          <span class="cv5-module-title">AI Strategy &amp; Governance</span>
+          <span class="cv5-module-meta">1.5 months · 10 sessions</span>
+        </div>
+        <div class="cv5-module-desc">How to build the business case, govern AI deployment, and measure ROI — at the level a CFO or CEO actually needs.</div>
+        <div class="cv5-module-grid">
+          <div class="cv5-module-block"><div class="lbl">01 · Hands-on Project</div><div class="cv5-module-block-text">Build an AI investment proposal for your company — live, defendable, board-ready.</div></div>
+          <div class="cv5-module-block"><div class="lbl">02 · Knowledge Depth</div><div class="cv5-module-block-text">AI governance frameworks, risk &amp; compliance, build vs. buy, AI vendor evaluation.</div></div>
+          <div class="cv5-module-block"><div class="lbl">03 · AI Integration</div><div class="cv5-module-block-text">Apply real-world frameworks: NIST AI RMF, EU AI Act compliance, India's DPDP rules.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Specialisation -->
+    <div class="cv5-panel" id="cv-4">
+      <div class="cv5-module fade-in">
+        <div class="cv5-module-head">
+          <span class="cv5-module-num">MODULE 06</span>
+          <span class="cv5-module-title">Specialisation Track (pick one)</span>
+          <span class="cv5-module-meta">3 months · 24 sessions</span>
+        </div>
+        <div class="cv5-module-desc">Deep, hands-on specialisation. Choose the track that maps to your role: AI Product, AI Strategy &amp; Operations, or AI for Finance &amp; Risk.</div>
+        <div class="cv5-module-grid">
+          <div class="cv5-module-block"><div class="lbl">Track A · AI Product</div><div class="cv5-module-block-text">For PMs, designers, and product-led leaders. Spec, evaluate, and ship AI-native features.</div></div>
+          <div class="cv5-module-block"><div class="lbl">Track B · AI Strategy &amp; Ops</div><div class="cv5-module-block-text">For ops leaders, consultants, and senior managers. Build AI deployment strategy, run agent fleets.</div></div>
+          <div class="cv5-module-block"><div class="lbl">Track C · AI Finance &amp; Risk</div><div class="cv5-module-block-text">For finance, FP&amp;A, and risk leaders. AI forecasting, automated risk scoring, AI-driven FP&amp;A.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Capstone -->
+    <div class="cv5-panel" id="cv-5">
+      <div class="cv5-module fade-in">
+        <div class="cv5-module-head">
+          <span class="cv5-module-num">MODULE 07</span>
+          <span class="cv5-module-title">Capstone Project — Sponsored, Live, Defended</span>
+          <span class="cv5-module-meta">2 months · Live deliverable</span>
+        </div>
+        <div class="cv5-module-desc">Real projects using AI tools and production-grade data pipelines. Executive presentation to a panel of industry leaders. You leave with a portfolio piece you can open, walk through, and defend in your next interview.</div>
+        <div class="cv5-module-grid">
+          <div class="cv5-module-block"><div class="lbl">01 · Sponsor Match</div><div class="cv5-module-block-text">Matched with a real company sponsor — Razorpay, Bajaj Finance, Flipkart Health+ in Cohort 1.</div></div>
+          <div class="cv5-module-block"><div class="lbl">02 · Live Build</div><div class="cv5-module-block-text">Ship an AI solution to a real business problem with mentor support and weekly reviews.</div></div>
+          <div class="cv5-module-block"><div class="lbl">03 · CXO Defense</div><div class="cv5-module-block-text">Present to a panel of 5+ founders, CXOs, and senior leaders. Critique that sharpens you for any future interview.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;" class="fade-in">
+      <button class="btn btn-primary" data-modal="guide">Download Detailed Curriculum</button>
+    </div>
   </div>
 </section>
 
-<!-- ===== WHATSAPP TESTIMONIALS ===== -->
-<section id="learner-section" class="wa-section">
+<!-- ============================================================
+     ===== FOLD 10 — ADMISSION PROCESS                   =====
+     ============================================================ -->
+<section id="admission" class="adm-section">
   <div class="container">
-    <div class="wa-header fade-in">
-      <span class="wa-eyebrow">Cohort 1 Learners</span>
-      <h2 class="wa-title">What Cohort 1 Learners Are Saying</h2>
-      <p class="wa-sub">Real messages from the PGPMT WhatsApp group</p>
-    </div>
-    <div class="wa-grid fade-in">
-
-      <div class="wa-col">
-        <div class="wa-bubble wa-bubble-sent">
-          <div class="wa-sender">Rahul M. — Product Manager, Razorpay</div>
-          <div class="wa-msg">Just finished the AI Strategy module. This is the first time I've been able to think about AI at a business level, not just as a collection of tools. Something clicked.</div>
-          <div class="wa-time">Sat 10:42 AM</div>
-        </div>
-        <div class="wa-bubble wa-bubble-received">
-          <div class="wa-sender">Priya S. — Ops Director, Flipkart</div>
-          <div class="wa-msg">The Bajaj Finance case study was incredible. Already applying the agent deployment framework at work. My VP asked where I learned this.</div>
-          <div class="wa-time">Sat 10:48 AM</div>
-        </div>
-        <div class="wa-bubble wa-bubble-sent">
-          <div class="wa-sender">Arjun K. — Business Analyst, HDFC Bank</div>
-          <div class="wa-msg">Saturday's session on AI Operations was the best 4 hours I've spent this year. No exaggeration. Already have 3 action items for Monday.</div>
-          <div class="wa-time">Sat 2:15 PM</div>
-        </div>
-        <div class="wa-bubble wa-bubble-received">
-          <div class="wa-sender">Sneha R. — Engineering Manager, Google</div>
-          <div class="wa-msg">My team is now asking ME about AI strategy. That's never happened before. Three months ago I was googling "what is an LLM."</div>
-          <div class="wa-time">Sun 9:03 AM</div>
-        </div>
-      </div>
-
-      <div class="wa-col">
-        <div class="wa-bubble wa-bubble-received">
-          <div class="wa-sender">Vikram T. — Senior PM, PhonePe</div>
-          <div class="wa-msg">The cohort group alone is worth it. Already have 3 potential collaborators for a side project. This is not a class, it's a network that happens to teach you things.</div>
-          <div class="wa-time">Fri 8:22 PM</div>
-        </div>
-        <div class="wa-bubble wa-bubble-sent">
-          <div class="wa-sender">Deepa N. — Finance Director, Infosys</div>
-          <div class="wa-msg">Finally understand how to present AI initiatives to our board. Built a deck last week and got approved for a pilot budget. That ROI alone covers the program fee.</div>
-          <div class="wa-time">Thu 6:47 PM</div>
-        </div>
-        <div class="wa-bubble wa-bubble-received">
-          <div class="wa-sender">Rohan A. — Head of Ops, Nykaa</div>
-          <div class="wa-msg">Was skeptical going in — I've done enough "programs." This one is different. The faculty actually work at companies running AI right now. Real problems, not textbook cases.</div>
-          <div class="wa-time">Sun 11:30 AM</div>
-        </div>
-        <div class="wa-bubble wa-bubble-sent">
-          <div class="wa-sender">Kavya M. — Strategy Lead, Zepto</div>
-          <div class="wa-msg">Just got back from a board meeting where I presented our AI roadmap. Used the exact framework from Week 6. They approved it on the spot. Best investment decision I've made.</div>
-          <div class="wa-time">Mon 7:15 PM</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== WHY SCALER ===== -->
-<section id="scaler-legacy" class="section" style="background:var(--navy);">
-  <div class="container">
-    <span class="section-label text-center" style="display:block;color:var(--amber);">Why Scaler</span>
-    <h2 class="text-center fade-in" style="margin-bottom:16px;color:#fff;">We built tech careers for a decade. Now we're building the leaders AI needs.</h2>
-    <p class="text-center fade-in" style="color:rgba(255,255,255,0.6);max-width:700px;margin:0 auto 48px;font-size:15px;">Scaler doesn't observe the AI shift from the outside. We've been inside it — training 25,000+ engineers, placing them at the companies building AI, and watching the gap between tech and business leadership widen in real time. PGPMT exists because we saw what's missing.</p>
-
-    <div class="legacy-stats fade-in" style="margin-bottom:48px;">
-      <div class="legacy-stat" style="border-color:rgba(255,255,255,0.1);"><div class="legacy-num" style="color:#fff;"><span class="counter" data-target="25000" data-suffix="+">0</span></div><div class="legacy-label" style="color:rgba(255,255,255,0.5);">Engineers trained</div></div>
-      <div class="legacy-stat" style="border-color:rgba(255,255,255,0.1);"><div class="legacy-num" style="color:#fff;"><span class="counter" data-target="900" data-suffix="+">0</span></div><div class="legacy-label" style="color:rgba(255,255,255,0.5);">Companies hired from Scaler</div></div>
-      <div class="legacy-stat" style="border-color:rgba(255,255,255,0.1);"><div class="legacy-num" style="color:#fff;"><span class="counter" data-target="25" data-suffix="L" data-prefix="&#8377;">0</span></div><div class="legacy-label" style="color:rgba(255,255,255,0.5);">Median CTC of Scaler alumni</div></div>
-      <div class="legacy-stat" style="border-color:rgba(255,255,255,0.1);"><div class="legacy-num" style="color:#fff;"><span class="counter" data-target="5000" data-suffix="+">0</span></div><div class="legacy-label" style="color:rgba(255,255,255,0.5);">Learners placed at top companies</div></div>
+    <div class="adm-header fade-in">
+      <span class="team-eyebrow">Admission Process</span>
+      <h2 class="team-h2">Four steps. Designed to confirm fit — not to filter you out.</h2>
+      <p>We have 200 seats. We're choosing for cohort quality, not for prestige. The process is a real conversation about whether this is the right call for you.</p>
     </div>
 
-    <div class="fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);">
-      <div style="background:var(--navy);padding:36px 32px;">
-        <div style="font-family:'Clash Grotesk',sans-serif;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:2px;color:var(--blue);margin-bottom:12px;">We know tech</div>
-        <div style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">We've placed more SDEs in Amazon than all IITs and NITs combined. We trained the engineers building the AI products you read about. We understand how models work, how teams ship AI, and where the real bottlenecks are — because we've been inside it for a decade.</div>
+    <div class="adm-steps fade-in">
+      <div class="adm-step">
+        <div class="adm-step-num">01</div>
+        <div class="adm-step-title">Apply</div>
+        <div class="adm-step-desc">Four-field form: name, email, phone, role. 60 seconds. No essays, no GMAT.</div>
       </div>
-      <div style="background:var(--navy);padding:36px 32px;">
-        <div style="font-family:'Clash Grotesk',sans-serif;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:2px;color:var(--blue);margin-bottom:12px;">We know business</div>
-        <div style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">Scaler School of Business already trains professionals in strategy, operations, and management. We've seen firsthand how the business world is moving toward AI transformation. We know what business leaders need to learn — because we've already built the curriculum that works.</div>
+      <div class="adm-step">
+        <div class="adm-step-num">02</div>
+        <div class="adm-step-title">Counselor Call</div>
+        <div class="adm-step-desc">A senior counselor (real person) calls within 48 hours. Goal: understand your role, your goal, and whether this is the right intake for you.</div>
       </div>
-      <div style="background:var(--navy);padding:36px 32px;">
-        <div style="font-family:'Clash Grotesk',sans-serif;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:2px;color:var(--blue);margin-bottom:12px;">We know what's coming</div>
-        <div style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">We don't teach AI from textbooks. We watch it evolve every quarter — new models, new capabilities, new company restructures. Our curriculum updates in real time because our instructors are inside the companies making it happen. Q3 FY26 Bajaj Finance is in the syllabus because it happened last quarter.</div>
+      <div class="adm-step">
+        <div class="adm-step-num">03</div>
+        <div class="adm-step-title">Profile Review</div>
+        <div class="adm-step-desc">We confirm cohort fit — experience band, function, current role. If it's not the right fit, we'll say so.</div>
       </div>
-      <div style="background:var(--navy);padding:36px 32px;">
-        <div style="font-family:'Clash Grotesk',sans-serif;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:2px;color:var(--blue);margin-bottom:12px;">PGPMT is the intersection</div>
-        <div style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">Tech expertise + business understanding + real-time AI knowledge = PGPMT. No other institution in India sits at this intersection. Traditional B-schools don't understand AI. Coding bootcamps don't understand business. We built both — and PGPMT is where they meet.</div>
-      </div>
-    </div>
-
-    <p class="text-center fade-in" style="color:rgba(255,255,255,0.5);font-size:13px;margin-top:36px;">PGPMT is not Scaler's experiment in business education. It's the inevitable next step — because the AI era doesn't need engineers OR business leaders. It needs both in one person.</p>
-  </div>
-</section>
-
-<!-- ===== PRICING & ROI ===== -->
-<section id="fold9" class="section" style="background:var(--panel);">
-  <div class="container">
-    <div class="annotation" data-ann="pricing"><strong>WHAT:</strong> Price + ROI math. <strong>WHY:</strong> Handles #1 objection: "Is it worth it?" 40% premium math makes ROI concrete. &#8377;20K down payment removes sticker shock. <strong>TRANSCRIPT:</strong> "That's good. That's peaceful." — actual lead response to EMI structure.</div>
-    <span class="section-label text-center" style="display:block;">Investment</span>
-    <h2 class="pricing-h2 fade-in">One decision. Twelve months. Here's what it costs — and returns.</h2>
-    <div class="pricing-layout fade-in">
-      <div class="price-card">
-        <div class="price-main">&#8377;3.25L</div>
-        <div class="price-sub">All-in program fee + GST</div>
-        <ul class="price-detail">
-          <li>12 months live + async instruction</li>
-          <li>200+ hours of live teaching</li>
-          <li>3 specialization tracks</li>
-          <li>Capstone with sponsor company</li>
-          <li>12-month career support</li>
-          <li>Lifetime cohort network access</li>
-        </ul>
-        <div class="down-payment-box">
-          <div class="amount">&#8377;20,000</div>
-          <div class="label">Start with just the down payment. Rest is no-cost EMI.</div>
-          <div class="verbatim">"That's good. That's peaceful." — Actual lead response</div>
-        </div>
-      </div>
-      <div class="roi-frame">
-        <h3>The ROI math</h3>
-        <p class="roi-text">AI-skilled professionals command a <strong>40% salary premium</strong> in India. McKinsey puts global premium at <strong>56%</strong>.</p>
-        <p class="roi-text">At &#8377;20L CTC &rarr; <strong>&#8377;8L additional/year</strong>. Payback in <strong>5 months</strong>.</p>
-        <p class="roi-text">At &#8377;30L CTC &rarr; payback in <strong>4 months</strong>. At &#8377;40L &rarr; <strong>3 months</strong>.</p>
-        <div class="guarantees-strip">
-          <div class="guarantee-pill"><span class="icon">&#10003;</span> 14-day full refund</div>
-          <div class="guarantee-pill"><span class="icon">&#10003;</span> Flexible EMI from &#8377;9K/mo</div>
-        </div>
-        <div class="mt-24"><button class="btn btn-primary" data-modal="apply">Apply Now</button></div>
+      <div class="adm-step">
+        <div class="adm-step-num">04</div>
+        <div class="adm-step-title">Enrollment</div>
+        <div class="adm-step-desc">No-cost EMI plan, ₹8,400/month. 14-day full refund window. Cohort 2 starts May 2026.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== COHORT REMINDER ===== -->
-<div class="cohort-banner">
-  <div class="container"><div class="cohort-banner-inner">
-    <span class="cb-item"><span class="cb-highlight">24 seats</span> remaining</span>
-    <span class="cb-item"><span class="cb-highlight">12 of 20</span> early-bird scholarships claimed</span>
-    <span class="cb-item">Applications close <span class="cb-highlight">May 15, 2026</span></span>
-    <button class="header-cta" data-modal="apply" style="font-size:12px;padding:6px 16px;">Reserve Your Seat &rarr;</button>
-  </div></div>
-</div>
-
-<!-- ===== HOW WE COMPARE ===== -->
-<section id="competitor-section" class="section">
-  <div class="container">
-    <span class="section-label text-center" style="display:block;">How We Compare</span>
-    <h2 class="comp-h2 fade-in">See the difference</h2>
-    <p class="comp-sub fade-in">You're comparing options. Here's how PGPMT stacks up against the alternatives.</p>
-    <div class="comp-table-wrap fade-in">
-      <table class="comp-table">
-        <thead><tr><th>Feature</th><th class="highlight">Scaler PGPMT</th><th>Traditional PG Programs</th><th>Premium B-Schools</th><th>Self-Paced Platforms</th></tr></thead>
-        <tbody>
-          <tr><td>Built for AI era</td><td class="highlight"><span class="check">&#10003;</span> 2026 curriculum</td><td><span class="partial">~</span> Generic + AI module</td><td><span class="partial">~</span> Academic, theory-heavy</td><td><span class="no">&#10007;</span> No cohort structure</td></tr>
-          <tr><td>Cohort quality</td><td class="highlight"><span class="check">&#10003;</span> 8+ YoE avg, top cos</td><td><span class="partial">~</span> Mixed experience</td><td><span class="check">&#10003;</span> Strong but &#8377;20L+ fee</td><td><span class="no">&#10007;</span> No cohort</td></tr>
-          <tr><td>Mentorship</td><td class="highlight"><span class="check">&#10003;</span> Practitioners, weekly</td><td><span class="partial">~</span> Limited, async</td><td><span class="partial">~</span> Faculty, not practitioners</td><td><span class="no">&#10007;</span> None</td></tr>
-          <tr><td>Price</td><td class="highlight">&#8377;3.25L</td><td>&#8377;3-6L</td><td>&#8377;20L+</td><td>&#8377;5-15K</td></tr>
-          <tr><td>Accountability</td><td class="highlight"><span class="check">&#10003;</span> Cohort + career team</td><td><span class="partial">~</span> Some support</td><td><span class="check">&#10003;</span> Alumni network</td><td><span class="no">&#10007;</span> Self-motivated only</td></tr>
-          <tr><td>Capstone</td><td class="highlight"><span class="check">&#10003;</span> Live sponsor company</td><td><span class="partial">~</span> Case study</td><td><span class="check">&#10003;</span> Academic project</td><td><span class="no">&#10007;</span> None</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="comp-mba-note fade-in"><p><strong>Already have an MBA?</strong> Your MBA gave you business fundamentals. PGPMT adds AI fluency: lead AI-powered teams, automate decisions, drive transformation. No coding required.</p></div>
-  </div>
-</section>
-
-<!-- ===== MASTERCLASS REGISTRATION ===== -->
-<section id="mc-section" class="section">
-  <div class="container">
-    <div class="mc-block fade-in">
-      <h3>Free Masterclass: AI for Business Leaders</h3>
-      <p>90 minutes. Live. See what the PGPMT curriculum feels like before you commit.</p>
-      <div class="mc-form" id="mc-form">
-        <input class="mc-input" type="text" placeholder="Your name" required>
-        <input class="mc-input" type="email" placeholder="Email address" required>
-        <button class="btn btn-blue" type="button" id="mc-submit">Register Free</button>
-      </div>
-      <p id="mc-success" style="display:none;color:var(--green);font-size:14px;margin-top:12px;">Registered! Check your email for the masterclass link.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FAQ ===== -->
+<!-- ============================================================
+     ===== FOLD 11 — FAQ                                 =====
+     ============================================================ -->
 <section id="fold12" class="section">
   <div class="container">
-    <h2 class="faq-h2 fade-in">Questions we get. Answers we stand behind.</h2>
-    <div class="faq-list fade-in">
-      <div class="faq-item"><div class="faq-q">Is this an MBA? <span class="faq-toggle">+</span></div><div class="faq-a">No. PGPMT is a Post Graduate Program in Management and Technology — a practitioner credential. If you want the formal MBA credential, the Woolf University pathway is available as an optional add-on.</div></div>
-      <div class="faq-item"><div class="faq-q">I work full-time. Can I manage this? <span class="faq-toggle">+</span></div><div class="faq-a">Designed for it. Weekend live sessions (Sat-Sun mornings). 4-6 hours async during the week. All recorded. Most Cohort 1 enrollees are in senior roles at large companies.</div></div>
-      <div class="faq-item"><div class="faq-q">How is this different from traditional PG programs? <span class="faq-toggle">+</span></div><div class="faq-a">Three things. The cohort: 5+ years experience minimum. The curriculum: built around 2026 AI, not a 3-year-old program with an AI module added. The instructors: practitioners working in the field today.</div></div>
-      <div class="faq-item"><div class="faq-q">How is this different from a self-paced online course? <span class="faq-toggle">+</span></div><div class="faq-a">Self-paced platforms are great for self-study. What they can't provide: practitioner mentorship, accountability from a cohort of senior peers, a structured career path, and a capstone with a real company. You're not paying for content — you're paying for transformation.</div></div>
-      <div class="faq-item"><div class="faq-q">I don't have a deep tech background. Is this for me? <span class="faq-toggle">+</span></div><div class="faq-a">PGPMT is not a coding program. It's for professionals who work adjacent to technology — PMs, ops leaders, business analysts — who need to understand AI well enough to make decisions about it and lead teams that build with it.</div></div>
-      <div class="faq-item"><div class="faq-q">Will this help me get promoted? <span class="faq-toggle">+</span></div><div class="faq-a">We don't guarantee promotions. But: AI-skilled professionals earn 40% more. Every capstone is a live deliverable for your promotion conversation. The cohort network is the most lasting return for many.</div></div>
-      <div class="faq-item"><div class="faq-q">What if I fall behind? <span class="faq-toggle">+</span></div><div class="faq-a">All sessions recorded. Dedicated support team (not a chatbot). Talk to your program manager within 30 days — we'll find a path.</div></div>
+    <h2 class="faq-h2 fade-in" style="text-align:center;">The questions worth asking before you decide.</h2>
+    <div class="faq-list fade-in" style="max-width:880px;margin:32px auto 0;">
+      <div class="faq-item"><div class="faq-q">Is this an MBA? <span class="faq-toggle">+</span></div><div class="faq-a">No. This is a Post Graduate Program in Business &amp; AI — a practitioner credential. If you want a formal MBA credential, the IIM-Trichy executive certificate covers it as part of the program.</div></div>
+      <div class="faq-item"><div class="faq-q">I work full-time. Can I manage this? <span class="faq-toggle">+</span></div><div class="faq-a">Designed for it. Weekend live sessions (Sat–Sun mornings). 4–6 hours async during the week. All recorded. Most Cohort 1 enrollees are in senior roles at large companies.</div></div>
+      <div class="faq-item"><div class="faq-q">How is this different from traditional PG programs? <span class="faq-toggle">+</span></div><div class="faq-a">Three things. The cohort: working professionals, 2+ years experience minimum. The curriculum: built around 2026 AI, not a 3-year-old program with an AI module bolted on. The instructors: practitioners working in the field today.</div></div>
+      <div class="faq-item"><div class="faq-q">How is this different from a self-paced online course? <span class="faq-toggle">+</span></div><div class="faq-a">Self-paced platforms are great for self-study. What they can't provide: practitioner mentorship, accountability from a cohort of senior peers, a structured career path, and a capstone with a real sponsor company. You're not paying for content — you're paying for a network and a credential.</div></div>
+      <div class="faq-item"><div class="faq-q">I don't have a deep tech background. Is this for me? <span class="faq-toggle">+</span></div><div class="faq-a">This is not a coding program. It's for professionals across business functions — product, operations, finance, sales, strategy — who need to understand AI well enough to make decisions about it and lead teams that use it. <strong>No coding experience required.</strong></div></div>
+      <div class="faq-item"><div class="faq-q">Will this help me get promoted? <span class="faq-toggle">+</span></div><div class="faq-a">We don't guarantee promotions. But: AI-skilled professionals earn 40–100% more depending on function. Every capstone is a live deliverable for your promotion conversation. The cohort network is the most lasting return for many.</div></div>
+      <div class="faq-item"><div class="faq-q">What does it cost? <span class="faq-toggle">+</span></div><div class="faq-a">₹8,400/month with no-cost EMI. Total ₹3,99,000 (incl. taxes). Lifelong curriculum updates included. Career support included. 14-day 100% refund window.</div></div>
+      <div class="faq-item"><div class="faq-q">What if I fall behind? <span class="faq-toggle">+</span></div><div class="faq-a">All sessions recorded. Dedicated program manager (real person, not a chatbot). Talk to them within 30 days — we'll find a path.</div></div>
       <div class="faq-item"><div class="faq-q">What's the application process? <span class="faq-toggle">+</span></div><div class="faq-a">Four fields: name, phone, email, role. Counselor call within 48 hours. The call confirms fit — not a hard sell.</div></div>
       <div class="faq-item"><div class="faq-q">Can I get a refund? <span class="faq-toggle">+</span></div><div class="faq-a">Yes. First 14 days — 100% refund. No admin charges. No exceptions to the exception.</div></div>
     </div>
   </div>
 </section>
 
-<!-- ===== FINAL CTA ===== -->
+<!-- ============================================================
+     ===== FINAL CTA                                     =====
+     ============================================================ -->
 <section id="fold13" class="section">
   <div class="container">
     <h2 class="final-h2 fade-in">The AI era does not wait. Neither should you.</h2>
@@ -4377,8 +4385,8 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
       <p class="punch">You've read this far. You already know what to do.</p>
     </div>
     <div class="final-ctas fade-in">
-      <button class="btn btn-primary btn-lg" data-modal="apply">Apply Now</button>
-      <button class="btn btn-secondary btn-lg" data-modal="guide">Download the Program Guide first</button>
+      <button class="btn btn-primary btn-lg" data-modal="apply">Find Your AI Path</button>
+      <button class="btn btn-secondary btn-lg" data-modal="guide">Download the Program Guide</button>
     </div>
     <p class="final-wa fade-in">Questions? <a href="https://wa.me/919876543210" target="_blank">WhatsApp us</a> — real person, replies within 2 hours.</p>
   </div>
@@ -4388,7 +4396,7 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
 <footer id="footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#011845"/><path d="M8 22V18l4-4 4 4 8-8" stroke="#0055FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="wordmark">SCALER</span></div><div class="program">Post Graduate Program in Management & Technology</div></div>
+      <div class="footer-brand"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#011845"/><path d="M8 22V18l4-4 4 4 8-8" stroke="#0055FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="wordmark">SCALER</span></div><div class="program">Online PGP in Business & AI</div></div>
       <div class="footer-contact"><div class="footer-contact-title">Contact</div><div class="footer-contact-item"><a href="tel:+919876543210">+91 98765 43210</a></div><div class="footer-contact-item"><a href="https://wa.me/919876543210" target="_blank">WhatsApp</a></div><div class="footer-contact-item"><a href="mailto:pgpmt@scaler.com">pgpmt@scaler.com</a></div></div>
       <div class="footer-legal"><div class="footer-legal-title">Legal</div><p>Scaler Education Pvt. Ltd.</p><p>Registered: Bangalore, India</p></div>
     </div>
@@ -4459,7 +4467,23 @@ input:checked + .annotation-slider:before { transform: translateX(14px); }
   });
 })();
 
-// --- Curriculum dark tabs ---
+// --- CV5 Curriculum tabs (new structure) ---
+(function() {
+  const tabs = document.querySelectorAll('.cv5-tab');
+  const panels = document.querySelectorAll('.cv5-panel');
+  if (!tabs.length) return;
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      this.classList.add('active');
+      const target = document.getElementById(this.dataset.cv);
+      if (target) target.classList.add('active');
+    });
+  });
+})();
+
+// --- Curriculum dark tabs (legacy) ---
 (function() {
   const tabs = document.querySelectorAll('.curr-dark-tab');
   const panels = document.querySelectorAll('.curr-dark-panel');

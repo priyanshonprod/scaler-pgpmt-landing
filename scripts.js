@@ -155,7 +155,7 @@ function openModal(type) {
   if (type === 'apply') {
     eyebrow.textContent = 'Cohort 2 — Apply Now';
     title.textContent = 'Reserve Your Seat';
-    sub.textContent = 'Submit 4 fields. A counselor reaches out within 48 hours. No commitment until you are ready.';
+    sub.textContent = 'Submit 4 fields. A counselor reaches out within 48 hours — to answer questions, not to push you.';
     submitBtn.textContent = 'Submit Application';
   } else if (type === 'curriculum') {
     eyebrow.textContent = 'Curriculum';
